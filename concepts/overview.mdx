@@ -1,0 +1,78 @@
+---
+title: Overview
+description: Understand Kao's main concepts before using the dashboard.
+---
+
+## Dashboard areas
+
+Kao is organized around the tasks server owners perform most often:
+
+| Area | Use it to |
+|------|-----------|
+| Import | Find emotes and add them to a server |
+| Servers | View server emojis, capacity, settings, and activity |
+| Bots | Invite the hosted bot, connect your own bot, or review shared server access |
+| Collections | Save reusable groups of emotes |
+| Backups | Snapshot and restore server emojis |
+| Rotations | Refresh server emojis on a schedule |
+| Sync | Copy a collection or server emoji set to other servers |
+| Activity | Monitor imports, restores, rotations, syncs, and deletes |
+| Billing | Review your plan, limits, and payment settings |
+
+## Servers and bot access
+
+Kao can manage a server when one of these is true:
+
+- The hosted Kao Bot is installed in the server.
+- Your own connected bot is installed and assigned to the server.
+- Another Kao user shared access to the server with you.
+
+The bot needs Discord permission to manage emojis and stickers before Kao can add, rename, or delete server emojis.
+
+## Operations
+
+Emoji changes run as operations. This lets Kao show progress, retry failed items where possible, and avoid overwhelming Discord's emoji limits.
+
+You will see operations for:
+
+- Imports
+- Bulk deletes
+- Backup restores
+- Rotations
+- Sync groups
+
+## Discord limits
+
+Discord controls how many static and animated emojis a server can store. Kao shows your server capacity before you import, restore, rotate, or sync.
+
+| Server boost level | Static emojis | Animated emojis |
+|--------------------|---------------|-----------------|
+| No boost | 50 | 50 |
+| Level 1 | 100 | 100 |
+| Level 2 | 150 | 150 |
+| Level 3 | 250 | 250 |
+
+Discord also limits how quickly a server can create emojis. If a large batch slows down, leave the dashboard open or check **Activity** later.
+
+## Plans and limits
+
+Your Kao plan controls limits such as daily imports, backups, collections, rotations, sync groups, and how many servers or bots you can manage.
+
+When you hit a limit, Kao shows the limit in context and offers the next available path.
+
+## Next steps
+
+<CardGrid>
+  <Card title="Quickstart" href="/quickstart">
+    Set up Kao and import your first emote.
+  </Card>
+  <Card title="Bot Setup" href="/concepts/bot-system">
+    Choose hosted Kao Bot or BYOB.
+  </Card>
+  <Card title="Activity Log" href="/guides/activity-log">
+    Understand progress and history.
+  </Card>
+  <Card title="Billing" href="/guides/billing">
+    See which features are limited by plan.
+  </Card>
+</CardGrid>

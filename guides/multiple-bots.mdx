@@ -1,0 +1,91 @@
+---
+title: Multiple Bots
+description: Manage hosted, BYOB, and shared server access.
+---
+
+## Overview
+
+The **Bots** page shows how Kao can access your servers.
+
+You may see:
+
+- Hosted Kao Bot installs
+- Your own connected BYOB bots
+- Servers shared with you by another Kao user
+
+## Hosted Kao Bot installs
+
+Hosted installs are the easiest path for most servers. Each hosted server entry shows whether the Kao Bot is active and ready for dashboard imports.
+
+From a hosted server entry you can:
+
+- View install status
+- Reinvite the hosted bot if it was removed
+- Remove hosted access when you no longer want Kao managing that server
+
+## Add your own bot
+
+Use BYOB when you need custom bot identity or stronger separation between communities.
+
+1. Go to **Bots**.
+2. Choose **Add Bot**.
+3. Paste the Discord bot token.
+4. Let Kao validate the bot.
+5. Invite the bot to the servers it should manage.
+
+Each BYOB bot needs its own Discord application and token.
+
+## Assign servers
+
+After adding a BYOB bot:
+
+1. Open the bot.
+2. Add or select the servers it should manage.
+3. Recheck permissions if Kao reports missing access.
+4. Remove stale server links that you no longer want this bot to manage.
+
+## Bot presence
+
+Some plans allow custom bot status text. Use presence settings when your community expects branded status or a specific activity message.
+
+## Token updates
+
+If you reset a BYOB token in Discord:
+
+1. Open the bot in Kao.
+2. Choose **Update Token**.
+3. Paste the new token.
+4. Save it.
+
+<Warning>
+Resetting a token in Discord immediately invalidates the old one. Update Kao right away or the bot can go offline.
+</Warning>
+
+## Shared servers
+
+Shared servers are servers you can access through another user's bot or hosted install. Your available actions depend on the access they granted and the Discord role requirements for that server.
+
+Use shared access when teammates should help with emoji work without owning the bot or billing account.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---------|---------------|
+| Bot will not connect | Check the token and whether the bot still exists in Discord |
+| Server is missing | Invite the bot to that server or check shared access |
+| Permission warning appears | Reinvite the bot or update its Discord role permissions |
+| Hosted bot was removed | Reinvite the hosted Kao Bot from the server entry |
+
+## Next steps
+
+<CardGrid>
+  <Card title="Bot Setup" href="/concepts/bot-system">
+    Compare hosted and BYOB options.
+  </Card>
+  <Card title="Server Settings" href="/guides/server-settings">
+    Configure server behavior and access.
+  </Card>
+  <Card title="Importing Emotes" href="/guides/importing-emotes">
+    Import after a bot is ready.
+  </Card>
+</CardGrid>

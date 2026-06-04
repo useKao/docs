@@ -1,0 +1,90 @@
+---
+title: Sync Groups
+description: Keep Discord server emojis synchronized.
+---
+
+## Overview
+
+Sync groups copy emojis from a source to one or more target servers. Use them to keep related communities, event servers, or brand servers consistent.
+
+## Sync modes
+
+| Mode | Source | Best for |
+|------|--------|----------|
+| Collection Source | A Kao collection | Curated sets you control in Kao |
+| Server Mirror | Another Discord server | Making target servers match a live source server |
+
+## Before you begin
+
+Make sure:
+
+- Kao can manage the source and target servers.
+- The bot has **Manage Emojis and Stickers** in each target server.
+- Target servers have enough static and animated emoji capacity.
+- You have a backup if the sync may remove emojis.
+
+## Create a sync group
+
+1. Go to **Sync**.
+2. Choose **Create Sync Group**.
+3. Select **Collection Source** or **Server Mirror**.
+4. Choose the source collection or source server.
+5. Select target servers.
+6. Choose sync settings.
+7. Create the group.
+
+## Sync settings
+
+The setting names below intentionally match the dashboard labels, including labels that use "Emotes."
+
+| Setting | What it does |
+|---------|--------------|
+| Remove Extra Emojis | Deletes target emojis that are not in the source |
+| Sync Animated Emotes | Includes animated emojis |
+| Sync Static Emotes | Includes static emojis |
+
+<Warning>
+Remove Extra Emojis can delete target server emojis. Leave it off if targets should keep their own local emojis.
+</Warning>
+
+## Run a sync
+
+Sync groups run when you choose **Sync Now**.
+
+Kao compares the source and target servers, then adds missing emojis and optionally removes extras. Progress appears while the sync runs, and results are saved in sync history.
+
+Large syncs can take a few minutes because Discord limits emoji changes.
+
+## Manage a sync group
+
+You can:
+
+- Change the source collection or server
+- Add or remove targets
+- Toggle static or animated syncing
+- Toggle Remove Extra Emojis
+- Review history
+- Delete the group
+
+## Troubleshooting
+
+| Problem | What to check |
+|---------|---------------|
+| Target failed | Confirm the bot is still in that server with Manage Emojis and Stickers |
+| Emojis did not appear | Check capacity and sync history for failed items |
+| Extra emojis were removed | Remove Extra Emojis was enabled |
+| Plan limit reached | Remove unused sync groups or review your plan |
+
+## Next steps
+
+<CardGrid>
+  <Card title="Collections" href="/guides/collections">
+    Build a curated source collection.
+  </Card>
+  <Card title="Backups" href="/guides/backups">
+    Back up targets before destructive syncs.
+  </Card>
+  <Card title="Activity Log" href="/guides/activity-log">
+    Track sync progress and history.
+  </Card>
+</CardGrid>

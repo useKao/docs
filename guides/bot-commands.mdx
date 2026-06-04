@@ -1,0 +1,73 @@
+---
+title: Bot Commands
+description: Use Kao's Discord slash commands when a connected bot supports them.
+---
+
+## Overview
+
+The dashboard is the primary way to use Kao. Some connected bots also expose Discord slash commands for quick server actions.
+
+Use `/help` in Discord to see the commands available for your server. Available commands depend on the bot setup and server permissions.
+
+## Common commands
+
+| Command | What it does |
+|---------|--------------|
+| `/help` | Shows available Kao commands |
+| `/status` | Shows server emoji capacity |
+| `/emojis` | Browses server emojis |
+| `/emoji delete` | Deletes a server emoji |
+| `/emoji rename` | Renames a server emoji |
+| `/settings` | Shows bot settings |
+
+## Import commands
+
+Some BYOB or command-enabled setups can import from Discord:
+
+| Command | What it does |
+|---------|--------------|
+| `/7tv` | Imports from a 7TV set |
+| `/import url` | Imports one emote from a URL |
+| `/import bttv` | Imports from BetterTTV |
+| `/import ffz` | Imports from FrankerFaceZ |
+
+For most hosted bot workflows, use the dashboard **Import** page instead.
+
+## Collection, backup, and rotation commands
+
+When the bot is linked to Kao's dashboard features, these commands may be available:
+
+| Command | What it does |
+|---------|--------------|
+| `/collection list` | Lists your collections |
+| `/collection apply` | Applies a collection to the server |
+| `/backup create` | Creates a server emoji backup |
+| `/backup list` | Lists recent backups |
+| `/rotation status` | Shows rotation schedules |
+| `/rotation trigger` | Runs a rotation now |
+| `/rotation pause` | Pauses a rotation |
+| `/rotation resume` | Resumes a rotation |
+
+## Who can use commands?
+
+Server settings control who can use bot commands. Depending on your setup, commands can be limited to the owner, server admins, selected Discord roles, or specific users.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---------|---------------|
+| Command does not appear | Refresh Discord, check the bot is installed, or use `/help` |
+| Command says permission denied | Your server settings may limit command access |
+| Import command fails | Check server capacity and Manage Emojis and Stickers permission |
+| Hosted bot import is confusing | Use the dashboard **Import** page for the hosted setup |
+
+## Next steps
+
+<CardGrid>
+  <Card title="Importing Emotes" href="/guides/importing-emotes">
+    Use the dashboard import flow.
+  </Card>
+  <Card title="Server Settings" href="/guides/server-settings">
+    Control command access and notifications.
+  </Card>
+</CardGrid>

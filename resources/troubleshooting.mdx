@@ -1,0 +1,237 @@
+---
+title: Troubleshooting
+description: Fix common setup, import, server, billing, and account issues.
+---
+
+## Setup issues
+
+### Hosted bot will not verify
+
+**Symptoms**
+
+- Kao says the hosted bot is not detected.
+- The server still shows as not ready after you approve the invite.
+
+**Fixes**
+
+1. Make sure the Discord invite was completed.
+2. Confirm you selected the same server in Kao and Discord.
+3. Check that the hosted bot is still in the server.
+4. Click verify again.
+5. If needed, remove the failed install and invite the hosted bot again.
+
+### BYOB token is invalid
+
+**Symptoms**
+
+- Kao rejects the token.
+- Your connected bot goes offline after a token reset.
+
+**Fixes**
+
+1. Open the [Discord Developer Portal](https://discord.com/developers/applications).
+2. Select your application.
+3. Open **Bot**.
+4. Reset and copy the token.
+5. Paste the new token into Kao.
+
+<Warning>
+Resetting a token makes the old token stop working immediately.
+</Warning>
+
+### Server does not appear
+
+**Symptoms**
+
+- A server is missing from a dropdown.
+- You cannot choose the expected target server.
+
+**Fixes**
+
+1. Confirm your Discord account has access to that server.
+2. Make sure the hosted bot or BYOB bot is installed.
+3. Check whether a server admin needs to grant shared access.
+4. If you just linked a BYOB bot to the server, refresh the dashboard so Kao reloads target server capacity.
+5. Sign out and back in to refresh your Discord server list.
+
+## Import issues
+
+### Server is at emoji capacity
+
+**Symptoms**
+
+- Imports, restores, rotations, or syncs fail because the server is full.
+
+**Fixes**
+
+1. Delete unused emojis.
+2. Choose a different target server.
+3. Reduce the batch size.
+4. Boost the server if your community wants more emoji slots.
+
+| Boost level | Static | Animated |
+|-------------|--------|----------|
+| No boost | 50 | 50 |
+| Level 1 | 100 | 100 |
+| Level 2 | 150 | 150 |
+| Level 3 | 250 | 250 |
+
+### Bot lacks permission
+
+**Symptoms**
+
+- Kao reports missing permissions.
+- Emoji creation, rename, or delete actions fail.
+
+**Fixes**
+
+1. Open the server's Discord role settings.
+2. Find the hosted bot or BYOB bot role.
+3. Enable **Manage Emojis and Stickers**.
+4. Make sure the bot role is high enough for the action.
+5. Reinvite the bot if the role is difficult to repair.
+
+### Import is slow or pending
+
+**Symptoms**
+
+- Progress stays pending.
+- A large batch takes several minutes.
+
+**Fixes**
+
+1. Check **Activity** for the current status.
+2. Wait for Discord's emoji change limit to clear.
+3. Import fewer emotes at once for urgent changes.
+4. Confirm your daily import allowance has not been reached.
+
+### Search returns no results
+
+**Symptoms**
+
+- A known emote does not appear.
+- Search results are empty.
+
+**Fixes**
+
+1. Try a shorter search term.
+2. Switch source filters.
+3. Search by creator or set when using 7TV.
+4. Try again later if a source platform is unavailable.
+
+## Server and dashboard issues
+
+### Wrong server selected
+
+**Symptoms**
+
+- Emojis are going to the wrong server.
+- You are viewing the wrong emoji list.
+
+**Fixes**
+
+1. Check the server icon and name in the selector.
+2. Reopen the action and choose the correct target.
+3. Rename servers in Discord if similar names are causing confusion.
+
+### Buttons or pages do not respond
+
+**Symptoms**
+
+- The dashboard loads but actions do not finish.
+- A page appears stuck.
+
+**Fixes**
+
+1. Refresh the page.
+2. Sign out and back in.
+3. Try a private browser window.
+4. Disable extensions that block scripts or popups.
+5. Try another browser.
+
+### Discord invite popup was blocked
+
+**Symptoms**
+
+- The hosted bot invite does not open.
+- Browser reports a blocked popup.
+
+**Fixes**
+
+1. Allow popups for usekao.com.
+2. Click the invite link again.
+3. Copy the shown invite URL if Kao provides one.
+
+## Billing issues
+
+### Plan did not activate
+
+**Symptoms**
+
+- You completed checkout but the dashboard still shows locked features.
+
+**Fixes**
+
+1. Refresh the Billing page.
+2. Sign out and back in.
+3. For crypto payments, wait until NowPayments marks the payment complete. Hosted invoice payments can remain pending while the network confirms.
+4. Start a new checkout if the crypto invoice expired or was canceled.
+5. Contact support if the crypto payment is complete, partially paid, or paid with the wrong asset and the plan stays inactive.
+
+### Coupon did not apply
+
+**Symptoms**
+
+- Checkout shows the wrong price.
+- Trial or discount is missing.
+
+**Fixes**
+
+1. Re-enter the coupon code.
+2. Confirm the coupon applies to the selected plan and billing interval.
+3. Start checkout again from Kao.
+
+## Account issues
+
+### Cannot sign in with Discord
+
+**Symptoms**
+
+- Discord redirects back without signing you in.
+- The dashboard returns to the landing page.
+
+**Fixes**
+
+1. Clear cookies for usekao.com.
+2. Try another browser.
+3. Check Discord status.
+4. Sign in again from [usekao.com](https://usekao.com).
+
+### Session expired
+
+**Symptoms**
+
+- Kao asks you to sign in again.
+- A dashboard action says your session expired.
+
+**Fixes**
+
+Sign in again. If it happens repeatedly, clear cookies for usekao.com and retry.
+
+## Getting more help
+
+When asking for help, include:
+
+- What you were trying to do
+- The exact error message
+- Which server or workflow was affected
+- What you already tried
+
+<CardGrid>
+  <Card title="Discord Community" href="https://usekao.com/api/discord/invite">
+    Get help from the community.
+  </Card>
+  <Card title="FAQ" href="/resources/faq">
+    Read common questions.
+  </Card>
+</CardGrid>

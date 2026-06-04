@@ -1,0 +1,105 @@
+---
+title: Server Settings
+description: Configure access, notifications, presets, and bot behavior for a server.
+---
+
+## Overview
+
+Server settings control how Kao behaves in a specific Discord server. Use them to adjust command access, notifications, community announcements, presets, and bot presentation.
+
+## Open server settings
+
+1. Go to **Servers**.
+2. Select a server.
+3. Open **Settings**.
+4. Choose the tab you want to update.
+
+## Bot settings
+
+Bot settings can include:
+
+- Bot nickname or presentation options
+- Command access mode
+- Roles allowed to use commands
+- Import acknowledgement behavior
+
+Some BYOB setups also show bot presence controls so you can choose the activity text Discord displays for that bot.
+
+## Command access
+
+Command access controls who can use Kao's Discord slash commands in the server.
+
+| Mode | Who can use commands |
+|------|----------------------|
+| Owner Only | The bot owner |
+| Admins Only | Discord users with admin-level server permissions |
+| Role Based | Users with selected Discord roles |
+| Whitelist | Only selected users |
+| Blacklist | Everyone except selected users |
+
+<Info>
+Dashboard access and Discord command access are related but not identical. Review shared server access if teammates also use the dashboard.
+</Info>
+
+## Staff notifications
+
+Staff notifications send operational updates to a Discord channel.
+
+Common categories include:
+
+- Imports
+- Rotations
+- Syncs
+- Warnings
+- Changelog updates
+
+Choose a channel, select the categories you want, and save.
+
+## Community announcements
+
+Community announcements share public-facing updates with your members, such as new emotes or refreshed rotations.
+
+You can enable announcements for:
+
+- Emote added
+- Rotation refreshed
+- Collection synced
+
+If your plan includes white-label options, you may also be able to customize announcement name, avatar, accent color, and attribution.
+
+## Presets
+
+Presets let you save server settings and apply them again later.
+
+Use presets when:
+
+- You manage several similar servers.
+- You want a known-good notification setup.
+- You are testing changes and want an easy way back.
+
+<Warning>
+Applying a preset can replace current server settings. Save the current setup first if you may need it again.
+</Warning>
+
+## Troubleshooting
+
+| Problem | What to check |
+|---------|---------------|
+| Settings will not save | Confirm you have access to manage this server in Kao |
+| Notifications do not appear | Check the selected channel and bot message permissions |
+| Community announcements fail | Confirm the webhook still exists and the channel is available |
+| Commands are blocked | Review command access mode and selected roles |
+
+## Next steps
+
+<CardGrid>
+  <Card title="Bot Commands" href="/guides/bot-commands">
+    See available Discord commands.
+  </Card>
+  <Card title="Multiple Bots" href="/guides/multiple-bots">
+    Manage hosted, BYOB, and shared access.
+  </Card>
+  <Card title="Backups" href="/guides/backups">
+    Create a restore point before big changes.
+  </Card>
+</CardGrid>

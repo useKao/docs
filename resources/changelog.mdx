@@ -1,0 +1,134 @@
+---
+title: Changelog
+description: Customer-facing updates and improvements to Kao.
+---
+
+## Overview
+
+This page highlights product changes that affect Kao customers. For smaller updates and support notices, join the [Kao Discord server](https://usekao.com/api/discord/invite).
+
+---
+
+## June 2026
+
+### Collection, rotation, and import fixes
+
+Collection search results can now be added without invalid URL errors, rotation setup refreshes target servers after bot linking, and bulk imports use the capacity-filtered import count before showing upgrade prompts.
+
+### Dashboard interface polish
+
+Dashboard settings, navigation, loading states, notifications, command palette rows, and emoji tools now use more consistent spacing, borders, radius, active states, and localized copy across supported languages.
+
+### Crypto checkout discounts
+
+Eligible coupons now work with crypto checkout as well as card checkout. Kao shows the discounted crypto price before sending you to NowPayments, and some trial-extension coupons can activate access without a crypto invoice.
+
+### Fresher coupon banners
+
+New promotional banners and pricing discounts now refresh without waiting for stale page or API caches to expire. When Kao launches or updates a coupon, marketing pages can show the current offer as soon as the page loads in the browser.
+
+---
+
+## May 2026
+
+### More accurate import rate-limit handling
+
+Hosted Kao Bot imports now track Discord emoji creation capacity more accurately, so large imports are less likely to be queued earlier than necessary. Queued imports also keep clearer Discord retry timing in the import modal, operations dock, and Activity.
+
+### Queued animated import reliability
+
+Animated imports that need background preparation now stay attached to their original import batch when Discord rate limits are active. Import progress, Activity, and admin queue views now use the same queue timing, including a clearer ready state when a queued item is due.
+
+### More reliable animated imports
+
+Animated emotes that need extra preparation now move into worker processing sooner, so imports can keep showing progress instead of waiting on expensive preparation work.
+
+### Clearer queue status
+
+Bulk operation progress is easier to recover after navigating around the dashboard. Queue, Activity, and admin views now agree more consistently about whether work is waiting on your quota, server capacity, or a Discord rate limit.
+
+### Faster, safer imports
+
+Imports, rotations, syncs, and restores now share clearer Discord capacity handling. When work has to wait, Kao can show whether the delay is related to your quota, server capacity, or Discord's emoji limits.
+
+### Clearer bot setup
+
+The bots dashboard now waits for access checks before showing setup choices. This prevents a brief flash of the wrong bot layout when your account has no configured bot access yet.
+
+---
+
+## April 2026
+
+### Shared server access
+
+Teams can now share server access so trusted members can help manage emojis without owning the bot or billing account.
+
+### More reliable imports
+
+Imports now do a better job of preparing images, avoiding duplicate work, showing progress, and recovering from temporary failures.
+
+### Multi-language support
+
+Kao is available in more languages, with a translation contribution flow for community improvements.
+
+### Account deletion and export
+
+Account settings now support full data export and account deletion flows so you can keep a copy of your data or remove your account.
+
+### Emoji safety and stability
+
+Kao improved animated emote handling, permission checks, and dashboard accessibility across core workflows.
+
+---
+
+## March 2026
+
+### Documentation refresh
+
+Customer docs were updated to better match current Kao features and setup flows.
+
+---
+
+## February 2026
+
+### Emote Creator
+
+You can create custom emotes by layering overlays on a base emote, preview the result, save it to your gallery, and import it into a server.
+
+### Multiple bot management
+
+You can manage more than one BYOB bot from the same account and assign bots to different servers.
+
+### Activity log
+
+The Activity page now tracks imports, backups, rotations, syncs, and deletes so you can review progress and results.
+
+### Plan management
+
+Kao added more plan controls, trial support, coupon support, and clearer plan limits in the dashboard.
+
+### Import improvements
+
+Search and import workflows improved with broader provider filtering, clearer server names, and more accurate backup snapshots.
+
+---
+
+## January 2025
+
+### Initial release
+
+Kao launched with Discord sign-in, Bring Your Own Bot setup, emote search, imports, server emoji management, bulk deletion, and custom bot setup.
+
+Supported sources at launch included 7TV, BetterTTV, and FrankerFaceZ.
+
+---
+
+## Feedback
+
+Have a feature request or found a bug?
+
+<CardGrid>
+  <Card title="Discord Server" href="https://usekao.com/api/discord/invite">
+    Share feedback with the community.
+  </Card>
+</CardGrid>
