@@ -1,35 +1,81 @@
 ---
 title: Kao documentation
 description: Learn how to set up Kao, import emotes, manage Discord server emojis, and automate emoji workflows.
+mode: wide
 ---
 
 Kao helps Discord server owners find, import, organize, and refresh custom emojis from one dashboard.
 
-<CardGrid>
-  <Card title="Quickstart" icon="rocket" href="/quickstart">
-    Sign in with Discord, invite Kao, and import your first emote.
+Use these docs to choose a bot setup, complete your first import, protect a server before large changes, and automate repeat emoji workflows.
+
+## Choose your setup path
+
+<Columns cols={2}>
+  <Card title="Start with the hosted Kao Bot" icon="rocket" href="/quickstart">
+    Invite the hosted Kao Bot, verify server access, and import your first emote.
   </Card>
-  <Card title="Bot setup" icon="bot" href="/concepts/bot-system">
-    Choose between the hosted Kao Bot and Bring Your Own Bot.
+  <Card title="Use Bring Your Own Bot" icon="bot" href="/concepts/bot-system">
+    Compare hosted Kao Bot and BYOB before you create or connect a custom Discord bot.
   </Card>
-  <Card title="Importing emotes" icon="download" href="/guides/importing-emotes">
-    Search 7TV, BetterTTV, FrankerFaceZ, EmojiGG, and Discord emote text.
+</Columns>
+
+## Core workflows
+
+<Columns cols={3}>
+  <Card title="Import emotes" icon="download" href="/guides/importing-emotes">
+    Search supported sources, paste Discord emote text, preview files, and upload emojis.
   </Card>
+  <Card title="Manage emojis" icon="smile" href="/guides/managing-emojis">
+    Rename, delete, filter, and review server emoji capacity.
+  </Card>
+  <Card title="Build collections" icon="folder-heart" href="/guides/collections">
+    Save reusable emote sets for future imports, rotations, and sync groups.
+  </Card>
+  <Card title="Create backups" icon="archive" href="/guides/backups">
+    Snapshot a server before risky changes and restore emojis when needed.
+  </Card>
+  <Card title="Run rotations" icon="refresh-cw" href="/guides/rotations">
+    Replace or refresh a server's emojis on a schedule.
+  </Card>
+  <Card title="Sync servers" icon="shuffle" href="/guides/sync-groups">
+    Keep a source collection or server mirrored to other Discord servers.
+  </Card>
+</Columns>
+
+## Find the right guide
+
+| Goal | Start with | Then read |
+|------|------------|-----------|
+| Invite Kao for the first time | [Quickstart](/quickstart) | [Bot setup](/concepts/bot-system) |
+| Decide between hosted Kao Bot and BYOB | [Bot setup](/concepts/bot-system) | [Multiple bots](/guides/multiple-bots) |
+| Import one emote or a batch | [Importing emotes](/guides/importing-emotes) | [Managing emojis](/guides/managing-emojis) |
+| Clean up a full emoji list | [Managing emojis](/guides/managing-emojis) | [Backups](/guides/backups) |
+| Reuse emotes across servers | [Collections](/guides/collections) | [Sync groups](/guides/sync-groups) |
+| Automate seasonal emojis | [Rotations](/guides/rotations) | [Activity log](/guides/activity-log) |
+| Fix a failed setup or import | [Troubleshooting](/resources/troubleshooting) | [FAQ](/resources/faq) |
+| Manage plan, billing, or account data | [Billing](/guides/billing) | [Account management](/guides/account-management) |
+
+## Learn the product model
+
+<Columns cols={2}>
+  <Card title="Overview" icon="map" href="/concepts/overview">
+    Understand the dashboard areas, operations, Discord limits, and plan boundaries.
+  </Card>
+  <Card title="Bot system" icon="network" href="/concepts/bot-system">
+    Learn how server access works across the hosted Kao Bot and BYOB.
+  </Card>
+</Columns>
+
+## Support and updates
+
+<Columns cols={3}>
   <Card title="Troubleshooting" icon="wrench" href="/resources/troubleshooting">
-    Fix common setup, import, server, billing, and account issues.
+    Fix setup, import, server, dashboard, billing, and account issues.
   </Card>
-</CardGrid>
-
-## Start here
-
-- [Introduction](/introduction)
-- [Quickstart](/quickstart)
-- [Overview](/concepts/overview)
-
-## Popular guides
-
-- [Managing emojis](/guides/managing-emojis)
-- [Collections](/guides/collections)
-- [Backups](/guides/backups)
-- [Rotations](/guides/rotations)
-- [Sync groups](/guides/sync-groups)
+  <Card title="FAQ" icon="circle-help" href="/resources/faq">
+    Get short answers to common Kao questions.
+  </Card>
+  <Card title="Changelog" icon="bell" href="/resources/changelog">
+    Review product updates, fixes, and new documentation.
+  </Card>
+</Columns>

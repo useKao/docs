@@ -11,7 +11,7 @@
   "appearance": {
     "default": "dark"
   },
-  "favicon": "/favicon.ico",
+  "favicon": "/images/favicon.png",
   "logo": {
     "light": "/images/logo.png",
     "dark": "/images/logo.png",
@@ -108,49 +108,9 @@
   },
   "footer": {
     "socials": {
+      "website": "https://usekao.com/",
       "discord": "https://usekao.com/api/discord/invite"
-    },
-    "links": [
-      {
-        "header": "Product",
-        "items": [
-          {
-            "label": "Features",
-            "href": "https://usekao.com/#features"
-          },
-          {
-            "label": "Pricing",
-            "href": "https://usekao.com/pricing"
-          }
-        ]
-      },
-      {
-        "header": "Resources",
-        "items": [
-          {
-            "label": "Documentation",
-            "href": "https://docs.usekao.com"
-          },
-          {
-            "label": "Support",
-            "href": "https://usekao.com/api/discord/invite"
-          }
-        ]
-      },
-      {
-        "header": "Legal",
-        "items": [
-          {
-            "label": "Privacy",
-            "href": "https://usekao.com/privacy"
-          },
-          {
-            "label": "Terms",
-            "href": "https://usekao.com/terms"
-          }
-        ]
-      }
-    ]
+    }
   },
   "seo": {
     "indexing": "navigable"
