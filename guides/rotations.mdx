@@ -1,0 +1,83 @@
+---
+title: Rotations
+description: Refresh server emojis automatically from collections.
+---
+
+## Overview
+
+Rotations refresh a server's emojis from a collection. Use them when you want seasonal sets, event-specific emoji pools, or a server that changes on a schedule.
+
+## Before you begin
+
+You need:
+
+- A server Kao can manage
+- At least one collection with emotes
+- Enough plan allowance for active rotations
+- A backup if the rotation may remove existing emojis
+
+## Create a rotation
+
+1. Go to **Rotations**.
+2. Choose **Create Rotation**.
+3. Name the rotation and select a server.
+4. Choose the collection to use.
+5. Set the schedule.
+6. Choose behavior.
+7. Review and create the rotation.
+
+## Schedule options
+
+| Schedule | Use it when |
+|----------|-------------|
+| Simple recurring | You want an interval such as every 6, 12, or 24 hours |
+
+You can set the timezone so the schedule matches your community.
+
+## Rotation behavior
+
+Kao currently supports **Full replacement** when creating a rotation. It replaces the server emoji set with emotes from the selected collection.
+
+<Warning>
+Full replacement can remove many server emojis. Create a backup before enabling it on an important server.
+</Warning>
+
+## Run a rotation manually
+
+Use **Execute Now** when you want to test or run a rotation outside its schedule.
+
+Kao shows live progress while it removes and adds emojis. Large rotations can take several minutes because Discord limits how quickly a server can change emojis.
+
+## Manage rotations
+
+From the Rotations page you can:
+
+- Enable or disable a rotation
+- Open rotation details
+- Run a rotation manually
+- View execution history
+- Delete a rotation
+
+## Troubleshooting
+
+| Problem | What to check |
+|---------|---------------|
+| Target server is missing | Confirm the bot is linked to that server, then refresh Rotations so Kao reloads target server capacity |
+| Rotation did not run | Make sure it is enabled and the schedule is correct |
+| Rotation partially completed | Open history or Activity to see which emojis failed |
+| Server is missing emojis | Check capacity, source collection size, and any failed items |
+| Plan limit reached | Disable or delete an old rotation, or review your plan |
+
+## Next steps
+
+<CardGrid>
+  <Card title="Collections" href="/guides/collections">
+    Build the emote sets that power rotations.
+  </Card>
+  <Card title="Backups" href="/guides/backups">
+    Save a restore point before replacement.
+  </Card>
+  <Card title="Sync Groups" href="/guides/sync-groups">
+    Keep multiple servers aligned.
+  </Card>
+</CardGrid>

@@ -1,0 +1,116 @@
+---
+title: Importing Emotes
+description: Search, preview, rename, and import emotes into Discord.
+---
+
+## Overview
+
+The **Import** page is the main place to add emotes to a Discord server. You can search supported platforms, browse 7TV sets, paste Discord emote text, preview results, and import one or more emotes.
+
+Kao supports:
+
+- 7TV
+- BetterTTV
+- FrankerFaceZ
+- EmojiGG
+- Discord emote text or URLs pasted into the import tool
+
+## Before you begin
+
+Make sure:
+
+- The target server appears in the server picker.
+- The hosted Kao Bot or your BYOB bot is installed in that server.
+- The bot has **Manage Emojis and Stickers** permission.
+- The server has enough static or animated emoji slots.
+
+## Search for emotes
+
+1. Open **Import** in the dashboard.
+2. Select the target server.
+3. Enter a search term.
+4. Use filters to narrow results by source, sort order, or animation type.
+5. Open an emote to preview it before importing.
+
+Search works best with short emote names, creator names, or common community phrases.
+
+## Import a single emote
+
+1. Open an emote result.
+2. Review the preview.
+3. Edit the emoji name if needed.
+4. Choose **Import**.
+
+Discord emoji names must be 2 to 32 characters and can contain letters, numbers, and underscores.
+
+<Warning>
+If the import name already exists on the server, rename the new emote or remove the existing emoji first.
+</Warning>
+
+## Import from pasted Discord emotes
+
+Use the Discord import option when you already have emotes in a message or URL list.
+
+1. Open the Discord import tool from the **Import** page.
+2. Paste Discord emote text, emote URLs, or message text containing emotes.
+3. Review the parsed emotes.
+4. Remove anything you do not want.
+5. Import the remaining emotes to your selected server.
+
+## Browse 7TV users and sets
+
+When a 7TV user or set appears in search:
+
+1. Open the profile or set.
+2. Browse the available emotes.
+3. Filter within the set if needed.
+4. Import individual emotes or select several for a batch.
+
+## Importing batches
+
+Large imports show progress while Kao uploads each emoji. Some batches finish quickly, while larger ones can take a few minutes because Discord limits how quickly a server can create emojis.
+
+Difficult animated emotes may show as optimizing while Kao prepares a Discord-sized file. Progress stays visible while that preparation finishes.
+
+If you select more emotes than the target server can currently fit, Kao plans the batch from the emotes that have available static or animated slots. Plan batch limits and upgrade prompts use that planned import count, not every selected search result.
+
+You can monitor batch progress from:
+
+- The import progress modal
+- The operations dock at the bottom of the dashboard
+- The **Activity** page
+
+<Info>
+If Kao says work is waiting, it is usually because your plan limit, server capacity, or Discord's emoji creation limit needs time to clear.
+</Info>
+
+## File checks
+
+Before uploading, Kao checks that imported files are usable Discord emoji images. Kao only accepts supported CDN/storage sources and validates image type, size, and hash before upload, so unsupported hosts, invalid image files, and oversized images are rejected early.
+
+## Troubleshooting
+
+| Problem | What to try |
+|---------|-------------|
+| Server is at capacity | Delete unused emojis or choose a server with free slots |
+| Invalid emoji name | Use only letters, numbers, and underscores |
+| Bot missing permissions | Reinvite or update the bot role with Manage Emojis and Stickers |
+| Source unavailable | Try again later or choose a different source |
+| Animated emote will not import | Check animated emoji capacity and source file size |
+
+## Next steps
+
+<CardGrid>
+  <Card title="Managing Emojis" href="/guides/managing-emojis">
+    Rename, delete, and review server emojis.
+  </Card>
+  <Card title="Collections" href="/guides/collections">
+    Save emotes into reusable collections.
+  </Card>
+  <Card title="Activity Log" href="/guides/activity-log">
+    Track import progress and history.
+  </Card>
+  <Card title="Backups" href="/guides/backups">
+    Create a restore point before large changes.
+  </Card>
+</CardGrid>

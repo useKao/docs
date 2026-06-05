@@ -1,0 +1,94 @@
+---
+title: Activity Log
+description: Track current and past emoji operations.
+---
+
+## Overview
+
+The **Activity** page shows what Kao has done, what is still running, and what needs attention.
+
+Use it to monitor:
+
+- Imports
+- Bulk deletes
+- Backup restores
+- Rotations
+- Sync groups
+
+## What each activity shows
+
+Each activity entry can include:
+
+- Operation type
+- Target server
+- Start time
+- Current status
+- Number of emojis added, removed, skipped, or failed
+- Why work is waiting, when Kao can show it
+
+## Status meanings
+
+| Status | Meaning |
+|--------|---------|
+| Pending | Kao has accepted the work and is waiting to run it |
+| In progress | Kao is actively processing items |
+| Completed | All items finished successfully |
+| Partial | Some items succeeded and some failed |
+| Failed | The operation could not finish |
+| Cancelled | The operation was stopped |
+
+## Live progress
+
+When work is active, the operations dock can appear at the bottom of the dashboard. You can keep using Kao while the operation continues.
+
+For large batches, you can minimize progress, move around the dashboard, and reopen the operation from the dock or **Activity** later to review results.
+
+## Why work can take time
+
+Emoji operations may wait when:
+
+- The server is changing many emojis.
+- Discord is temporarily limiting emoji changes for the server.
+- Your plan's import allowance needs to reset.
+- Another operation is already running on the same server.
+
+Kao shows the clearest available reason in the dashboard.
+
+## Support details
+
+If support asks you to share an activity entry, include the visible status, wait reason, server name, and any development diagnostics shown in the entry details. Do not share private Discord messages, payment details, or bot tokens.
+
+## Clear activity history
+
+To remove old entries:
+
+1. Open **Activity**.
+2. Choose **Clear History**.
+3. Confirm the action.
+
+<Info>
+Clearing activity history does not undo imports, deletes, restores, rotations, or syncs.
+</Info>
+
+## Troubleshooting
+
+| Problem | What to try |
+|---------|-------------|
+| Operation is pending | Wait for the earlier server work or Discord limit to clear |
+| Operation is partial | Open the entry to review failed items |
+| Operation failed | Check bot permissions, server capacity, and the error message |
+| Progress seems slow | Large emoji changes can take several minutes |
+
+## Next steps
+
+<CardGrid>
+  <Card title="Importing Emotes" href="/guides/importing-emotes">
+    Import emotes and watch progress.
+  </Card>
+  <Card title="Backups" href="/guides/backups">
+    Review restore activity.
+  </Card>
+  <Card title="Rotations" href="/guides/rotations">
+    Track scheduled changes.
+  </Card>
+</CardGrid>

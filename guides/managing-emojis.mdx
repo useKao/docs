@@ -1,0 +1,105 @@
+---
+title: Managing Emojis
+description: View, rename, delete, and organize a server's emojis.
+---
+
+## Overview
+
+Use the server emoji tools to keep a Discord server's emoji list clean and easy to use.
+
+From Kao you can:
+
+- View static and animated emojis
+- Search and filter the emoji grid
+- Rename emojis
+- Delete one emoji or many emojis
+- Review server capacity
+- Save useful emojis into collections
+
+## Open a server's emojis
+
+1. Go to **Servers** in the dashboard.
+2. Select a server.
+3. Open the emoji view.
+4. Use search or filters to find the emoji you want.
+
+Each emoji card shows the preview, name, and available actions.
+
+## Rename an emoji
+
+1. Select the emoji.
+2. Choose **Edit**.
+3. Enter the new name.
+4. Save your change.
+
+Emoji names must be 2 to 32 characters and can contain letters, numbers, and underscores.
+
+<Info>
+Renaming an emoji does not change older Discord messages that already used it.
+</Info>
+
+## Delete emojis
+
+To delete one emoji:
+
+1. Select the emoji.
+2. Choose **Delete**.
+3. Confirm the deletion.
+
+To delete several emojis:
+
+1. Turn on selection mode.
+2. Select each emoji you want to remove.
+3. Choose **Delete Selected**.
+4. Review the list and confirm.
+
+<Warning>
+Deleting an emoji is permanent. Create a backup first if you may need to restore the server later.
+</Warning>
+
+## Role-restricted emojis
+
+Discord supports restricting some emojis to specific roles. If your server uses this feature, open an emoji's edit view and choose the roles that should be allowed to use it.
+
+Most servers can leave role restrictions empty.
+
+## Capacity planning
+
+Kao shows static and animated emoji usage separately because Discord tracks them separately.
+
+If a server is almost full:
+
+- Remove duplicates or unused emojis.
+- Keep animated slots for emotes that need movement.
+- Move reusable emotes into a collection before deleting them.
+- Create a backup before large cleanup work.
+
+## Team access
+
+If other people help manage the server, configure shared access from the bot or server settings area. Give access only to people who should be able to modify server emojis.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---------|---------------|
+| Server does not appear | The bot may not be installed, or you may not have access to that server |
+| Rename or delete fails | Confirm the bot has Manage Emojis and Stickers permission |
+| Emoji looks broken in Discord | Discord may still be caching a deleted emoji; refresh Discord |
+| You deleted the wrong emoji | Restore from a backup if one exists |
+
+## Next steps
+
+<CardGrid>
+  <Card title="Backups" href="/guides/backups">
+    Save a restore point before cleanup.
+  </Card>
+  <Card title="Collections" href="/guides/collections">
+    Keep favorite emotes for reuse.
+  </Card>
+  <Card title="Importing Emotes" href="/guides/importing-emotes">
+    Add more emotes to the server.
+  </Card>
+  <Card title="Server Settings" href="/guides/server-settings">
+    Configure access and notifications.
+  </Card>
+</CardGrid>

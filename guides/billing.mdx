@@ -1,0 +1,99 @@
+---
+title: Billing & Plans
+description: Manage your Kao plan, checkout options, discounts, and feature limits.
+---
+
+## Overview
+
+Kao plans control feature access and limits such as imports, collections, backups, rotations, sync groups, servers, and bots.
+
+Use the **Billing** page to view your current plan, compare upgrades, manage checkout, or open subscription settings.
+
+## View plans
+
+1. Open **Billing** in the dashboard or visit the [Pricing page](https://usekao.com/pricing).
+2. Compare included features and limits.
+3. Choose monthly or yearly billing where available.
+
+Yearly billing may include a discount compared with monthly billing.
+
+## Subscribe with card
+
+1. Select a plan.
+2. Choose the billing interval.
+3. Enter a coupon code if you have one.
+4. Continue to Stripe checkout.
+5. Complete payment.
+6. Return to Kao.
+
+Most card subscriptions activate immediately after checkout succeeds.
+
+## Pay with crypto
+
+1. Select a plan.
+2. Choose **Pay with Crypto**.
+3. Enter a coupon code if you have one.
+4. Select a supported currency.
+5. Complete the NowPayments checkout.
+6. Return to Kao and wait for the payment to finish.
+
+Crypto checkout uses a hosted NowPayments invoice. The payment window is 7 days, and crypto payments can take longer to finish than card payments.
+
+Kao activates your plan only after NowPayments reports a complete `finished` payment for the expected amount and currency. Partial payments, wrong-asset payments, canceled invoices, expired invoices, failed payments, and refunds do not activate plan access automatically.
+
+## Discounts and trials
+
+Kao may show active discounts, yearly savings, free trials, or coupon fields when they are available for a plan.
+
+Manual coupon codes can apply to card checkout, crypto checkout, or both depending on the coupon. If no manual code is entered, Kao may apply the best eligible automatic discount for the selected payment method.
+
+Free trials apply to eligible card checkouts. Crypto plans activate only after NowPayments reports the payment as `finished`. Trial-extension crypto coupons are an exception: they can activate or extend access without creating a NowPayments invoice.
+
+## Change or cancel a subscription
+
+From **Billing**, you can open subscription management to:
+
+- Change plans
+- Cancel a subscription
+- Review renewal date
+- View payment status
+
+When you cancel, your paid plan remains active until the end of the current billing period. After that, your account returns to the free tier. Kao keeps your data, but features beyond free limits may become unavailable until you upgrade again.
+
+## Plan limits
+
+Kao shows upgrade prompts when you reach a limit. Common limits include:
+
+| Limit | What it affects |
+|-------|-----------------|
+| Daily imports | How many emotes you can import per day |
+| Collections | How many reusable sets you can keep |
+| Backups | How many snapshots you can store or create |
+| Rotations | How many active schedules you can run |
+| Sync groups | How many sync setups and targets you can use |
+| Bots and servers | How many communities you can manage |
+
+## Troubleshooting
+
+| Problem | What to try |
+|---------|-------------|
+| Card payment failed | Check card details or try another payment method |
+| Crypto payment is pending | Wait for the provider to finish the payment, then refresh Billing |
+| Crypto payment failed or expired | Start a new checkout from Kao |
+| Crypto payment used the wrong asset or amount | Contact support with the checkout/order details |
+| Plan did not activate | Sign out and back in, then check Billing again |
+| Feature still locked | Confirm the subscription is active and the limit has not been reached |
+
+## Next steps
+
+<CardGrid>
+  <Card title="Rotations" href="/guides/rotations">
+    Use plan features for scheduled changes.
+  </Card>
+  <Card title="Sync Groups" href="/guides/sync-groups">
+    Sync emojis across servers.
+  </Card>
+  <Card title="Account Management" href="/guides/account-management">
+    Export data or manage account deletion.
+  </Card>
+</CardGrid>
