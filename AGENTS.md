@@ -24,6 +24,7 @@
 - Bold for UI elements: Click **Settings**
 - Code formatting for file names, commands, paths, and code references
 - Prefer practical setup steps and troubleshooting tables over marketing copy.
+- Follow `DOCUMENTATION_SPEC.md` when adding or revising public docs pages.
 
 ## Content boundaries
 
