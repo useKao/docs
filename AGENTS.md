@@ -7,6 +7,8 @@
 - Configuration lives in `docs.json`.
 - Run `mint dev` to preview locally.
 - Run `mint broken-links` to check links.
+- Run `mint validate` to check the strict documentation build.
+- Run `mint a11y` to check color and media accessibility.
 
 ## Terminology
 

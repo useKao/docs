@@ -4,7 +4,7 @@
   "name": "Kao",
   "description": "Customer guides for setting up Kao, importing emotes, and managing Discord server emojis.",
   "colors": {
-    "primary": "#3B82F6",
+    "primary": "#1E40AF",
     "light": "#60A5FA",
     "dark": "#2563EB"
   },
@@ -92,7 +92,7 @@
           {
             "group": "Support",
             "icon": "circle-help",
-            "pages": ["resources/faq", "resources/troubleshooting"]
+            "pages": ["resources/support", "resources/faq", "resources/troubleshooting"]
           },
           {
             "group": "Updates",

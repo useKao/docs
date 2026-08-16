@@ -47,6 +47,21 @@ Discord emoji names must be 2 to 32 characters and can contain letters, numbers,
 If the import name already exists on the server, rename the new emote or remove the existing emoji first.
 </Warning>
 
+## Choose appearance and framing
+
+When you select emotes for import, use the appearance controls to decide how the source image is fitted into a Discord emoji.
+
+| Option | Result |
+|---------|-------------|
+| Auto | Uses the recommended balance between subject size and empty space |
+| Larger | Makes the subject bigger; wide emotes may be cropped |
+| Fit | Shows the entire image |
+| Trim | Removes more empty space around the subject |
+
+For a batch, select a group of emotes, choose a profile, and apply it to the selected items. You can reset custom choices when you want to return to the batch setting.
+
+Review the **Discord-scale preview** before importing. Check both the **Message** and **Picker** previews when an emote has important edges or fine detail.
+
 ## Import from pasted Discord emotes
 
 Use the Discord import option when you already have emotes in a message or URL list.
@@ -71,6 +86,8 @@ When a 7TV user or set appears in search:
 Large imports show progress while Kao uploads each emoji. Some batches finish quickly, while larger ones can take a few minutes because Discord limits how quickly a server can create emojis.
 
 Difficult animated emotes may show as optimizing while Kao prepares a Discord-sized file. Progress stays visible while that preparation finishes.
+
+If background optimization is still running, Kao imports the emote automatically when processing finishes. You can minimize the import window and continue browsing, then follow the result from **Activity**.
 
 If you select more emotes than the target server can currently fit, Kao plans the batch from the emotes that have available static or animated slots. Plan batch limits and upgrade prompts use that planned import count, not every selected search result.
 
@@ -97,6 +114,9 @@ Before uploading, Kao checks that imported files are usable Discord emoji images
 | Bot missing permissions | Reinvite or update the bot role with Manage Emojis and Stickers |
 | Source unavailable | Try again later or choose a different source |
 | Animated emote will not import | Check animated emoji capacity and source file size |
+| Preview is still preparing | Wait for processing to finish, then review the Discord-scale preview |
+| Larger crops the emote | Choose **Fit** or **Auto**, or review the exact preview before importing |
+| Import is queued | Check **Activity** for the quota, capacity, or Discord limit that is delaying it |
 
 ## Next steps
 

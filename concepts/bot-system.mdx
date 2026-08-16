@@ -23,7 +23,7 @@ Use it when you want:
 - A bot that Kao keeps running for you
 - A simple path for adding more servers later
 
-To invite it, go to **Bots**, choose **Invite hosted bot**, select a server, approve the Discord invite, and return to Kao for verification.
+To invite it, go to **Bots**, choose **Invite Kao Bot**, select a server, approve the Discord invite, and return to Kao for verification.
 
 ## Bring Your Own Bot
 
@@ -41,9 +41,10 @@ Use BYOB when you need:
 
 1. Open the [Discord Developer Portal](https://discord.com/developers/applications).
 2. Create an application.
-3. Open **Bot** and generate a token.
-4. Paste the token into Kao when adding your bot.
-5. Invite the bot to each server you want Kao to manage.
+3. Open **Bot** and, under **Privileged Gateway Intents**, enable **Server Members Intent**.
+4. Reset and copy the bot token.
+5. Paste the token into Kao when adding your bot.
+6. Invite the bot to each server you want Kao to manage.
 
 <Warning>
 Treat a bot token like a password. Only paste it into Kao's token field, and reset it in Discord if it is ever exposed.
@@ -54,6 +55,18 @@ Treat a bot token like a password. Only paste it into Kao's token field, and res
 At minimum, the bot needs **Manage Emojis and Stickers** in the target server.
 
 Some workflows also need the bot to see basic server structure so Kao can display channels, roles, and server settings. Kao shows missing permission warnings in the dashboard when something needs attention.
+
+For BYOB setup, enable **Server Members Intent** when Kao asks for it. Without that intent, Kao may not be able to load the bot's servers after token validation.
+
+## Permission and install health
+
+The dashboard can show a warning when:
+
+- The bot is missing a required Discord permission.
+- The bot is offline or still starting, so Kao cannot check it yet.
+- The bot may no longer be in the selected server.
+
+Open the warning to review the affected server. Reinvite or update the bot permissions when Kao offers that action, wait briefly if the bot is starting, and run the check again after Discord finishes applying the change.
 
 ## Shared server access
 
@@ -75,6 +88,8 @@ Consider BYOB if your community needs branded bot identity. Consider the hosted 
 | Hosted bot will not verify | Finish the Discord invite, then click verify again |
 | BYOB token is invalid | Reset the token in Discord and paste the new token into Kao |
 | Bot cannot import | Reinvite or update the bot role with Manage Emojis and Stickers |
+| Permission check is unavailable | Check that the bot is online, wait for startup to finish, then check again |
+| Bot may no longer be in the server | Invite the bot again and return to Kao to verify the server |
 
 ## Next steps
 

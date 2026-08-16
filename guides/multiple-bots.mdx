@@ -20,6 +20,7 @@ Hosted installs are the easiest path for most servers. Each hosted server entry 
 From a hosted server entry you can:
 
 - View install status
+- Review permission health and affected features
 - Reinvite the hosted bot if it was removed
 - Remove hosted access when you no longer want Kao managing that server
 
@@ -34,6 +35,8 @@ Use BYOB when you need custom bot identity or stronger separation between commun
 5. Invite the bot to the servers it should manage.
 
 Each BYOB bot needs its own Discord application and token.
+
+When Discord asks for privileged access during setup, enable **Server Members Intent** in the application's **Bot** settings. Kao uses it to load the bot's server list after validation.
 
 ## Assign servers
 
@@ -75,6 +78,7 @@ Use shared access when teammates should help with emoji work without owning the 
 | Server is missing | Invite the bot to that server or check shared access |
 | Permission warning appears | Reinvite the bot or update its Discord role permissions |
 | Hosted bot was removed | Reinvite the hosted Kao Bot from the server entry |
+| Permission check is unavailable | Confirm the bot is online or wait for startup to finish, then recheck |
 
 ## Next steps
 

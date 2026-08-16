@@ -27,7 +27,7 @@ Use this structure unless a new product area clearly needs a new group.
 | Emoji workflows | Importing, managing, saving, and creating emotes | Importing emotes, Managing emojis, Collections, Emote Creator |
 | Automation | Repeated or scheduled emoji operations | Backups, Rotations, Sync groups, Activity log |
 | Account and settings | Billing, privacy, account, and server preferences | Server settings, Billing, Account management |
-| Resources | Help, updates, and reference answers | FAQ, Troubleshooting, Changelog |
+| Resources | Help, updates, and reference answers | Support, FAQ, Troubleshooting, Changelog |
 
 The homepage should act as a map. It must include:
 
@@ -190,7 +190,26 @@ What it usually means.
 Before opening a docs PR:
 
 - Run `mint broken-links` from this repository.
+- Run `mint validate` from this repository.
+- Run `mint a11y` from this repository.
 - Search for outdated product names or forbidden internal terms.
 - Check that every changed page has next-step links.
 - Check that public docs do not reveal internal runbooks, security findings, source-code-derived secrets, or private architecture.
 - If a product change affects setup, billing, permissions, or Discord behavior, update troubleshooting and FAQ in the same change.
+
+## Future media opportunities
+
+Use visuals when they make a customer task easier to understand than text or a table. Keep this
+list as a planning aid; do not add visual assets only for decoration.
+
+Potential candidates:
+
+- Bot setup: hosted Kao Bot versus BYOB setup and the permission recheck flow.
+- Importing: appearance profiles, exact Discord-scale previews, and queued processing.
+- Rotations: Full replacement, Partial update, and Playlist behavior comparison.
+- Backups: Add Missing versus Sync to Backup restore modes.
+- Activity: the lifecycle from queued work to completion or partial completion.
+- Short videos: first-time setup, importing a batch, and recovering from a permission warning.
+
+For each future visual, record the user goal it supports, the product state needed to capture it,
+the update trigger, descriptive alt text, and a transcript or text equivalent for video.

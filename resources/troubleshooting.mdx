@@ -20,6 +20,22 @@ description: Fix common setup, import, server, billing, and account issues.
 4. Click verify again.
 5. If needed, remove the failed install and invite the hosted bot again.
 
+### Bot permission warning or bot not found
+
+**Symptoms**
+
+- Kao shows **Missing Bot Permissions**.
+- Kao says it cannot check the bot because it is offline or still starting.
+- Kao says the bot may no longer be in the selected server.
+
+**Fixes**
+
+1. Open the warning and review the affected server and feature.
+2. Update the bot role with the missing Discord permission, or use the offered update or reinvite action.
+3. If the bot is starting, wait briefly and check again.
+4. If the bot was removed, invite it to the server again and return to Kao to verify it.
+5. Check the [Kao service status page](https://status.usekao.com) if the check remains unavailable.
+
 ### BYOB token is invalid
 
 **Symptoms**
@@ -104,6 +120,21 @@ Resetting a token makes the old token stop working immediately.
 2. Wait for Discord's emoji change limit to clear.
 3. Import fewer emotes at once for urgent changes.
 4. Confirm your daily import allowance has not been reached.
+
+### Preview or appearance is not what I expected
+
+**Symptoms**
+
+- An animated preview is still preparing.
+- A wide emote looks cropped after choosing a larger appearance.
+- An import is queued for background processing.
+
+**Fixes**
+
+1. Review the **Discord-scale preview** after preparation finishes.
+2. Choose **Auto** or **Fit** if important edges are cropped.
+3. Use **Trim** when the image has too much empty space.
+4. Follow the operation from **Activity** while background optimization or rate-limit processing finishes.
 
 ### Search returns no results
 
@@ -228,6 +259,9 @@ When asking for help, include:
 - What you already tried
 
 <CardGrid>
+  <Card title="Support" href="/resources/support">
+    Check service status or choose the right way to contact Kao.
+  </Card>
   <Card title="Discord Community" href="https://usekao.com/api/discord/invite">
     Get help from the community.
   </Card>
