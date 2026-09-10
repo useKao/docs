@@ -5,7 +5,7 @@ description: Keep Discord server emojis synchronized.
 
 ## Overview
 
-Sync groups copy emojis from a source to one or more target servers. Use them to keep related communities, event servers, or brand servers consistent.
+Sync groups copy emojis from a source to one or more target servers when you choose **Sync Now**. Use them to keep related communities, event servers, or brand servers consistent.
 
 ## Sync modes
 
@@ -18,7 +18,8 @@ Sync groups copy emojis from a source to one or more target servers. Use them to
 
 Make sure:
 
-- Kao can manage the source and target servers.
+- The source collection exists, or Kao can access the source server.
+- Kao can manage each target server.
 - The bot has **Manage Emojis and Stickers** in each target server.
 - Target servers have enough static and animated emoji capacity.
 - You have a backup if the sync may remove emojis.
@@ -51,7 +52,7 @@ Remove Extra Emojis can delete target server emojis. Leave it off if targets sho
 
 Sync groups run when you choose **Sync Now**.
 
-Kao compares the source and target servers, then adds missing emojis and optionally removes extras. Progress appears while the sync runs, and results are saved in sync history.
+Kao compares the source with each target, then adds missing emojis and optionally removes extras. Progress appears while the sync runs, and results are saved in sync history.
 
 Large syncs can take a few minutes because Discord limits emoji changes.
 
@@ -59,10 +60,10 @@ Large syncs can take a few minutes because Discord limits emoji changes.
 
 You can:
 
-- Change the source collection or server
-- Add or remove targets
+- Rename the group
 - Toggle static or animated syncing
 - Toggle Remove Extra Emojis
+- Run Sync Now
 - Review history
 - Delete the group
 

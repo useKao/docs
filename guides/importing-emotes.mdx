@@ -1,11 +1,11 @@
 ---
-title: Importing Emotes
-description: Search, preview, rename, and import emotes into Discord.
+title: Import emotes into Discord
+description: Import 7TV, BTTV, FFZ, and EmojiGG emotes into Discord with Kao, including batches and animated emotes.
 ---
 
 ## Overview
 
-The **Import** page is the main place to add emotes to a Discord server. You can search supported platforms, browse 7TV sets, paste Discord emote text, preview results, and import one or more emotes.
+Kao imports emotes from 7TV, BetterTTV, FrankerFaceZ, and EmojiGG into your Discord server through a web dashboard. Use the hosted Kao Bot or Bring Your Own Bot. The **Import** page is the main place to add emotes. You can search supported platforms, browse 7TV sets, paste Discord emote text, preview results, and import one or more emotes.
 
 Kao supports:
 
@@ -17,7 +17,7 @@ Kao supports:
 
 ## Before you begin
 
-Make sure:
+Follow the [quickstart](/quickstart) to connect the hosted Kao Bot or your BYOB bot first. Then make sure:
 
 - The target server appears in the server picker.
 - The hosted Kao Bot or your BYOB bot is installed in that server.
@@ -83,7 +83,9 @@ When a 7TV user or set appears in search:
 
 ## Importing batches
 
-Large imports show progress while Kao uploads each emoji. Some batches finish quickly, while larger ones can take a few minutes because Discord limits how quickly a server can create emojis.
+Select several emotes, review the selected items and target server, then choose **Import**. Kao shows progress for each emoji.
+
+Completion time depends on file processing, your available plan allowance, and Discord limits. A queued batch can take longer than a few minutes. Wait for the final result rather than treating the start of a batch as a successful import.
 
 Difficult animated emotes may show as optimizing while Kao prepares a Discord-sized file. Progress stays visible while that preparation finishes.
 
@@ -98,8 +100,18 @@ You can monitor batch progress from:
 - The **Activity** page
 
 <Info>
-If Kao says work is waiting, it is usually because your plan limit, server capacity, or Discord's emoji creation limit needs time to clear.
+Check **Activity** to see why work is waiting. Rate limits can clear with time, but a full server needs free emoji slots. Fix missing permissions before retrying failed work.
 </Info>
+
+## Animated GIF and WebP emotes
+
+Kao can process animated provider emotes, including GIF and animated WebP sources. The source format and the file uploaded to Discord can differ because Kao prepares the image for Discord. Check the animated preview and the server's available animated emoji slots before importing.
+
+Some animations need background optimization. An optimizing status means the image is still being prepared; check **Activity** for the final import result.
+
+## Confirm the import
+
+Check the final result in **Activity**, then confirm the emoji appears in your Discord server's emoji list. If a batch partially completes, review the failed items before retrying them.
 
 ## File checks
 

@@ -1,17 +1,18 @@
 ---
-title: Rotations
-description: Refresh server emojis automatically from collections.
+title: Schedule Discord emoji rotations
+description: Schedule Discord emoji changes with Kao collections, partial updates, or playlists.
 ---
 
 ## Overview
 
-Rotations refresh a server's emojis from a collection. Use them when you want seasonal sets, event-specific emoji pools, or a server that changes on a schedule.
+Kao can rotate your Discord server emojis automatically on a recurring schedule. Rotations use emotes saved in Kao collections. Use them when you want seasonal sets, event-specific emoji pools, or a server that changes on a schedule.
 
 ## Before you begin
 
 You need:
 
-- A server Kao can manage
+- The hosted Kao Bot or your BYOB bot installed in a server Kao can manage
+- The bot permission to manage emojis in that server
 - At least one collection with emotes
 - Enough plan allowance for active rotations
 - A backup if the rotation may remove existing emojis
@@ -21,9 +22,9 @@ You need:
 1. Go to **Rotations**.
 2. Choose **Create Rotation**.
 3. Name the rotation and select a server.
-4. Choose a collection, or choose the collections for a playlist.
-5. Set the schedule.
-6. Choose behavior.
+4. Choose a collection.
+5. Set **Repeat Every** and **Timezone**.
+6. Choose the rotation behavior. For a playlist, choose at least two collections at this step.
 7. Review and create the rotation.
 
 ## Schedule options
@@ -32,13 +33,13 @@ You need:
 |----------|-------------|
 | Simple recurring | You want an interval such as every 6, 12, or 24 hours |
 
-You can set the timezone so the schedule matches your community.
+Choose an available **Repeat Every** interval and a **Timezone**. The minimum interval depends on your plan; unavailable intervals are disabled. A scheduled start does not promise an exact completion time.
 
 ## Rotation behavior
 
 | Behavior | What it does | Use it when |
 | --- | --- | --- |
-| Full replacement | Removes the server's existing emojis and replaces them with emotes from one collection | You want the server to match one collection exactly |
+| Full replacement | Removes the server's existing emojis and replaces them with emotes from one collection | You want to replace the current set with one collection |
 | Partial update | Keeps the base emojis you choose and rotates the remaining emojis from one collection | Some permanent emojis should stay in place |
 | Playlist rotation | Cycles through multiple collections in sequence | You want different collections to appear over time |
 
@@ -52,7 +53,11 @@ Full replacement can remove many server emojis, including emojis that are not in
 
 Use **Execute Now** when you want to test or run a rotation outside its schedule.
 
-Kao shows live progress while it removes and adds emojis. Large rotations can take several minutes because Discord limits how quickly a server can change emojis.
+Kao shows live progress while it removes and adds emojis. Processing and Discord limits can delay completion. Check execution history for added, removed, and failed items before running it again.
+
+<Warning>
+**Execute Now** performs real changes. Test a replacement rotation on a test server first. Disabling a schedule does not restore emojis removed by an earlier execution.
+</Warning>
 
 ## Manage rotations
 
@@ -71,7 +76,7 @@ From the Rotations page you can:
 | Target server is missing | Confirm the bot is linked to that server, then refresh Rotations so Kao reloads target server capacity |
 | Rotation did not run | Make sure it is enabled and the schedule is correct |
 | Rotation partially completed | Open history or Activity to see which emojis failed |
-| Server is missing emojis | Check capacity, source collection size, and any failed items |
+| Server is missing emojis | Check capacity, source collection size, and failed items. A partial run may have removed emojis before additions completed; review history before retrying or restoring a backup |
 | Plan limit reached | Disable or delete an old rotation, or review your plan |
 
 ## Next steps
