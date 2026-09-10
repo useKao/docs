@@ -5,7 +5,7 @@ description: Back up and restore a server's emojis.
 
 ## Overview
 
-Backups save a point-in-time copy of a server's emojis. Use them before large imports, rotations, syncs, or cleanup work.
+Backups save a point-in-time copy of a server's emojis. They are not a continuous mirror, so create another backup after important changes. Use them before large imports, rotations, syncs, or cleanup work.
 
 You can restore a backup to the original server, copy it to another server, or convert it into a collection.
 
@@ -22,6 +22,10 @@ You can restore a backup to the original server, copy it to another server, or c
 
 <Info>
 The confirmation screen shows the total count and static versus animated breakdown before you start.
+</Info>
+
+<Info>
+Backup creation can be queued while Kao captures and processes the emoji artifacts. Wait for the backup to show as completed before restoring it.
 </Info>
 
 ## What a backup includes
@@ -48,6 +52,8 @@ Your plan controls how many backups you can keep and how many you can create in 
 Sync to Backup can delete emojis from the target server. Use Add Missing if you want to keep existing emojis.
 </Warning>
 
+Restoring uploads emoji artifacts again through Discord. The restored emojis are new Discord emoji records, so an old emoji ID or a message that refers to that ID is not preserved.
+
 ## Restore to another server
 
 You can restore a backup to any server Kao can manage. This is useful when you want to copy an emoji set to a new community.
@@ -65,6 +71,7 @@ Collections are easier to browse, import from, rotate, and sync later.
 - Create a backup before bulk deleting emojis.
 - Create a backup before using Sync to Backup or full replacement rotations.
 - Name backups with dates or event names.
+- Run a fresh backup after major changes; an older backup reflects only its creation point.
 - Delete backups you no longer need if you hit your plan limit.
 - Convert long-term reusable sets into collections.
 
@@ -73,6 +80,7 @@ Collections are easier to browse, import from, rotate, and sync later.
 | Problem | What to try |
 |---------|-------------|
 | Backup limit reached | Delete an old backup or review your plan |
+| Backup is still processing | Wait for a completed status before trying to restore it |
 | Restore partially failed | Check target capacity and open Activity for item-level status |
 | Restored emojis are missing | Confirm the restore finished and the target server has enough slots |
 | Wrong emoji count | A backup reflects the server at the moment it was created |
