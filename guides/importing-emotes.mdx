@@ -15,6 +15,10 @@ Kao supports:
 - EmojiGG
 - Discord emote text or URLs pasted into the import tool
 
+Use this guide when you want the imported emoji to become a real Discord server
+emoji. The bot needs permission and the server needs an available static or
+animated slot. A queued or optimizing state is progress, not proof of delivery.
+
 ## Before you begin
 
 Follow the [quickstart](/quickstart) to connect the hosted Kao Bot or your BYOB bot first. Then make sure:
@@ -109,9 +113,18 @@ Kao can process animated provider emotes, including GIF and animated WebP source
 
 Some animations need background optimization. An optimizing status means the image is still being prepared; check **Activity** for the final import result.
 
-## Confirm the import
+## How to know the import finished
 
-Check the final result in **Activity**, then confirm the emoji appears in your Discord server's emoji list. If a batch partially completes, review the failed items before retrying them.
+An import is complete only when the batch reports its final result and the emoji
+appears in the target Discord server. Check:
+
+- **Activity** shows the batch as complete rather than queued or optimizing.
+- The final result separates imported, failed, and still-waiting items.
+- The emoji appears in the target server's emoji list.
+- Failed items have enough capacity and the bot still has permission before you retry.
+
+If a batch partially completes, retry only the failed items after fixing the
+reported cause.
 
 ## File checks
 

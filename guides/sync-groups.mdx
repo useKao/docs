@@ -7,6 +7,10 @@ description: Keep Discord server emojis synchronized.
 
 Sync groups copy emojis from a source to one or more target servers when you choose **Sync Now**. Use them to keep related communities, event servers, or brand servers consistent.
 
+Sync is deliberate, not automatic when the source changes. Each run can finish
+differently per target server because permissions, capacity, or Discord limits
+may differ.
+
 ## Sync modes
 
 | Mode | Source | Best for |
@@ -66,6 +70,18 @@ You can:
 - Run Sync Now
 - Review history
 - Delete the group
+
+## How to know a sync finished
+
+Open sync history after the run. For every target server, confirm:
+
+- The run reached a final state.
+- Added, removed, and failed counts match the result you expected.
+- Emojis that should remain are still present when **Remove Extra Emojis** was off.
+- Failed targets have enough capacity and the bot still has permission before retrying.
+
+A successful target does not prove that every other target succeeded. Review
+each target result separately.
 
 ## Troubleshooting
 
