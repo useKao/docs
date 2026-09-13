@@ -7,6 +7,9 @@ description: Configure access, notifications, presets, and bot behavior for a se
 
 Server settings control how Kao behaves in a specific Discord server. The available tabs depend on whether the server uses the hosted Kao Bot or a connected BYOB bot. Use them to adjust command access, notifications, community announcements, presets, and bot presentation where those options are available.
 
+Command access decides who may use Kao's Discord commands. It does not create
+viewer, editor, or admin roles for the Kao dashboard.
+
 ## Open server settings
 
 1. Go to **Servers**.
@@ -42,8 +45,22 @@ Command access controls who can use Kao's Discord slash commands in the server.
 | Blacklist | Everyone except selected users |
 
 <Info>
-Dashboard access and Discord command access are related but not identical. Review shared server access if teammates also use the dashboard.
+Dashboard access and Discord command access are separate checks. A Discord role
+allowed to run bot commands does not automatically grant that member access to
+another user's Kao dashboard.
 </Info>
+
+## How to verify an access change
+
+After saving command access settings:
+
+1. Confirm the saved mode and selected roles or users still appear after reload.
+2. Test an allowed command with a Kao-owned test account that should pass.
+3. Test the same command with a Kao-owned test account that should be blocked.
+4. Confirm both accounts still need the normal Discord permissions for the action.
+
+Do not test with a customer account or ask anyone to share a session, bot token,
+or Discord credential.
 
 ## Staff notifications
 

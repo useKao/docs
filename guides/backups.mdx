@@ -9,6 +9,10 @@ Backups save a point-in-time copy of a server's emojis. They are not a continuou
 
 You can restore a backup to the original server, copy it to another server, or convert it into a collection.
 
+A backup is a point-in-time emoji snapshot, not a continuous mirror or a full
+Discord server backup. Wait for its completed state before relying on it as a
+restore point.
+
 ## Create a backup
 
 1. Go to **Backups**.
@@ -74,6 +78,21 @@ Collections are easier to browse, import from, rotate, and sync later.
 - Run a fresh backup after major changes; an older backup reflects only its creation point.
 - Delete backups you no longer need if you hit your plan limit.
 - Convert long-term reusable sets into collections.
+
+## How to know backup or restore work finished
+
+For a new backup, confirm that its status is complete and that the static,
+animated, and total counts match the source server at capture time.
+
+For a restore, open **Activity** and confirm:
+
+- The restore reached a final state.
+- Restored and failed item counts are visible.
+- The target server contains the expected emoji names and images.
+- The target has enough capacity and the bot still has permission before retrying failures.
+
+Restored emojis receive new Discord emoji IDs. Completion does not restore old
+message references to the deleted IDs.
 
 ## Troubleshooting
 

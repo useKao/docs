@@ -7,6 +7,10 @@ description: Schedule Discord emoji changes with Kao collections, partial update
 
 Kao can rotate your Discord server emojis automatically on a recurring schedule. Rotations use emotes saved in Kao collections. Use them when you want seasonal sets, event-specific emoji pools, or a server that changes on a schedule.
 
+The schedule starts a real Discord mutation workflow. Capacity, file processing,
+and Discord limits can delay completion, so the execution result matters more
+than the scheduled start time.
+
 ## Before you begin
 
 You need:
@@ -68,6 +72,19 @@ From the Rotations page you can:
 - Run a rotation manually
 - View execution history
 - Delete a rotation
+
+## How to know a rotation finished
+
+Open rotation history or **Activity** and check:
+
+- The execution reached a final state.
+- Added, removed, and failed item counts are visible.
+- Base emojis remain after a partial update.
+- The expected collection is active after a playlist step.
+- The server still has enough capacity and the bot has permission before a retry.
+
+Do not immediately rerun a partial execution. Review failed items first, because
+another run can repeat removals without fixing the failed additions.
 
 ## Troubleshooting
 
