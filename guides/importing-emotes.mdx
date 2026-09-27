@@ -1,6 +1,6 @@
 ---
 title: Import emotes into Discord
-description: Import 7TV, BTTV, FFZ, and EmojiGG emotes into Discord with Kao, including batches and animated emotes.
+description: "Import 7TV, BTTV, FFZ, and EmojiGG emotes into Discord with Kao, including batches and animated emotes."
 ---
 
 ## Overview
@@ -15,9 +15,7 @@ Kao supports:
 - EmojiGG
 - Discord emote text or URLs pasted into the import tool
 
-Use this guide when you want the imported emoji to become a real Discord server
-emoji. The bot needs permission and the server needs an available static or
-animated slot. A queued or optimizing state is progress, not proof of delivery.
+Use this guide when you want the imported emoji to become a real Discord server emoji. The bot needs permission and the server needs an available static or animated slot. A queued or optimizing state is progress, not proof of delivery.
 
 ## Before you begin
 
@@ -48,7 +46,7 @@ Search works best with short emote names, creator names, or common community phr
 Discord emoji names must be 2 to 32 characters and can contain letters, numbers, and underscores.
 
 <Warning>
-If the import name already exists on the server, rename the new emote or remove the existing emoji first.
+  If the import name already exists on the server, rename the new emote or remove the existing emoji first.
 </Warning>
 
 ## Choose appearance and framing
@@ -56,7 +54,7 @@ If the import name already exists on the server, rename the new emote or remove 
 When you select emotes for import, use the appearance controls to decide how the source image is fitted into a Discord emoji.
 
 | Option | Result |
-|---------|-------------|
+| --- | --- |
 | Auto | Uses the recommended balance between subject size and empty space |
 | Larger | Makes the subject bigger; wide emotes may be cropped |
 | Fit | Shows the entire image |
@@ -104,7 +102,7 @@ You can monitor batch progress from:
 - The **Activity** page
 
 <Info>
-Check **Activity** to see why work is waiting. Rate limits can clear with time, but a full server needs free emoji slots. Fix missing permissions before retrying failed work.
+  Check **Activity** to see why work is waiting. Discord allows roughly 50 new emojis per server per rolling hour, shared by Kao imports, rotations, and manual uploads, so rate limits clear with time. A full server needs free emoji slots regardless. Fix missing permissions before retrying failed work.
 </Info>
 
 ## Animated GIF and WebP emotes
@@ -115,16 +113,14 @@ Some animations need background optimization. An optimizing status means the ima
 
 ## How to know the import finished
 
-An import is complete only when the batch reports its final result and the emoji
-appears in the target Discord server. Check:
+An import is complete only when the batch reports its final result and the emoji appears in the target Discord server. Check:
 
 - **Activity** shows the batch as complete rather than queued or optimizing.
 - The final result separates imported, failed, and still-waiting items.
 - The emoji appears in the target server's emoji list.
 - Failed items have enough capacity and the bot still has permission before you retry.
 
-If a batch partially completes, retry only the failed items after fixing the
-reported cause.
+If a batch partially completes, retry only the failed items after fixing the reported cause.
 
 ## File checks
 
@@ -133,7 +129,7 @@ Before uploading, Kao checks that imported files are usable Discord emoji images
 ## Troubleshooting
 
 | Problem | What to try |
-|---------|-------------|
+| --- | --- |
 | Server is at capacity | Delete unused emojis or choose a server with free slots |
 | Invalid emoji name | Use only letters, numbers, and underscores |
 | Bot missing permissions | Reinvite or update the bot role with Manage Emojis and Stickers |
@@ -149,12 +145,15 @@ Before uploading, Kao checks that imported files are usable Discord emoji images
   <Card title="Managing Emojis" href="/guides/managing-emojis">
     Rename, delete, and review server emojis.
   </Card>
+
   <Card title="Collections" href="/guides/collections">
     Save emotes into reusable collections.
   </Card>
+
   <Card title="Activity Log" href="/guides/activity-log">
     Track import progress and history.
   </Card>
+
   <Card title="Backups" href="/guides/backups">
     Create a restore point before large changes.
   </Card>
