@@ -1,0 +1,92 @@
+---
+title: Emote polls
+description: Let your server members vote on which emotes get added, and have Kao add the winners for you.
+---
+
+## Overview
+
+Emote polls let your members decide which emotes get added to the server. Kao posts the poll in Discord, counts the votes, and adds the winning emotes automatically.
+
+There are two kinds of poll:
+
+| Poll type | How it works |
+|-----------|--------------|
+| Single emote | Members vote **Yes** or **No** on one emote |
+| Ballot | Members pick their favorites from 2 to 8 emotes on a private ballot. The top picks win |
+
+## Before you begin
+
+- Kao must be in the server, with permission to post in the poll channel.
+- To change poll settings on the dashboard, you need to manage the server in Kao: own its bot, or be an admin of its hosted Kao Bot install.
+- To start and manage polls in Discord, you need the Kao administrator role and the **Manage Server** permission, or a **Poll managers** role.
+- The server needs free emoji slots for the winners.
+
+<Info>
+If you do not see **Polls** on a server's page, polls are not available for that server yet.
+</Info>
+
+## Set up polls
+
+1. Open **Servers**, select the server, and choose **Polls**.
+2. Open the **Settings** tab.
+3. Make sure **Polls are on** is turned on.
+4. Choose a **Poll channel**.
+5. Set **Who can vote**: **Anyone**, **Only these roles**, or **Everyone except these roles**.
+6. Choose your **Poll managers**. They can start, end, cancel, and retry polls in Discord.
+7. Save your settings.
+
+You can also set **Poll length**, **Votes needed**, **Yes votes needed to pass (%)**, **Progress updates**, and a **Log channel**.
+
+## Start a poll
+
+You can start a poll in three ways:
+
+- **Dashboard:** open the server's **Polls** section and click **New poll**.
+- **`/kao`:** open **More** > **Polls** > **New poll**.
+- **Message command:** right-click a message that contains 7TV or FrankerFaceZ links, choose **Apps**, then **Start an emote poll**.
+
+Kao posts the poll in the poll channel you chose.
+
+## When a poll ends
+
+Kao adds the winning emotes automatically. If an emote cannot be added, Kao explains why and offers **Try adding again**.
+
+If a poll ends with too few votes, you can still choose **Add it anyway**. Use **End now** to close a poll early, or **Cancel poll** to stop it without adding anything.
+
+Find every poll's result on the **Past polls** tab.
+
+## Poll schedules
+
+On the Pro plan, Kao can start polls for you on a repeating schedule. Open the **Schedules** tab and choose a source: one of your collections or 7TV trending emotes.
+
+## Plan limits
+
+| Limit | Free | Pro |
+|-------|------|-----|
+| Open polls at once | 2 | 10 |
+| Emotes per poll | Up to 4 | Up to 8 |
+| Poll schedules | Not included | Included |
+
+## Troubleshooting
+
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| **Polls** section is missing | Polls are not available for the server yet | Check again later |
+| Poll does not post | Kao cannot post in the poll channel | Check the channel permissions for Kao's bot |
+| Winner was not added | The server is full or the bot lacks **Create Expressions** | Free a slot or fix permissions, then use **Try adding again** |
+| Members cannot vote | **Who can vote** excludes their roles | Review **Who can vote** in poll settings |
+| You cannot start a poll | You reached your plan's open poll limit | End a poll or upgrade |
+
+## Next steps
+
+<CardGrid>
+  <Card title="Use Kao in Discord" href="/guides/bot-commands">
+    Run polls and more from `/kao`.
+  </Card>
+  <Card title="Collections" href="/guides/collections">
+    Build a collection to use for poll schedules.
+  </Card>
+  <Card title="Server settings" href="/guides/server-settings">
+    Choose who can use Kao in the server.
+  </Card>
+</CardGrid>

@@ -23,10 +23,11 @@ Use this structure unless a new product area clearly needs a new group.
 | Area | Purpose | Page examples |
 |------|---------|---------------|
 | Start here | First-session orientation and setup | Introduction, Quickstart, Overview |
-| Bot setup | Server access, hosted Kao Bot, and BYOB | Bot system, Multiple bots, Bot commands |
-| Emoji workflows | Importing, managing, saving, and creating emotes | Importing emotes, Managing emojis, Collections, Emote Creator |
-| Automation | Repeated or scheduled emoji operations | Backups, Rotations, Sync groups, Activity log |
-| Account and settings | Billing, privacy, account, and server preferences | Server settings, Billing, Account management |
+| Servers and bots | Server access, hosted Kao Bot, BYOB, and per-server settings | Choose a bot setup, Servers and bots, Server settings |
+| Kao in Discord | Using Kao from inside Discord | Use Kao in Discord, Emote polls |
+| Emoji workflows | Importing, managing, saving, and creating emotes | Import emotes, Browser extension, Manage emojis, Collections, Emote Creator |
+| Automation | Repeated or scheduled emoji operations | Streamer emotes, Backups, Rotations, Sync groups, Activity |
+| Account and settings | Notifications, billing, privacy, and account | Notifications, Billing and plans, Account and privacy |
 | Resources | Help, updates, and reference answers | Support, FAQ, Troubleshooting, Changelog |
 
 The homepage should act as a map. It must include:
@@ -207,7 +208,7 @@ Potential candidates:
 - Bot setup: hosted Kao Bot versus BYOB setup and the permission recheck flow.
 - Importing: appearance profiles, exact Discord-scale previews, and queued processing.
 - Rotations: Full replacement, Partial update, and Playlist behavior comparison.
-- Backups: Add Missing versus Sync to Backup restore modes.
+- Backups: Add missing emojis versus Make it match the backup restore modes.
 - Activity: the lifecycle from queued work to completion or partial completion.
 - Short videos: first-time setup, importing a batch, and recovering from a permission warning.
 

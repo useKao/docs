@@ -1,126 +1,132 @@
 ---
-title: Server Settings
-description: Configure access, notifications, presets, and bot behavior for a server.
+title: Server settings
+description: Set who can use Kao in a server, turn server features on or off, share the server with your team, and configure BYOB notifications.
 ---
 
 ## Overview
 
-Server settings control how Kao behaves in a specific Discord server. The available tabs depend on whether the server uses the hosted Kao Bot or a connected BYOB bot. Use them to adjust command access, notifications, community announcements, presets, and bot presentation where those options are available.
+Each server has its own page in Kao. Use it to check whether Kao is working in the server, choose who can use Kao there, and share the server with teammates.
 
-Command access decides who may use Kao's Discord commands. It does not create
-viewer, editor, or admin roles for the Kao dashboard.
+## Open a server's page
 
-## Open server settings
-
-1. Go to **Servers**.
+1. Open **Servers**.
 2. Select a server.
-3. Open **Settings**.
-4. Choose the tab you want to update.
+3. Choose a section from the server menu. On a phone, use the section picker at the top of the page.
 
-## Bot settings
+## Server page sections
 
-Bot settings can include:
+| Section | What it does | Available for |
+|---------|--------------|---------------|
+| **Overview** | Shows whether Kao is working, what needs fixing, and a shortcut to `/kao` | All servers |
+| **Commands** | Sets Kao roles, server features, and the server language | All servers |
+| **Polls** | Runs and schedules emote polls | All servers where polls are available |
+| **Team** | Shares the server with teammates through a Discord role | All servers |
+| **Activity** | Lists work done in this server, including work started from Discord | All servers |
+| **Notifications** | Sets staff notifications and community announcements | BYOB servers you own |
+| **Presets** | Saves and applies server settings | BYOB servers you own |
+| **Branding** | Sets the bot nickname. White-label branding, accent color, and attribution need Pro or Enterprise | BYOB bot owners |
 
-- Bot nickname or presentation options
-- Command access mode
-- Roles allowed to use commands
-- Import acknowledgement behavior
+## Kao roles
 
-Some BYOB setups also show bot presence controls so you can choose the activity text Discord displays for that bot.
+Kao roles decide who can use Kao in Discord and what they can do. Set them in **Commands** under **Who can manage Kao?**, or in Discord from `/kao` > **More** > **Settings**.
+
+| Kao role | Can do |
+|----------|--------|
+| **Importer** | Add emotes |
+| **Emote manager** | Everything an Importer can do, plus manage emotes and run automation |
+| **Kao administrator** | Everything an Emote manager can do, plus change Kao's settings for the server, restore with **Make it match the backup**, and delete backups |
+
+Kao also checks the member's Discord permissions for each action:
+
+| Action | Discord permission needed |
+|--------|---------------------------|
+| Add emotes | **Create Expressions** |
+| Rename, protect, restrict, or delete emotes | **Manage Expressions** |
+| Run a rotation | **Create Expressions** and **Manage Expressions** |
+| Change Kao's settings for the server | **Manage Server** |
+
+The server owner and members with Administrator always count as Kao administrators. You can assign up to 25 roles in total.
+
+Members without a Kao role see "You need a Kao role to use Kao here." when they try to use Kao in Discord.
 
 <Info>
-Hosted Kao Bot installs support the core emote workflows, while bot identity, presence, command access and white-label controls can be limited to connected BYOB bots.
+Kao roles control what members can do in Discord. Dashboard access to a server you do not own comes from [Team access](#team-access).
 </Info>
 
-## Command access
+## Server features and language
 
-Command access controls who can use Kao's Discord slash commands in the server.
+In **Commands**, use **Server features** to turn individual Kao features on or off for the server, such as collections, backups, rotations, and import acknowledgements.
 
-| Mode | Who can use commands |
-|------|----------------------|
-| Owner Only | The bot owner |
-| Admins Only | Discord users with admin-level server permissions |
-| Role Based | Users with selected Discord roles |
-| Whitelist | Only selected users |
-| Blacklist | Everyone except selected users |
+Use **Server language** to choose the language Kao uses in Discord. The default is the server's Discord language. Kao supports 12 languages.
 
-<Info>
-Dashboard access and Discord command access are separate checks. A Discord role
-allowed to run bot commands does not automatically grant that member access to
-another user's Kao dashboard.
-</Info>
+## Team access
 
-## How to verify an access change
+Team access lets teammates manage a server from their own Kao dashboard. It works with both the hosted Kao Bot and BYOB, and needs a paid plan.
 
-After saving command access settings:
+1. Open the server and choose **Team**.
+2. Under **Team role**, click **Choose role** and select the Discord role your teammates have.
 
-1. Confirm the saved mode and selected roles or users still appear after reload.
-2. Test an allowed command with a Kao-owned test account that should pass.
-3. Test the same command with a Kao-owned test account that should be blocked.
-4. Confirm both accounts still need the normal Discord permissions for the action.
+Members with that role see the server under **Shared with you** on their **Servers** page and can manage it from their own dashboard. Some actions, such as running polls, also depend on their Kao role and Discord permissions.
 
-Do not test with a customer account or ask anyone to share a session, bot token,
-or Discord credential.
-
-## Staff notifications
-
-Staff notifications send operational updates to a Discord channel.
-
-Common categories include:
-
-- Imports
-- Rotations
-- Syncs
-- Warnings
-- Changelog updates
-
-Choose a channel, select the categories you want, and save.
-
-## Community announcements
-
-Community announcements share public-facing updates with your members, such as new emotes or refreshed rotations.
-
-You can enable announcements for:
-
-- Emote added
-- Rotation refreshed
-- Collection synced
-
-If your plan includes white-label options, you may also be able to customize announcement name, avatar, accent color, and attribution.
-
-## Presets
-
-Presets let you save server settings and apply them again later.
-
-Use presets when:
-
-- You manage several similar servers.
-- You want a known-good notification setup.
-- You are testing changes and want an easy way back.
+## Remove Kao from a server
 
 <Warning>
-Applying a preset can replace current server settings. Save the current setup first if you may need it again.
+**Remove Kao** affects everyone who uses Kao in the server:
+
+- With your own bot, Kao stops running the server through that bot and deletes the server's Kao settings. The bot stays in the server until you remove it in Discord.
+- With the hosted Kao Bot, the bot leaves the server and everyone's Kao access to it ends.
+</Warning>
+
+Open the server's **Team** section and use **Remove Kao** in the danger zone. If someone else added the hosted Kao Bot and made you an admin, use **Leave server** instead. It only ends your own access. If your access comes from a Team role, ask the server owner to remove that Discord role from you.
+
+## Notifications (BYOB)
+
+Servers that use your own bot can post updates to Discord.
+
+**Staff notifications** send operational alerts as bot messages. Choose a channel and the categories you want:
+
+- **Import Updates**
+- **Rotations**
+- **Syncs**
+- **Warnings**
+- **Emote Votes**
+
+**Community announcements** post public updates through a webhook. Turn on **Enable announcements**, choose an **Announcement channel**, then connect a webhook with **Make one for me** or **I have one**. Under **What to announce**, choose from:
+
+- **New emotes added**
+- **Rotation refreshed**
+- **Collection synced**
+
+On the Pro or Enterprise plan, you can also set the webhook name and accent color, and hide the "Powered by Kao" footer.
+
+## Presets (BYOB)
+
+Presets save a server's settings so you can apply them again later or to another server.
+
+<Warning>
+Applying a preset replaces the current settings it covers. Save the current setup as a preset first if you may need it again.
 </Warning>
 
 ## Troubleshooting
 
-| Problem | What to check |
-|---------|---------------|
-| Settings will not save | Confirm you have access to manage this server in Kao |
-| Notifications do not appear | Check the selected channel and bot message permissions |
-| Community announcements fail | Confirm the webhook still exists and the channel is available |
-| Commands are blocked | Review command access mode and selected roles |
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| A section is missing | The section is BYOB-only, or polls are not available for the server | Check the availability column above |
+| Settings will not save | You are not a Kao administrator for the server | Ask the server owner to change it or give you the role |
+| Members cannot use `/kao` | They have no Kao role, or lack the matching Discord permission | Assign a Kao role and check their Discord permissions |
+| **Team** says it needs a paid plan | Team access is not included in Free | Upgrade, or manage the server yourself |
+| Community announcements fail | The webhook was deleted, or the bot lacks **Manage Webhooks** | Reconnect the webhook or re-invite the bot |
 
 ## Next steps
 
 <CardGrid>
-  <Card title="Bot Commands" href="/guides/bot-commands">
-    See available Discord commands.
+  <Card title="Use Kao in Discord" href="/guides/bot-commands">
+    Learn what each Kao role can do in Discord.
   </Card>
-  <Card title="Multiple Bots" href="/guides/multiple-bots">
-    Manage hosted, BYOB, and shared access.
+  <Card title="Emote polls" href="/guides/emote-polls">
+    Let members vote on new emotes.
   </Card>
-  <Card title="Backups" href="/guides/backups">
-    Create a restore point before big changes.
+  <Card title="Servers and bots" href="/guides/multiple-bots">
+    Manage hosted servers and your own bots.
   </Card>
 </CardGrid>

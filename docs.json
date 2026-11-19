@@ -24,7 +24,13 @@
     "eyebrows": "breadcrumbs"
   },
   "contextual": {
-    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+    "options": [
+      "copy",
+      "view",
+      "assistant",
+      "mcp",
+      "add-mcp"
+    ]
   },
   "navbar": {
     "links": [
@@ -52,18 +58,35 @@
             "group": "Start here",
             "icon": "rocket",
             "expanded": true,
-            "pages": ["introduction", "quickstart", "concepts/overview"]
+            "pages": [
+              "introduction",
+              "quickstart",
+              "concepts/overview"
+            ]
           },
           {
-            "group": "Bot setup",
+            "group": "Servers and bots",
             "icon": "bot",
-            "pages": ["concepts/bot-system", "guides/multiple-bots", "guides/bot-commands"]
+            "pages": [
+              "concepts/bot-system",
+              "guides/multiple-bots",
+              "guides/server-settings"
+            ]
+          },
+          {
+            "group": "Kao in Discord",
+            "icon": "message-square",
+            "pages": [
+              "guides/bot-commands",
+              "guides/emote-polls"
+            ]
           },
           {
             "group": "Emoji workflows",
             "icon": "smile",
             "pages": [
               "guides/importing-emotes",
+              "guides/browser-extension",
               "guides/managing-emojis",
               "guides/collections",
               "guides/emote-creator"
@@ -73,6 +96,7 @@
             "group": "Automation",
             "icon": "refresh-cw",
             "pages": [
+              "guides/streamer-emotes",
               "guides/backups",
               "guides/rotations",
               "guides/sync-groups",
@@ -82,7 +106,11 @@
           {
             "group": "Account and settings",
             "icon": "settings",
-            "pages": ["guides/server-settings", "guides/billing", "guides/account-management"]
+            "pages": [
+              "guides/notifications",
+              "guides/billing",
+              "guides/account-management"
+            ]
           }
         ]
       },
@@ -92,12 +120,18 @@
           {
             "group": "Support",
             "icon": "circle-help",
-            "pages": ["resources/support", "resources/faq", "resources/troubleshooting"]
+            "pages": [
+              "resources/support",
+              "resources/faq",
+              "resources/troubleshooting"
+            ]
           },
           {
             "group": "Updates",
             "icon": "bell",
-            "pages": ["resources/changelog"]
+            "pages": [
+              "resources/changelog"
+            ]
           }
         ]
       }

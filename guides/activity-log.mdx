@@ -1,86 +1,95 @@
 ---
-title: Activity Log
-description: Track current and past emoji operations.
+title: Activity
+description: Follow running emoji work, review history, undo Discord imports, and check your usage limits.
 ---
 
 ## Overview
 
-The **Activity** page shows what Kao has done, what is still running, and what needs attention.
+The **Activity** page shows what Kao is doing now, what it has done, and how much of your plan's allowance you have used. Use it to follow imports, deletes, restores, rotations, syncs, streamer follow updates, and poll results.
 
-Use it to monitor:
+## Happening now
 
-- Imports
-- Bulk deletes
-- Backup restores
-- Rotations
-- Sync groups
+Work that is running or waiting appears at the top of the page.
 
-## What each activity shows
+- Click **Cancel** to stop an operation. Kao asks you to confirm.
+- For queued emotes, use **Add first** to move an emote ahead of the others, or **Remove** to take it out of the queue.
 
-Each activity entry can include:
+While work runs, the operations dock at the bottom of the dashboard shows progress on every page. You can minimize an import and reopen it from the dock or from **Activity**. Use **Clear completed** in the dock to hide finished work.
 
-- Operation type
-- Target server
-- Start time
-- Current status
-- Number of emojis added, removed, skipped, or failed
-- Why work is waiting, when Kao can show it
+## History
 
-## Status meanings
+The **History** list shows past work. Filter it by:
 
-| Status | Meaning |
-|--------|---------|
-| Pending | Kao has accepted the work and is waiting to run it |
-| In progress | Kao is actively processing items |
-| Completed | All items finished successfully |
-| Partial | Some items succeeded and some failed |
-| Failed | The operation could not finish |
-| Cancelled | The operation was stopped |
+- **All** or **Needs a look**
+- **Where it started**: **Dashboard**, **Discord**, **Browser extension**, or **Automation**
+- Server
 
-## Live progress
+Open an entry to see the server, where it started, when it started, and how long it took. Entries for rotation runs and restores link to their full details.
 
-When work is active, the operations dock can appear at the bottom of the dashboard. You can keep using Kao while the operation continues.
+## Status labels
 
-For large batches, you can minimize progress, move around the dashboard, and reopen the operation from the dock or **Activity** later to review results.
+| Label | Meaning |
+|-------|---------|
+| **Waiting for you** | Kao needs you to confirm or fix something |
+| **Waiting** | Kao accepted the work and is waiting to run it, for example for Discord's hourly limit |
+| **Running** | Kao is processing items. Shows "N of M done" while it runs |
+| **Completed** | Everything finished. Shows counts such as "N added" or "N deleted" |
+| **Partly done** | Some items succeeded and some failed |
+| **Failed** | The operation could not finish |
+| **Cancelled** | Someone stopped the operation |
 
-## Why work can take time
+## Undo a Discord import
 
-Emoji operations may wait when:
+Imports started in Discord can be undone for 10 minutes. Open the import in **Activity** and click **Undo import**. You can also undo it from the review card in Discord.
 
-- The server is changing many emojis.
-- Discord is temporarily limiting emoji changes for the server.
-- Your plan's import allowance needs to reset.
-- Another operation is already running on the same server.
+Imports from the browser extension's **Quick add** can be undone for a short time from the extension's toast.
 
-Kao shows the clearest available reason in the dashboard.
+## Usage and limits
 
-## Support details
+The **Usage and limits** panel shows:
 
-If support asks you to share an activity entry, include the visible status, wait reason, server name, and any development diagnostics shown in the entry details. Do not share private Discord messages, payment details, or bot tokens.
+- **Today's limit**: how many emotes you can still add today on your plan
+- **This hour, per server**: how many new emojis Discord will accept this hour, and when the next slot frees up
+- **Last 7 days**: your recent usage
+
+## Why work can wait
+
+Emoji work may wait when:
+
+- The server reached Discord's limit of about 50 new emojis an hour. Kao shows "Waiting for Discord's hourly emoji limit" and an estimated finish time.
+- Your plan's daily import allowance is used up. Kao shows "Waiting for your daily import limit to reset".
+- Another restore, rotation, or sync is already running on the same server.
+- An animated emote is still being prepared in the background.
 
 ## Clear activity
 
-Choose **Clear all** to hide the activity currently shown in your list. Clearing the list does not stop work that is already running and does not undo imports, deletes, restores, rotations, or syncs. You can still remove an individual finished entry from its activity details.
+On **Activity**, press and hold **Clear** to hide the entries in your list. On **Overview**, the **Recent Activity** card has **Clear all**, which asks you to confirm, and each row's menu has **Remove**.
+
+Clearing activity only hides entries. It does not stop running work or undo any changes.
+
+## Share activity with support
+
+If support asks about an activity entry, share its status, the server name, when it started, and any message it shows. Never share bot tokens, payment details, or private Discord messages.
 
 ## Troubleshooting
 
-| Problem | What to try |
-|---------|-------------|
-| Operation is pending | Wait for the earlier server work or Discord limit to clear |
-| Operation is partial | Open the entry to review failed items |
-| Operation failed | Check bot permissions, server capacity, and the error message |
-| Progress seems slow | Large emoji changes can take several minutes |
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| Work stays **Waiting** | Discord's hourly limit, your daily allowance, or other work on the server | Check the reason and estimated time shown |
+| Entry shows **Partly done** | Some items failed | Open it to see which items failed and why |
+| Entry shows **Failed** | Missing permissions, a full server, or a source problem | Read the message, fix the cause, and try again |
+| **Undo import** is missing | The 10-minute undo window has passed, or the import did not start in Discord | Delete the emojis on the **Emotes** page instead |
 
 ## Next steps
 
 <CardGrid>
-  <Card title="Importing Emotes" href="/guides/importing-emotes">
-    Import emotes and watch progress.
+  <Card title="Import emotes" href="/guides/importing-emotes">
+    Import emotes and follow their progress.
   </Card>
-  <Card title="Backups" href="/guides/backups">
-    Review restore activity.
+  <Card title="Use Kao in Discord" href="/guides/bot-commands">
+    Learn about Discord imports and undo.
   </Card>
-  <Card title="Rotations" href="/guides/rotations">
-    Track scheduled changes.
+  <Card title="Billing and plans" href="/guides/billing#plan-limits">
+    See your plan's daily and hourly limits.
   </Card>
 </CardGrid>

@@ -1,100 +1,100 @@
 ---
 title: Schedule Discord emoji rotations
-description: Schedule Discord emoji changes with Kao collections, partial updates, or playlists.
+description: Refresh a server's emojis from Kao collections on a schedule or whenever a followed streamer adds emotes.
 ---
 
 ## Overview
 
-Kao can rotate your Discord server emojis automatically on a recurring schedule. Rotations use emotes saved in Kao collections. Use them when you want seasonal sets, event-specific emoji pools, or a server that changes on a schedule.
+Rotations change a server's emojis automatically using emotes from your collections. Use them for seasonal sets, event emojis, or a server that always has something new.
 
-The schedule starts a real Discord mutation workflow. Capacity, file processing,
-and Discord limits can delay completion, so the execution result matters more
-than the scheduled start time.
+A rotation makes real changes in Discord. Free slots, file processing, and Discord's hourly limit can delay completion, so check the run result rather than the scheduled time.
 
 ## Before you begin
 
-You need:
-
-- The hosted Kao Bot or your BYOB bot installed in a server Kao can manage
-- The bot permission to manage emojis in that server
-- At least one collection with emotes
-- Enough plan allowance for active rotations
-- A backup if the rotation may remove existing emojis
+- Rotations need a paid plan. Pro includes up to 15 rotations, with runs as often as every 2 hours.
+- Kao must be in the server with **Create Expressions** and **Manage Expressions**.
+- You need at least one [collection](/guides/collections) with emotes.
+- [Protect](/guides/managing-emojis#protect-emojis) any emojis that must stay, and consider a [backup](/guides/backups) first.
 
 ## Create a rotation
 
-1. Go to **Rotations**.
-2. Choose **Create Rotation**.
-3. Name the rotation and select a server.
-4. Choose a collection.
-5. Set **Repeat Every** and **Timezone**.
-6. Choose the rotation behavior. For a playlist, choose at least two collections at this step.
-7. Review and create the rotation.
+1. Open **Rotations** and click **Create rotation**.
+2. **Basic Information**: enter a **Rotation Name** and choose the **Target Server**.
+3. **Select Collection**: choose the source collection.
+4. **Schedule Configuration**: choose **When to rotate**, then set the interval and **Timezone**.
+5. **Rotation Behavior**: choose how emojis change, and which emotes to pick.
+6. **Review and Create**: check your choices and create the rotation.
 
-## Schedule options
+## When to rotate
 
-| Schedule | Use it when |
-|----------|-------------|
-| Simple recurring | You want an interval such as every 6, 12, or 24 hours |
-
-Choose an available **Repeat Every** interval and a **Timezone**. The minimum interval depends on your plan; unavailable intervals are disabled. A scheduled start does not promise an exact completion time.
+| Option | How it works |
+|--------|--------------|
+| **On a schedule** | Runs at a **Repeat Every** interval, from 1 hour to 1 week. Your plan sets the shortest interval allowed |
+| **When the channel adds emotes** | Runs after a followed streamer adds a set number of new emotes (1–50). Needs a collection linked to a [streamer follow](/guides/streamer-emotes) |
 
 ## Rotation behavior
 
 | Behavior | What it does | Use it when |
-| --- | --- | --- |
-| Full replacement | Removes the server's existing emojis and replaces them with emotes from one collection | You want to replace the current set with one collection |
-| Partial update | Keeps the base emojis you choose and rotates the remaining emojis from one collection | Some permanent emojis should stay in place |
-| Playlist rotation | Cycles through multiple collections in sequence | You want different collections to appear over time |
+|----------|--------------|-------------|
+| **Full Replacement** | Replaces the server's emojis with emotes from the collection | You want a completely new set each run |
+| **Partial Update** | Keeps the base emojis you choose and rotates the rest | Some permanent emojis should stay |
+| **Playlist Rotation** | Cycles through several collections in order | You want different collections over time |
+| **Fresh swap** | Adds the newest emotes and removes the oldest unprotected ones only when the server is full | You follow a streamer and always want their latest emotes |
 
-When you choose **Partial update**, select the base emojis that should stay on the server. When you choose **Playlist rotation**, select at least two collections.
+For **Partial Update**, select the base emojis to keep. For **Playlist Rotation**, select at least two collections.
 
-<Warning>
-Full replacement can remove many server emojis, including emojis that are not in the selected collection. Create a backup before enabling it on an important server.
-</Warning>
+### Which emotes to pick
 
-## Run a rotation manually
-
-Use **Execute Now** when you want to test or run a rotation outside its schedule.
-
-Kao shows live progress while it removes and adds emojis. Processing and Discord limits can delay completion. Check execution history for added, removed, and failed items before running it again.
+Except for **Fresh swap**, choose how Kao picks emotes from the collection: **Random**, **Newest first**, **Favor recent**, or **Added after a date**.
 
 <Warning>
-**Execute Now** performs real changes. Test a replacement rotation on a test server first. Disabling a schedule does not restore emojis removed by an earlier execution.
+**Full Replacement** can remove many emojis, including ones that are not in the collection. Protected emojis and Discord-managed emojis are never removed. Protect the emojis you want to keep before you turn it on.
 </Warning>
+
+## Run a rotation now
+
+Click **Run now** on the rotation's row or page. Kao shows what it will remove and add before you confirm, and offers a link to back up the server first.
+
+A manual run makes real changes. Turning a rotation off later does not bring back emojis an earlier run removed.
+
+Manual and scheduled runs of the same rotation never overlap.
 
 ## Manage rotations
 
-From the Rotations page you can:
+The **Rotations** page lists each rotation with its recent runs. Rotations with a problem appear under **Needs attention**.
 
-- Enable or disable a rotation
-- Open rotation details
-- Run a rotation manually
-- View execution history
-- Delete a rotation
+Open a rotation to see its page:
 
-## How to know a rotation finished
+- **Turn on** or **Turn off** the rotation
+- **Run now**
+- **Next run**, **Last run**, and how often it repeats
+- **Runs**, filtered by **All** or **Problems**
+- The rotation's settings
+- **Kept on every run**: the emojis Kao will never remove
 
-Open rotation history or **Activity** and check:
+Delete a rotation from the menu on its page.
 
-- The execution reached a final state.
-- Added, removed, and failed item counts are visible.
-- Base emojis remain after a partial update.
-- The expected collection is active after a playlist step.
-- The server still has enough capacity and the bot has permission before a retry.
+## Check that a run finished
 
-Do not immediately rerun a partial execution. Review failed items first, because
-another run can repeat removals without fixing the failed additions.
+Open a run on the rotation's page, or find it in **Activity**. Each run shows which emotes were added or removed and how the run started.
+
+- Check that the run reached a final state.
+- If an emote failed, click **Try again** next to it.
+- Check that the server has free slots and the bot has permission before retrying.
+
+## When your plan changes
+
+If your plan no longer includes rotations, or you have more than it allows, the extra rotations show **Paused by plan**. Kao keeps them, and they resume if you upgrade.
 
 ## Troubleshooting
 
-| Problem | What to check |
-|---------|---------------|
-| Target server is missing | Confirm the bot is linked to that server, then refresh Rotations so Kao reloads target server capacity |
-| Rotation did not run | Make sure it is enabled and the schedule is correct |
-| Rotation partially completed | Open history or Activity to see which emojis failed |
-| Server is missing emojis | Check capacity, source collection size, and failed items. A partial run may have removed emojis before additions completed; review history before retrying or restoring a backup |
-| Plan limit reached | Disable or delete an old rotation, or review your plan |
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| Rotation did not run | It is turned off, or paused by your plan | Turn it on, or check your plan |
+| Rotation shows "Waiting for new emotes" | It runs when the streamer adds emotes, and not enough are new yet | Wait for the streamer to add more, or switch to **On a schedule** |
+| Run partly finished | The server ran out of slots, or the bot lost permission | Fix the cause, then click **Try again** on failed emotes |
+| Emojis you wanted were removed | They were not protected | Protect them, then restore from a backup |
+| Target server is missing | Kao is not in the server | Add the server on the **Servers** page |
 
 ## Next steps
 
@@ -102,10 +102,10 @@ another run can repeat removals without fixing the failed additions.
   <Card title="Collections" href="/guides/collections">
     Build the emote sets that power rotations.
   </Card>
-  <Card title="Backups" href="/guides/backups">
-    Save a restore point before replacement.
+  <Card title="Streamer emotes" href="/guides/streamer-emotes">
+    Rotate in a streamer's new emotes.
   </Card>
-  <Card title="Sync Groups" href="/guides/sync-groups">
-    Keep multiple servers aligned.
+  <Card title="Backups" href="/guides/backups">
+    Save a restore point before a replacement.
   </Card>
 </CardGrid>

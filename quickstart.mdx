@@ -1,80 +1,87 @@
 ---
 title: Quickstart
-description: Set up Kao and import your first Discord emote.
+description: Sign in, invite the hosted Kao Bot, and import your first Discord emotes.
 ---
+
+## Overview
+
+This guide sets up Kao with the hosted Kao Bot, the recommended path for most servers. You do not need a Discord Developer Portal application or a bot token. Setup takes about five minutes.
 
 ## Prerequisites
 
-You need a Discord account and a server where you have permission to manage the server or invite bots.
+- A Discord account
+- A Discord server where you have the **Manage Server** permission
 
 <Info>
-The hosted Kao Bot is the recommended setup for most people. You can import from the dashboard without creating a Discord Developer Portal application.
+On the Free plan, the hosted Kao Bot can join up to 2 servers. See [Billing and plans](/guides/billing#plan-limits) for other limits.
 </Info>
 
-## Step 1: Sign in
+## Step 1: Sign in with Discord
 
-Go to [usekao.com](https://usekao.com), choose **Get Started**, and sign in with Discord.
+Go to [usekao.com](https://usekao.com) and sign in with Discord.
 
-Kao asks for access to your Discord identity and server list so it can show the servers you can manage. Kao does not read your messages.
+Kao asks Discord for your account identity, email address, server list, and your roles in those servers. Kao uses this to show the servers you can manage and to check who can use Kao in each server. Kao does not read your messages.
 
-## Step 2: Choose your bot setup
+## Step 2: Pick your first emotes
 
-During onboarding, choose one of these options:
+Setup opens with **Pick your first emotes**, a list of trending 7TV emotes.
 
-| Option | Best for |
-|--------|----------|
-| Use Kao Bot | Fast setup, no bot token, dashboard imports |
-| Bring Your Own Bot | Custom bot identity, custom status, and advanced control |
+1. Select a few emotes you want in your server.
+2. Click **Continue**.
 
-For the hosted setup, select **Use Kao Bot**.
+Your picks stay selected while you invite Kao, even if you leave for Discord and come back.
 
-## Step 3: Invite Kao
+## Step 3: Choose how Kao joins your server
 
-1. Select the server you want to manage.
-2. Open the Discord invite from Kao.
-3. Approve the requested permissions.
-4. Return to Kao and wait for the install check to complete.
+Choose **Use Kao Bot**. It is marked **Recommended**.
 
-On a phone, Discord may open in another app or tab. Finish approving the invite in Discord, then return to Kao and choose **Verify**. If the invite window closes, use **Reopen Discord** and complete the approval before verifying again.
+Choose **Bring Your Own Bot** only if you want your own bot identity. See [Choose a bot setup](/concepts/bot-system) before you pick it.
+
+## Step 4: Invite Kao
+
+1. Under **Where should Kao join?**, select your server.
+2. Click **Invite Kao**. Discord opens in a new tab or in the Discord app.
+3. Review the permissions in Discord and approve the invite.
+4. Return to Kao. Kao checks the server automatically and shows **Kao joined this server.**
+5. Click **Continue to emotes**.
+
+If the Discord window closed before you approved, click **Reopen Discord**. If you already invited Kao, click **I've already invited Kao**.
 
 <Warning>
-If Discord says you cannot invite the bot, make sure your account has permission to manage the server or ask a server administrator to invite Kao.
+If Discord does not list your server, your account does not have **Manage Server** there. Ask a server admin to give you that permission or to invite Kao.
 </Warning>
 
-## Optional: join the support Discord
+## Step 5: Import your emotes
 
-At the end of onboarding, Kao may offer an optional **Join the Kao Support Discord** checkbox. Leave it unchecked to skip it. If you opt in, Kao opens a separate Discord authorization step and returns you to the dashboard when the join is complete or needs attention. Your setup still completes if you cancel or the join cannot be confirmed.
+1. Under **Review your emotes**, check your picks and the target server.
+2. Click **Add N emotes**, where N is the number of emotes you picked.
+3. Watch the preparation and upload progress until the import finishes.
 
-## Step 4: Import an emote
+To finish setup without importing, choose **Skip importing for now**.
 
-1. Open **Import** in the dashboard.
-2. Choose the target server.
-3. Search for an emote or paste Discord emote text.
-4. Preview the emote and edit the emoji name if needed.
-5. Click **Import**.
+Discord limits each server to about 50 new emojis an hour. If you picked more, Kao queues the rest and adds them as slots free up.
 
-Kao shows progress while the emoji is uploaded. Larger batches may take longer because Discord limits how quickly any server can create emojis.
+## Optional: join the Kao Support Discord
 
-## Step 5: Keep going
+The last step can offer **Join the Kao Support Discord**. Click **Continue to Discord** to join, or **Go to dashboard** to skip. Setup is already complete either way.
 
-After your first import, the most useful next actions are:
+<Tip>
+You can leave setup at any time with **Skip setup**. To start again later, open **Settings** and use **Restart setup** under **Advanced Options**.
+</Tip>
 
-- Open **Servers** to review, rename, or delete emojis.
-- Create a **Backup** before making large changes.
-- Save favorite emotes into a **Collection**.
-- Use **Activity** to see what is running or what finished.
+## Next steps
 
 <CardGrid>
-  <Card title="Managing Emojis" href="/guides/managing-emojis">
-    Review and clean up your server emojis.
+  <Card title="Manage emojis" href="/guides/managing-emojis">
+    Rename, protect, and clean up your server's emojis.
   </Card>
-  <Card title="Backups" href="/guides/backups">
+  <Card title="Use Kao in Discord" href="/guides/bot-commands">
+    Type `/kao` in your server to add and manage emotes.
+  </Card>
+  <Card title="Back up your server" href="/guides/backups">
     Save a restore point before big changes.
   </Card>
-  <Card title="Collections" href="/guides/collections">
-    Build reusable emote sets.
-  </Card>
-  <Card title="Bot Setup" href="/concepts/bot-system">
-    Compare hosted and BYOB setup.
+  <Card title="Follow a streamer" href="/guides/streamer-emotes">
+    Get a streamer's new 7TV emotes automatically.
   </Card>
 </CardGrid>

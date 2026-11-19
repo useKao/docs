@@ -1,99 +1,126 @@
 ---
-title: Billing & Plans
-description: Manage your Kao plan, checkout options, discounts, and feature limits.
+title: Billing and plans
+description: Compare Kao's Free and Pro plans, pay by card or crypto, and change or cancel your subscription.
 ---
 
 ## Overview
 
-Kao plans control feature access and limits such as imports, collections, backups, rotations, sync groups, servers, and bots.
+Kao has a Free plan and a paid plan, Kao Pro. For higher limits, Kao also offers an Enterprise plan. Contact [support@usekao.com](mailto:support@usekao.com) for details. Your plan sets limits such as how many emotes you can add per day, how many servers can use the hosted Kao Bot, and whether you can use rotations and sync groups.
 
-Use the **Billing** page to view your current plan, compare upgrades, manage checkout, or open subscription settings.
-
-## View plans
-
-1. Open **Billing** in the dashboard or visit the [Pricing page](https://usekao.com/pricing).
-2. Compare included features and limits.
-3. Choose monthly or yearly billing where available.
-
-Yearly billing may include a discount compared with monthly billing.
-
-## Subscribe with card
-
-1. Select a plan.
-2. Choose the billing interval.
-3. Enter a coupon code if you have one.
-4. Continue to Stripe checkout.
-5. Complete payment.
-6. Return to Kao.
-
-Most card subscriptions activate immediately after checkout succeeds.
-
-## Pay with crypto
-
-1. Select a plan.
-2. Choose **Pay with Crypto**.
-3. Enter a coupon code if you have one.
-4. Select a supported currency.
-5. Complete the NowPayments checkout.
-6. Return to Kao and wait for the payment to finish.
-
-Crypto checkout uses a hosted NowPayments invoice. The payment window is 7 days, and crypto payments can take longer to finish than card payments.
-
-Kao activates your plan only after NowPayments reports a complete `finished` payment for the expected amount and currency. Partial payments, wrong-asset payments, canceled invoices, expired invoices, failed payments, and refunds do not activate plan access automatically.
-
-## Discounts and trials
-
-Kao may show active discounts, yearly savings, free trials, or coupon fields when they are available for a plan.
-
-Manual coupon codes can apply to card checkout, crypto checkout, or both depending on the coupon. If no manual code is entered, Kao may apply the best eligible automatic discount for the selected payment method.
-
-Free trials apply to eligible card checkouts. Crypto plans activate only after NowPayments reports the payment as `finished`. Trial-extension crypto coupons are an exception: they can activate or extend access without creating a NowPayments invoice.
-
-## Change or cancel a subscription
-
-From **Billing**, you can open subscription management to:
-
-- Change plans
-- Cancel a subscription
-- Review renewal date
-- View payment status
-
-When you cancel, your paid plan remains active until the end of the current billing period. After that, your account returns to the free tier. Kao keeps your data, but features beyond free limits may become unavailable until you upgrade again.
+Use the **Billing** page in the dashboard to see your plan and usage, compare plans, pay, and manage your subscription. For current prices, see the [Pricing page](https://usekao.com/pricing).
 
 ## Plan limits
 
-Kao shows upgrade prompts when you reach a limit. Common limits include:
+| Limit | Free | Pro |
+|-------|------|-----|
+| New emotes per day | 100 | 500 |
+| Emotes per import | 25 | 100 |
+| Servers with the hosted Kao Bot | 2 | Unlimited |
+| Your own bots (BYOB) | 1 bot, in up to 3 servers | 10 bots, in up to 50 servers |
+| Collections | 2, up to 50 emotes each | 25, no emote limit |
+| Backups | 2 | 15 |
+| Rotations | Not included | 15, as often as every 2 hours |
+| Sync groups | Not included | Included |
+| Team access | Not included | Included |
+| Protected emojis per server | 10 | Unlimited |
+| Open emote polls | 2, up to 4 emotes each | 10, up to 8 emotes each, with schedules |
+| Followed streamers | 1, with a daily digest | Unlimited, with real-time alerts |
+| Emote Creator creations | 3 | 200 |
+| Emote Creator uploads | 10 | 100 |
 
-| Limit | What it affects |
-|-------|-----------------|
-| Daily imports | How many emotes you can import per day |
-| Collections | How many reusable sets you can keep |
-| Backups | How many snapshots you can store or create |
-| Rotations | How many active schedules you can run |
-| Sync groups | How many sync setups and targets you can use |
-| Bots and servers | How many communities you can manage |
+Discord's own limits apply on every plan. Each server can take about 50 new emojis an hour. See [Discord limits](/concepts/overview#discord-limits).
+
+<Info>
+Limits can change. The [Pricing page](https://usekao.com/pricing) and your **Billing** page always show the current limits for your account.
+</Info>
+
+## The Billing page
+
+| Section | What it shows |
+|---------|---------------|
+| **Plan** | Your current plan and renewal date, with **Change plan** and **Update payment method** |
+| **Usage** | What you have used against your plan's limits |
+| **What Kao Pro adds** | The features you would get by upgrading |
+| **Compare plans** | Opens the plan comparison and checkout |
+| **Cancel subscription** | Cancels a paid plan |
+
+If the Kao team gave you a plan, the **Plan** section says so and shows when it ends.
+
+## Upgrade
+
+1. Open **Billing** and click **Compare plans** or **Change plan**.
+2. Under **Billing interval**, choose **Monthly** or **Yearly**. Yearly costs less per month.
+3. Optionally, enter a code under **Coupon** and click **Apply**.
+4. Choose a payment method and continue to checkout.
+
+### Pay by card
+
+Choose **Credit / Debit Card** and click **Continue to Stripe**. Card subscriptions renew automatically. Most card payments activate your plan immediately.
+
+### Pay with crypto
+
+Choose **Cryptocurrency** and click **Pay with Crypto**. Kao opens a NowPayments invoice where you choose the coin.
+
+- Each crypto payment covers one billing term. It does not renew automatically.
+- You have 7 days to pay an invoice.
+- Kao activates your plan after NowPayments confirms the full payment. Network confirmation can take a while.
+- If you renew the same plan early, you keep the time you have left.
+- Partial payments, payments in the wrong coin, expired invoices, and refunds do not activate a plan automatically. Contact support with your order details.
+
+<Warning>
+If you pay with crypto while a card subscription is active, Kao shows **Payment received; plan change needs review**. Your current plan stays in place until support reviews the payment.
+</Warning>
+
+## Coupons and trials
+
+Coupons can apply to card payments, crypto payments, or both. Kao shows the discounted price before you pay. Some coupons extend or activate access without a crypto invoice.
+
+Kao sometimes offers trials or plan gifts. When one applies to your account, the **Billing** page and your notifications show it.
+
+## Change or cancel your plan
+
+To change plans, click **Change plan**. To switch to a cheaper option at your next renewal, choose **Downgrade at renewal**.
+
+To cancel:
+
+1. Open **Billing** and go to **Cancel subscription**.
+2. Click **Continue to cancel**.
+3. Confirm on Stripe's page.
+
+You keep your plan until the end of the current billing period. Then your account moves to Free.
+
+## What happens when a paid plan ends
+
+Kao pauses work that goes beyond Free limits. It does not delete it.
+
+- Rotations over the limit show **Paused by plan**.
+- Extra collections become read-only.
+- Hosted Kao Bot servers beyond the Free limit are paused.
+- Backups stay restorable, and emoji protection stays in place.
+
+Upgrading again brings everything back.
 
 ## Troubleshooting
 
-| Problem | What to try |
-|---------|-------------|
-| Card payment failed | Check card details or try another payment method |
-| Crypto payment is pending | Wait for the provider to finish the payment, then refresh Billing |
-| Crypto payment failed or expired | Start a new checkout from Kao |
-| Crypto payment used the wrong asset or amount | Contact support with the checkout/order details |
-| Plan did not activate | Sign out and back in, then check Billing again |
-| Feature still locked | Confirm the subscription is active and the limit has not been reached |
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| Card payment failed | The card was declined | Check the card details, or use **Update payment method** |
+| Crypto payment is pending | The network has not confirmed the payment yet | Wait, then refresh **Billing** |
+| Crypto invoice expired | The 7-day payment window passed | Start a new checkout from Kao |
+| Wrong coin or amount was paid | The payment did not match the invoice | Contact support with your order details |
+| Plan did not activate | The payment is still processing | Refresh **Billing**. If it stays inactive, contact support |
+| Coupon did not apply | The coupon does not cover this plan, interval, or payment method | Check the coupon terms and try again |
 
 ## Next steps
 
 <CardGrid>
+  <Card title="Pricing" href="https://usekao.com/pricing">
+    See current prices.
+  </Card>
   <Card title="Rotations" href="/guides/rotations">
-    Use plan features for scheduled changes.
+    Use Pro to refresh emojis on a schedule.
   </Card>
-  <Card title="Sync Groups" href="/guides/sync-groups">
-    Sync emojis across servers.
-  </Card>
-  <Card title="Account Management" href="/guides/account-management">
-    Export data or manage account deletion.
+  <Card title="Account and privacy" href="/guides/account-management">
+    Export your data or delete your account.
   </Card>
 </CardGrid>

@@ -1,89 +1,121 @@
 ---
-title: Account Management
-description: "Export your data, delete your account, and manage privacy options."
+title: Account and privacy
+description: Set your dashboard preferences, export your data, make privacy requests, and delete your Kao account.
 ---
 
 ## Overview
 
-Account settings help you control your Kao setup, dashboard preferences, and privacy choices.
+The **Settings** page holds your personal Kao settings. It is one scrolling page with these sections:
 
-## Open settings
+| Section | What it controls |
+|---------|------------------|
+| **Preferences** | Dashboard theme and language |
+| **Import defaults** | The starting appearance and framing for new imports. See [Import emotes](/guides/importing-emotes#set-your-import-defaults) |
+| **Browser extension** | Linked browsers and **Quick add**. See [Browser extension](/guides/browser-extension) |
+| **Notifications** | Where each kind of notice reaches you. See [Notifications](/guides/notifications) |
+| **Privacy and data** | Data export and privacy requests |
+| **Advanced Options** | **Restart setup** |
+| **Danger** zone | **Delete account** |
 
-Open **Settings** from the dashboard sidebar. Today, this area is also where you can restart setup if you want to choose a different bot path.
+## Preferences
 
-## Dashboard preferences
+- **Theme** changes the dashboard's accent color.
+- **Language** changes the dashboard language. Kao supports 12 languages.
 
-Open **Settings** and choose **Preferences** to save your dashboard choices to your account.
-
-- **Theme** changes the dashboard accent color.
-- **Language** changes the dashboard language.
-
-These preferences follow your account when you sign in again. They do not change your Discord server's settings.
+These preferences are saved to your account and follow you to other devices. They do not change your Discord server's settings.
 
 ## Export your data
 
-Use data export when you want a copy of the information Kao stores for your account.
+1. Open **Settings** and go to **Privacy and data**.
+2. Under **Your data export**, click **Request data export**.
 
-If an export control is visible in your dashboard, use it there. If it is not visible, contact support and request an account export.
+Kao downloads a JSON file with the information it stores for your account, such as your profile, bots, collections, automation, activity, and billing references.
 
-Exports can include profile details, bot records, collections, rotations, sync groups, activity history, billing references, and other account data.
+## Make a privacy request
 
-<Info>
-  Large accounts can take longer to export.
-</Info>
+Use a privacy request when you want Kao to act on your personal data, for example to get a copy or remove it.
+
+1. Open **Settings** and find **Privacy requests**.
+2. Click **Make a request**, choose what you need, and click **Submit request**.
+3. Follow the request's status in **Settings**. Open requests also appear on your dashboard.
+
+When a download is ready, click **Verify with Discord to download**. Each download link works once. You can **Withdraw** a request while it is open.
+
+If you do not have a Kao account, email [privacy@usekao.com](mailto:privacy@usekao.com). To check a request you already made, go to [usekao.com/privacy-requests](https://usekao.com/privacy-requests) and enter the token from your receipt.
 
 ## Delete your account
 
-Account deletion permanently removes your Kao account and associated data.
-
-1. Export your data first if you want a copy.
-2. Use the dashboard deletion control if it is available.
-3. If the control is not visible, contact support and request account deletion.
-
 <Warning>
-  Account deletion is permanent. Your bots may stop working with Kao, server configurations are removed, and the action cannot be undone.
+Deleting your account locks it immediately. You have 14 days to cancel. After that, deletion begins and cannot be undone.
+
+Some changes happen as soon as you schedule deletion and are not undone if you cancel:
+
+- Sessions, Discord sign-in credentials, BYOB bot tokens, webhook secrets, and notification preferences are removed.
+- Linked browsers are unlinked, and your **Quick add** history is removed.
+- On every server that uses one of your BYOB bots, community announcements and the **Rotations**, **Backups**, and **Collections** server features are turned off.
+- Every rotation is turned off and every sync group is paused. Paused sync groups cannot be resumed.
 </Warning>
 
-## Deletion certificate
+1. Export your data first if you want a copy.
+2. Open **Settings** and click **Delete account** in the **Danger** zone.
+3. Optionally, tell Kao why you are leaving.
+4. Review what will happen and click **Continue**.
+5. Click **Verify with Discord**.
+6. Type the confirmation text, check the box, and click **Schedule account deletion**.
 
-When available, Kao provides a deletion certificate that records the deletion request and processing status. Keep it if you need proof that the request was made or completed.
+### What happens when you delete your account
 
-## No Kao account?
+- Your account is locked. You cannot sign in or start new work during the 14 days.
+- BYOB bots stop working with Kao immediately.
+- Emojis already in your Discord servers stay there. They belong to the server, not your Kao account.
+- Subscriptions stop renewing. Deletion does not issue a refund automatically.
+- Kao keeps only the minimum records it needs for legal, financial, or security reasons.
 
-If you do not have a Kao account but believe Kao holds data about you, for example from a banned or duplicate-account fraud-prevention record, email [**privacy@usekao.com**](mailto:privacy@usekao.com) or open a support ticket in the [Kao Discord server](https://usekao.com/api/discord/invite) to request access to or deletion of that data.
+### Cancel or check a deletion
+
+Kao shows a deletion status page after you schedule deletion. Use it to check progress or click **Cancel deletion** during the 14 days. Canceling requires you to verify with Discord again.
+
+Canceling unlocks your account, but the changes made when you scheduled deletion stay in place. After canceling:
+
+1. Sign in with Discord again.
+2. Paste your BYOB bot tokens again with **Update token**.
+3. Set your notification preferences again and link your browser extension again.
+4. On servers that use your BYOB bots, reconnect community announcements and turn features back on under **Commands** > **Server features**. On servers you do not own, ask a Kao administrator there to do this.
+5. Turn your rotations back on.
+6. Paused sync groups cannot be resumed. Create them again, or contact support.
+
+When deletion finishes, click **Download deletion receipt** on the status page to keep proof that it was completed.
+
+For full details, see [Deleting your Kao account](https://usekao.com/help/account-deletion) in the Help Center.
 
 ## Policy updates
 
-When Kao updates legal policies, the dashboard may ask you to review and accept the new version before continuing.
+When Kao updates its Terms or Privacy Policy, the dashboard may ask you to review and accept the new version before you continue.
 
 ## Cookie preferences
 
-Use cookie settings from the site footer or account area to review available cookie choices and save your preference. Optional analytics are enabled only when you choose them. Read the [Cookie Policy](https://usekao.com/cookies) and [Privacy Policy](https://usekao.com/privacy) for details.
-
-Kao supports multiple interface languages. The language switcher can also suggest a language based on your browser or region until you choose a preference.
+Open cookie settings from the site footer to review your choices. Choosing **Essential Only** turns off optional analytics. Automatic error diagnostics still run so Kao can fix problems. Read the [Cookie Policy](https://usekao.com/cookies) for details.
 
 ## Privacy basics
 
-Kao uses Discord sign-in and stores the account and server management data needed to provide the service.
+- Kao uses Discord sign-in. It stores the account and server data it needs to provide the service.
+- When you use Kao in a server, Discord sends Kao your Discord ID, name, avatar, roles, and permissions in that server. Kao uses them to check what you may do and records what you did.
+- Message commands such as **Import emotes** only read the message you choose.
+- From December 6, 2026, a server's managers can see who added or removed emotes with Kao in that server.
+- Kao does not sell your data and never shows a bot token after you save it.
 
-Kao does not:
-
-- Read your Discord messages
-- Sell your data
-- Show bot tokens after they are saved
+Read the [Privacy Policy](https://usekao.com/privacy) for full details.
 
 ## Next steps
 
 <CardGrid>
-  <Card title="Billing" href="/guides/billing">
-    Manage plans and payments.
+  <Card title="Notifications" href="/guides/notifications">
+    Choose where Kao notices reach you.
   </Card>
-
-  <Card title="FAQ" href="/resources/faq">
-    Read common account questions.
+  <Card title="Billing and plans" href="/guides/billing">
+    Manage your plan and payments.
   </Card>
-
   <Card title="Support" href="/resources/support">
-    Find help for account, setup, and service issues.
+    Get help with account, setup, and service issues.
   </Card>
 </CardGrid>

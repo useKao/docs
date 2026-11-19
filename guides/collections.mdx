@@ -1,41 +1,50 @@
 ---
 title: Collections
-description: Save reusable groups of emotes for imports, rotations, and sync groups.
+description: Save reusable groups of emotes for imports, rotations, syncs, and poll schedules.
 ---
 
 ## Overview
 
-Collections are reusable emote sets. Use them to curate themes, save favorites, prepare a server import, power rotations, or sync the same set across multiple servers.
+Collections are reusable emote sets. Use them to save favorites, prepare a themed import, or feed rotations, syncs, and poll schedules.
+
+Open **Collections** from the **Emotes** area of the sidebar. The page has two sections:
+
+- **Yours**: collections you created.
+- **Server collections**: collections shared with a server's authorized staff.
+
+## Before you begin
+
+Your plan sets how many collections you can keep and how many emotes each can hold. On Free, you can keep 2 collections of up to 50 emotes each. See [Billing and plans](/guides/billing#plan-limits).
 
 ## Create a collection
 
-1. Go to **Collections**.
-2. Choose **Create Collection**.
-3. Add a name and optional description.
+1. Open **Collections**.
+2. Click **New Collection**.
+3. Add a name and an optional description.
 4. Save the collection.
 
-Keep names short and descriptive, such as "Reaction Faces", "Seasonal Emotes", or "Main Community Set".
+Keep names short and descriptive, such as "Reaction Faces" or "Monthly Rotation".
 
 ## Add emotes
 
-You can add emotes from several places:
+You can add emotes from:
 
 - Search results on the **Import** page
-- Public 7TV sets
-- A backup converted into a collection
+- A public 7TV emote set
+- A backup, with **Add to Collection**
+
+Each emote shows where it came from, such as "Added by you" or the 7TV channel it came from.
 
 ## Copy a 7TV set
 
-Use 7TV user search when you want to copy a public 7TV set into a collection.
-
 1. Open the collection.
-2. Choose **Add Emotes**.
-3. Search for a 7TV user.
-4. Open the user's public sets.
-5. Copy the set into the collection.
+2. Click **Add Emotes**.
+3. Open the **Browse 7TV Users** tab and search for a 7TV user.
+4. Open one of their sets.
+5. Click **Copy to Collection**.
 
 <Info>
-Copying creates a collection snapshot. Future changes to the 7TV set do not automatically change your collection.
+Copying makes a snapshot. Later changes to the 7TV set do not change your collection. To keep a collection matched to a streamer's set, [follow the streamer](/guides/streamer-emotes) instead.
 </Info>
 
 ## Organize a collection
@@ -45,38 +54,44 @@ Inside a collection you can:
 - Search and filter emotes
 - Mark favorites
 - Remove emotes
-- Drag to reorder
-- Export the collection as JSON
+- Drag emotes to reorder them
 
-Favorites are useful when importing from a large collection because Kao can prioritize them during selection.
+## Export a collection
+
+Click **Export** and choose:
+
+- **Emote images (.zip)** to download every emote image
+- **Emote list (.json)** to download the list of emotes
 
 ## Import from a collection
 
 1. Open the collection.
-2. Choose **Import to Server**.
+2. Click **Import to Discord**.
 3. Select the target server.
-4. Choose favorites, random, static, or animated selection.
-5. Confirm the import.
+4. Choose how to select emotes: **Import Favorites**, **Random Selection**, **Animated Only**, or **Static Only**.
+5. Review the preview and confirm.
 
-Progress appears in the import modal, operations dock, and **Activity**.
-
-## Smart select
-
-Smart select helps choose emotes from a collection when you do not want to pick every item manually. Review the suggested selection before importing.
+Progress appears in the import window, the operations dock, and **Activity**. If the server has no room left this hour, Kao queues the emotes instead of failing.
 
 ## Use collections with automation
 
-Collections can be used as the source for:
+Collections can be the source for:
 
-- **Rotations**, which refresh a server on a schedule
-- **Sync groups**, which copy a collection to target servers
-- **Backups**, when a backup is converted into a reusable collection
+- [Rotations](/guides/rotations), which refresh a server on a schedule
+- [Sync groups](/guides/sync-groups), which make target servers match the collection
+- [Poll schedules](/guides/emote-polls#poll-schedules), which start polls from the collection
+
+Collections linked to a [streamer follow](/guides/streamer-emotes) are managed by the follow and update automatically.
+
+## When you go over your plan's limit
+
+If your plan changes and you have more collections than it allows, the extra collections become read-only. You can still view, export, import from, or delete them. Upgrading makes them editable again.
 
 ## Best practices
 
 - Keep each collection focused on one purpose.
-- Use descriptions for context, such as "monthly rotation source".
-- Favorite the emotes you want Kao to prefer.
+- Use the description for context, such as "Source for the weekly rotation".
+- Mark favorites for the emotes you want Kao to prefer.
 - Remove stale emotes so automation stays predictable.
 
 ## Next steps
@@ -85,10 +100,10 @@ Collections can be used as the source for:
   <Card title="Rotations" href="/guides/rotations">
     Use a collection to refresh a server on a schedule.
   </Card>
-  <Card title="Sync Groups" href="/guides/sync-groups">
-    Push a collection to multiple servers.
+  <Card title="Sync groups" href="/guides/sync-groups">
+    Make other servers match a collection.
   </Card>
-  <Card title="Backups" href="/guides/backups">
-    Convert server snapshots into collections.
+  <Card title="Streamer emotes" href="/guides/streamer-emotes">
+    Keep a collection matched to a streamer's 7TV set.
   </Card>
 </CardGrid>

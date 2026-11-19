@@ -9,6 +9,98 @@ This page highlights selected product changes that affect Kao customers. For the
 
 ---
 
+## November 2026
+
+### A new mobile dashboard
+
+On phones and tablets, **Overview**, **Servers**, **Emotes**, and **Import** now sit in a bottom tab bar. **More** opens every other page. Search, sheets, and forms fit smaller screens, and the dashboard uses neutral gray surfaces.
+
+### Search 7TV by tag
+
+Type `#` and a tag, such as `#cat`, in the **Import** search bar to find 7TV emotes by tag. Combine tags with a name, such as `dance #cat #hat`. See [Search 7TV by tag](/guides/importing-emotes#search-7tv-by-tag).
+
+### Import defaults
+
+Choose a starting appearance and framing in **Settings** > **Import defaults**. New imports, **Quick add**, collection imports, the Emote Creator, and setup start with it. See [Import emotes](/guides/importing-emotes#set-your-import-defaults).
+
+### Sharper animated emotes and accurate queue times
+
+Large animated emotes that Kao used to refuse now import, and more keep every frame at full size. Animated emotes stay animated when you restore a backup. When work waits for Discord's hourly emoji limit, Kao shows a finish time that updates every minute.
+
+### Clearer automations
+
+Rotations, backups, and syncs each have their own page with settings and history. Rotation runs show which emotes were added or removed, and you can retry a failed emote with **Try again**. Syncs no longer delete an emote when its replacement will not fit in the server.
+
+### Safer deletes and confirmations
+
+Every destructive action now asks before it acts, including deleting a creation, removing emotes from a collection, clearing activity, unlinking a browser, and canceling an operation. If something fails, the dialog stays open with the error and a retry. The deletion progress window has its own **Cancel** button.
+
+### Privacy Policy update
+
+The Privacy Policy now has a section on using Kao in a Discord server. From December 6, 2026, a server's managers can see who added or removed emotes with Kao. See [Account and privacy](/guides/account-management#privacy-basics).
+
+---
+
+## October 2026
+
+### Kao in Discord
+
+Type `/kao` in any channel to add, manage, protect, and back up emotes without opening a browser. Every import shows a review card first, with 10 minutes to undo. See [Use Kao in Discord](/guides/bot-commands).
+
+### Emote polls
+
+Let members vote on new emotes, from a single **Yes** or **No** to a ballot of up to 8 emotes. Kao adds the winners for you. See [Emote polls](/guides/emote-polls).
+
+### Streamer emotes
+
+Follow a streamer and Kao keeps a collection matched to their 7TV emote set. Kao can post a daily digest, add new emotes, or keep your server in sync. See [Streamer emotes](/guides/streamer-emotes).
+
+### Protected emotes
+
+Protect emojis so Kao never removes them during rotations, syncs, restores, or bulk deletes. If someone deletes a protected emoji in Discord, Kao adds it back. See [Protect emojis](/guides/managing-emojis#protect-emojis).
+
+### A rebuilt Emote Creator
+
+Choose **Guided** for four short steps or **Editor** for every layer on one screen. Drafts save as you go, and animated creations keep every frame. See [Emote Creator](/guides/emote-creator).
+
+### Servers, Team, and Kao roles
+
+Each server has its own page with **Overview**, **Commands**, **Polls**, **Team**, and **Activity**. Share a hosted Kao Bot server with teammates through a Discord role, and choose who can import, manage emotes, or change settings with Kao roles. See [Server settings](/guides/server-settings).
+
+### Notifications and the browser extension
+
+A new notification centre lets you choose whether each kind of notice arrives in Kao, by email, or as a Discord DM. The Kao browser extension for Chrome adds 7TV emotes to your server in one click. See [Notifications](/guides/notifications) and [Browser extension](/guides/browser-extension).
+
+### Fresh swap rotations and safer restores
+
+The **Fresh swap** rotation adds the newest emotes and removes the oldest unprotected ones only when the server is full. Restores now show a preview of what will be added and removed before you confirm.
+
+### BetterTTV and EmojiGG search removed
+
+BetterTTV and EmojiGG closed their search to other sites, so Kao can no longer search them. Emotes you already saved from them still import. Animated FrankerFaceZ emotes now import with their animation.
+
+---
+
+## September 2026
+
+### Easier setup
+
+Setup pairs each step with a Discord preview, marks servers that already have Kao installed, and shows separate preparation and upload progress for your first import.
+
+### Account deletion and privacy requests
+
+Delete your account from **Settings** with a 14-day cancellation period, and download a deletion receipt when it completes. Submit privacy requests and follow their status from your dashboard. See [Account and privacy](/guides/account-management).
+
+### Redesigned billing
+
+The **Billing** page brings your plan, usage, payment details, and plan comparison together.
+
+### Support inside Kao
+
+Open **Support** from the dashboard to check service status, contact the team, or report a problem with an optional screenshot.
+
+---
+
 ## August 2026
 
 ### Clearer bot health warnings
@@ -47,17 +139,13 @@ Kao updated its 7TV integration to remain compatible with current source identif
 
 ## June 2026
 
-### Documentation navigation refresh
-
-The documentation homepage now gives you clearer setup paths, workflow links, and guide recommendations for common Kao tasks.
-
 ### Collection, rotation, and import fixes
 
-Collection search results can now be added without invalid URL errors, rotation setup refreshes target servers after bot linking, and bulk imports use the capacity-filtered import count before showing upgrade prompts.
+Collection search results can now be added without invalid URL errors, rotation setup refreshes target servers after bot linking, and bulk imports only count emotes that fit in the server before showing upgrade prompts.
 
 ### Dashboard interface polish
 
-Dashboard settings, navigation, loading states, notifications, command palette rows, and emoji tools now use more consistent spacing, borders, radius, active states, and localized copy across supported languages.
+Dashboard settings, navigation, notifications, search, and emoji tools now look more consistent, with better translations across supported languages.
 
 ### Crypto checkout discounts
 
@@ -65,7 +153,7 @@ Eligible coupons now work with crypto checkout as well as card checkout. Kao sho
 
 ### Fresher coupon banners
 
-New promotional banners and pricing discounts now refresh without waiting for stale page or API caches to expire. When Kao launches or updates a coupon, marketing pages can show the current offer as soon as the page loads in the browser.
+When Kao launches or updates a coupon, the pricing page and promotional banners show the current offer straight away.
 
 ---
 
@@ -73,19 +161,19 @@ New promotional banners and pricing discounts now refresh without waiting for st
 
 ### More accurate import rate-limit handling
 
-Hosted Kao Bot imports now track Discord emoji creation capacity more accurately, so large imports are less likely to be queued earlier than necessary. Queued imports also keep clearer Discord retry timing in the import modal, operations dock, and Activity.
+Hosted Kao Bot imports now follow Discord's emoji limits more accurately, so large imports are less likely to wait longer than necessary. Queued imports also keep clearer Discord retry timing in the import modal, operations dock, and Activity.
 
 ### Queued animated import reliability
 
-Animated imports that need background preparation now stay attached to their original import batch when Discord rate limits are active. Import progress, Activity, and admin queue views now use the same queue timing, including a clearer ready state when a queued item is due.
+Animated imports that need background preparation now stay attached to their original import batch when Discord rate limits are active. Import progress and Activity now show the same queue timing, including a clearer ready state when a queued item is due.
 
 ### More reliable animated imports
 
-Animated emotes that need extra preparation now move into worker processing sooner, so imports can keep showing progress instead of waiting on expensive preparation work.
+Animated emotes that need extra preparation now move to background processing sooner, so imports keep showing progress while they are prepared.
 
 ### Clearer queue status
 
-Bulk operation progress is easier to recover after navigating around the dashboard. Queue, Activity, and admin views now agree more consistently about whether work is waiting on your quota, server capacity, or a Discord rate limit.
+Bulk operation progress is easier to recover after navigating around the dashboard. The dashboard and Activity now agree more consistently about whether work is waiting on your daily allowance, server capacity, or a Discord rate limit.
 
 ### Faster, safer imports
 
@@ -93,7 +181,7 @@ Imports, rotations, syncs, and restores now share clearer Discord capacity handl
 
 ### Clearer bot setup
 
-The bots dashboard now waits for access checks before showing setup choices. This prevents a brief flash of the wrong bot layout when your account has no configured bot access yet.
+Bot setup now shows the right setup choices for your account as soon as the page opens.
 
 ---
 
@@ -118,14 +206,6 @@ Account settings now support full data export and account deletion flows so you 
 ### Emoji safety and stability
 
 Kao improved animated emote handling, permission checks, and dashboard accessibility across core workflows.
-
----
-
-## March 2026
-
-### Documentation refresh
-
-Customer docs were updated to better match current Kao features and setup flows.
 
 ---
 
@@ -168,7 +248,13 @@ Supported sources at launch included 7TV, BetterTTV, and FrankerFaceZ.
 Have a feature request or found a bug?
 
 <CardGrid>
-  <Card title="Discord Server" href="https://usekao.com/api/discord/invite">
-    Share feedback with the community.
+  <Card title="Send feedback" href="https://usekao.com/feedback">
+    Tell the Kao team what you think.
+  </Card>
+  <Card title="Report a bug" href="https://usekao.com/report">
+    Report something that is broken.
+  </Card>
+  <Card title="Discord server" href="https://usekao.com/api/discord/invite">
+    Share ideas with the community.
   </Card>
 </CardGrid>

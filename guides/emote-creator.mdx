@@ -1,78 +1,102 @@
 ---
 title: Emote Creator
-description: Create custom emotes by combining layers, overlays, and templates.
+description: Make your own emotes by combining a base emote with overlays, then save, download, or add them to a server.
 ---
 
 ## Overview
 
-The Emote Creator lets you combine a base emote with overlays, effects, and templates. You can preview the result, save it to your creations gallery, then import it into a server or download it.
+The Emote Creator combines a base emote with overlays to make a new emote. Your work saves as a draft while you go, and finished emotes appear on your **Your creations** page. From there you can add them to a server or download them.
 
-## Start a creation
+Open **Create** in the sidebar to start.
 
-1. Go to **Create**.
-2. Add a base layer or choose a template.
-3. Add overlays.
-4. Position each layer on the canvas.
+## Choose a mode
 
-The canvas uses a transparent background preview so you can see what will become transparent in Discord.
+| Mode | Best for |
+|------|----------|
+| **Guided** | Your first emote. Four short steps |
+| **Editor** | Full control. Every layer on one screen, with handles, layer order, keyboard shortcuts, and undo |
 
-## Work with layers
+Select **Remember my choice** to skip this screen next time. You can switch modes later.
 
-Each layer can be adjusted independently:
+## Make an emote in Guided mode
 
-| Control | What it changes |
-|---------|-----------------|
-| Position | Where the layer sits on the canvas |
-| Scale | How large the layer appears |
-| Rotation | The layer angle |
-| Opacity | How transparent the layer is |
-| Order | Which layers appear in front |
+1. **Pick a base**: choose a 7TV emote, one of your creations, or an image you upload.
+2. **Add overlays**: try overlays such as hats, signs, and reactions on top of the base.
+3. **Fine-tune**: adjust where each overlay sits, its size, tilt, and see-through level. Add a style such as an outline, glow, or shadow.
+4. **Name and save**: give the emote a name and save it.
 
-Use the layer panel to select, reorder, or remove layers.
+## Use the Editor
 
-## Use templates and quick overlays
+The Editor shows the canvas, the layer list, and a live Discord preview together. Select a layer to move, resize, or rotate it with its handles. Drag layers in the list to change which one is in front. Click **Save emote** when you are done.
 
-Templates give you a starting point. Quick overlays are useful for common additions such as hats, glasses, effects, and other decorative layers.
+The library has four tabs:
 
-After applying a template or overlay, you can still move and adjust each layer.
+| Tab | Contents |
+|-----|----------|
+| **Emotes** | 7TV emotes and your own creations to use as a base |
+| **Overlays** | Decorations grouped into categories such as Popular, Party, Weather, Hands, Signs, and Reactions |
+| **Uploads** | Your own images. PNG, JPEG, GIF, or WebP, up to 4 MB each |
+| **Templates** | Quick layouts for the selected overlay, such as Corner badge, Tilted, or Top hat |
 
-## Preview before saving
+You can use up to 5 layers in one emote.
 
-Discord often displays emojis at small sizes. Before saving:
+## Drafts
 
-1. Open the preview.
-2. Check the emote at smaller sizes.
-3. Remove tiny details that are hard to read.
-4. Increase contrast when the result feels muddy.
+Kao saves your work as a draft while you edit. Drafts follow you to every device where you sign in. Open a draft to **Continue**, or **Discard** it. You can keep up to 25 drafts.
 
-<Info>
-Simple, high-contrast compositions usually work better than detailed images once Discord shrinks them.
-</Info>
+If a save fails, click **Try again** to save the same work without making another edit. Your local copy stays on the current device in the meantime.
 
-## Save and use your creation
+If you edit the same draft on two devices, Kao asks whether to **Keep mine** or **Use the other**.
 
-1. Choose **Save**.
-2. Open the creation from your gallery.
-3. Import it to a server, download it, or delete it when you no longer need it.
+## Animated emotes
 
-Created emotes follow the same server capacity and naming rules as imported emotes.
+Animated creations keep every frame. Kao fits them under Discord's 256 KB limit when it can. A creation over the limit can still be saved and downloaded, but not added to a server.
+
+## Use your creations
+
+Open **Your creations** to see everything you have made. Filter by **All**, **Animated**, **Static**, or **Not on a server**.
+
+For each creation you can:
+
+- **Edit** or **Remix** it. Both save a new creation and keep the original.
+- **Download** it.
+- Add it to a server. Each server shows **Add**, **Added**, or **No room**.
+- Delete it.
+
+Creations follow the same naming rules and slot limits as imported emotes. Kao uses your [import defaults](/guides/importing-emotes#set-your-import-defaults) when it adds a creation to a server.
+
+## Plan limits
+
+| Limit | Free | Pro |
+|-------|------|-----|
+| Saved creations | 3 | 200 |
+| Uploaded images | 10 | 100 |
+
+## Design tips
+
+Discord shows emojis at small sizes.
+
+- Keep compositions simple and high-contrast.
+- Remove tiny details that disappear when shrunk.
+- Check the live Discord preview before you save.
 
 ## Troubleshooting
 
-| Problem | What to try |
-|---------|-------------|
-| Emote looks unclear | Preview at small size and simplify layers |
-| Overlay is hidden | Move it higher in the layer order |
-| Import fails | Check server capacity, bot permissions, and emoji name |
-| You want to reuse it later | Keep it in your creations gallery or download it |
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| Emote looks unclear in Discord | Too much detail at small sizes | Simplify layers and check the Discord preview |
+| Overlay is hidden | It is behind another layer | Move it higher in the layer list |
+| Save failed | A temporary connection problem | Click **Try again**. If Kao cannot confirm the save, check your drafts first |
+| Creation shows **No room** | The server has no free slots of that type | Free a slot on the **Emotes** page |
+| Creation cannot be added | It is larger than 256 KB | Simplify the animation or download it instead |
 
 ## Next steps
 
 <CardGrid>
-  <Card title="Importing Emotes" href="/guides/importing-emotes">
-    Import emotes from supported sources.
+  <Card title="Import emotes" href="/guides/importing-emotes">
+    Import emotes from 7TV and FrankerFaceZ.
   </Card>
-  <Card title="Managing Emojis" href="/guides/managing-emojis">
-    Review custom emotes after importing them.
+  <Card title="Manage emojis" href="/guides/managing-emojis">
+    Review your creations after adding them.
   </Card>
 </CardGrid>

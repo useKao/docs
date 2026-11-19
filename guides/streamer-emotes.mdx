@@ -1,0 +1,92 @@
+---
+title: Streamer emotes
+description: Follow a streamer's 7TV emote set and get their new emotes in your Discord server automatically.
+---
+
+## Overview
+
+Streamer emotes keep your server up to date with the streamers you watch. When you follow a streamer, Kao creates a collection that matches their active 7TV emote set. When the streamer adds an emote, it appears in your collection too. Kao can then alert your server, add the new emotes, or keep the server matched to the set.
+
+Open **Streamer emotes** from the **Server Emojis** area of the sidebar. In Discord, use `/kao` > **7TV channels**.
+
+## Before you begin
+
+- The streamer must use 7TV.
+- Kao must be in the server where you want the emotes.
+- For alerts, Kao needs permission to post in the alert channel.
+
+## Follow a streamer
+
+1. Open **Streamer emotes** and click **Follow a streamer**.
+2. Enter the streamer's Twitch channel or 7TV profile and click **Find**.
+3. Leave **Follow the active set** on to follow whichever set the streamer uses.
+4. Click **Follow streamer**.
+5. Add the follow to a server, or choose **Not now** to keep only the collection.
+
+Kao creates a collection linked to the streamer's 7TV set. The follow manages that collection, so you do not edit it yourself.
+
+## Choose what happens in your server
+
+Each server you add a follow to has its own settings.
+
+| Setting | Options |
+|---------|---------|
+| **Alerts** | **Daily digest**, **Real-time** (Pro), or **Off** |
+| **Alert channel** | The Discord channel for alerts |
+| **Daily time** and **Timezone** | When the daily digest posts |
+| **Server emojis** | **Alerts only**, **Add new emotes**, or **Keep in sync** (Pro) |
+
+**Keep in sync** mirrors the streamer's set as it changes. It adds new emotes and removes emotes the streamer removed. It never removes protected emojis, and it only removes emotes that the follow added.
+
+Alert cards in Discord show **Add all new**, **Open in Kao**, and **View on 7TV**, with an emote picker below. Members with the right Kao role can add emotes straight from the card.
+
+## How often Kao checks
+
+| Plan | Followed streamers | Checks |
+|------|--------------------|--------|
+| Free | 1 | Once a day, with a daily digest |
+| Pro | Unlimited | Real-time 7TV alerts |
+
+Use **Check now** on the streamer's panel to check sooner. The number of manual checks per day is limited.
+
+## Manage a follow
+
+Open a streamer to see their panel: recent additions and removals from the last 30 days, the servers following them, and anything that needs fixing.
+
+From the panel you can:
+
+- **Edit follow** to change server settings
+- **Pause** or **Resume** the follow
+- **Remove from server**
+- **Open collection**
+- **Stop following**
+
+When you stop following, choose whether to **Keep the emotes as a collection**. Kao shows which rotations and syncs use the collection first. If a rotation or sync uses it, Kao keeps the collection automatically.
+
+## Paused follows
+
+Kao pauses a follow on its own when it loses access, for example when a bot, server, or alert channel is no longer reachable. The panel shows the reason. The follow resumes automatically after you fix the problem.
+
+## Troubleshooting
+
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| Streamer not found | The channel does not use 7TV, or the name is misspelled | Check the Twitch name or use the 7TV profile link |
+| Follow shows as paused | Kao lost access to the bot, server, or alert channel | Follow the reason on the panel, then wait for it to resume |
+| New emotes were not added | The server is full | Free emoji slots. The panel says when the server is full |
+| Alerts arrive only once a day | Free checks once a day | Upgrade to Pro for real-time alerts |
+| Kao kept the collection after you stopped following | A rotation or sync uses the collection | Remove the collection from that rotation or sync, then delete it from **Collections** |
+
+## Next steps
+
+<CardGrid>
+  <Card title="Rotations" href="/guides/rotations">
+    Rotate in a streamer's new emotes as they arrive.
+  </Card>
+  <Card title="Collections" href="/guides/collections">
+    Learn how linked collections work.
+  </Card>
+  <Card title="Manage emojis" href="/guides/managing-emojis#protect-emojis">
+    Protect the emojis you want to keep.
+  </Card>
+</CardGrid>
