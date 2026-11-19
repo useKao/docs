@@ -1,96 +1,95 @@
 ---
-title: Sync Groups
-description: Keep Discord server emojis synchronized.
+title: Sync groups
+description: Make one or more Discord servers match a Kao collection or a source server.
 ---
 
 ## Overview
 
-Sync groups copy emojis from a source to one or more target servers when you choose **Sync Now**. Use them to keep related communities, event servers, or brand servers consistent.
+A sync group makes target servers match a source. The source can be a Kao collection or another Discord server. Use sync groups to keep related communities, event servers, or brand servers consistent.
 
-Sync is deliberate, not automatic when the source changes. Each run can finish
-differently per target server because permissions, capacity, or Discord limits
-may differ.
+Kao matches emojis by name, ignoring capitalization. If a target already has an emoji with the same name and type as the source, Kao keeps the target's emoji, even if its image is different.
+
+Syncs run when you click **Sync now**. They do not run automatically when the source changes. To keep a server matched to a streamer's 7TV set automatically, use [Streamer emotes](/guides/streamer-emotes) with **Keep in sync**.
 
 ## Sync modes
 
 | Mode | Source | Best for |
 |------|--------|----------|
-| Collection Source | A Kao collection | Curated sets you control in Kao |
-| Server Mirror | Another Discord server | Making target servers match a live source server |
+| **Collection Source** | A Kao collection | Curated sets you control in Kao |
+| **Server Mirror** | Another Discord server | Making target servers match a source server |
 
 ## Before you begin
 
-Make sure:
-
-- The source collection exists, or Kao can access the source server.
-- Kao can manage each target server.
-- The bot has **Manage Emojis and Stickers** in each target server.
-- Target servers have enough static and animated emoji capacity.
-- You have a backup if the sync may remove emojis.
+- Sync groups need a paid plan.
+- For **Server Mirror**, you and Kao must both still have access to the source server.
+- Kao must be in each target server with **Create Expressions** and **Manage Expressions**.
+- Target servers need enough static and animated slots.
+- [Protect](/guides/managing-emojis#protect-emojis) any emojis that must stay, and consider a [backup](/guides/backups) of each target.
 
 ## Create a sync group
 
-1. Go to **Sync**.
-2. Choose **Create Sync Group**.
-3. Select **Collection Source** or **Server Mirror**.
-4. Choose the source collection or source server.
-5. Select target servers.
-6. Choose sync settings.
-7. Create the group.
+1. Open **Sync** and click **Create sync group**.
+2. **Choose Sync Mode**: select **Collection Source** or **Server Mirror**.
+3. Choose the source collection or source server.
+4. **Select Target Servers**.
+5. **Name & Settings**: name the group and choose its settings.
+6. Create the group.
 
 ## Sync settings
 
-The setting names below intentionally match the dashboard labels, including labels that use "Emotes."
+| Setting | What it does | Default |
+|---------|--------------|---------|
+| **Remove Extra Emojis** | Deletes target emojis of the synced types that are not in the source | On |
+| **Sync Animated Emotes** | Includes animated emojis | On |
+| **Sync Static Emotes** | Includes static emojis | On |
 
-| Setting | What it does |
-|---------|--------------|
-| Remove Extra Emojis | Deletes target emojis that are not in the source |
-| Sync Animated Emotes | Includes animated emojis |
-| Sync Static Emotes | Includes static emojis |
+For a collection source, you can also choose **Which emotes to pick**: **Collection order**, **Newest first**, **Favor recent**, or **Added after a date**.
 
 <Warning>
-Remove Extra Emojis can delete target server emojis. Leave it off if targets should keep their own local emojis.
+**Remove Extra Emojis** is on by default and deletes target emojis that are not in the source. Turn it off if targets should keep their own emojis. Same-name replacements still happen when it is off, so protect any emoji that must stay. Protected and Discord-managed emojis are always kept.
 </Warning>
 
 ## Run a sync
 
-Sync groups run when you choose **Sync Now**.
+Kao compares the source with each target. It adds missing emojis and, if **Remove Extra Emojis** is on, removes extras.
 
-Kao compares the source with each target, then adds missing emojis and optionally removes extras. Progress appears while the sync runs, and results are saved in sync history.
+If a target has an emoji with the same name as the source but a different type, for example static instead of animated, Kao replaces it. This happens even when **Remove Extra Emojis** is off, and even when the target emoji's type is excluded by **Sync Animated Emotes** or **Sync Static Emotes**. Kao only plans a replacement when the new emoji fits. If it does not fit, Kao keeps the old emoji and marks the target as partly synced.
 
-Large syncs can take a few minutes because Discord limits emoji changes.
+<Warning>
+Kao deletes the old emoji before it uploads the replacement. If the upload then fails, the target loses that emoji. Back up important targets before you sync, and protect emojis that must stay.
+</Warning>
+
+1. Open the sync group.
+2. Click **Sync now** and confirm.
+
+Large syncs can take a while because of Discord's hourly emoji limit. The same sync never runs twice at once, and syncs do not overlap with restores on the same server.
 
 ## Manage a sync group
 
-You can:
+The sync group's page shows:
 
-- Rename the group
-- Toggle static or animated syncing
-- Toggle Remove Extra Emojis
-- Run Sync Now
-- Review history
-- Delete the group
+- Its overall state: **In sync**, **Partly synced**, **Failed on N of M**, or **Never synced**
+- A **Servers** table with each target's status and its added, removed, and failed counts
+- **History** of past runs
 
-## How to know a sync finished
+From the page you can **Rename** the group, change its settings, run **Sync now**, or **Delete sync**.
 
-Open sync history after the run. For every target server, confirm:
+## Check that a sync finished
 
-- The run reached a final state.
-- Added, removed, and failed counts match the result you expected.
-- Emojis that should remain are still present when **Remove Extra Emojis** was off.
-- Failed targets have enough capacity and the bot still has permission before retrying.
+Check each target in the **Servers** table separately. One target succeeding does not mean every target succeeded.
 
-A successful target does not prove that every other target succeeded. Review
-each target result separately.
+- Each target shows **In sync** or a failure.
+- Added, removed, and failed counts match what you expected.
+- Before you sync again, failed targets have free slots and the bot has permission.
 
 ## Troubleshooting
 
-| Problem | What to check |
-|---------|---------------|
-| Target failed | Confirm the bot is still in that server with Manage Emojis and Stickers |
-| Emojis did not appear | Check capacity and sync history for failed items |
-| Extra emojis were removed | Remove Extra Emojis was enabled |
-| Plan limit reached | Remove unused sync groups or review your plan |
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| Target failed | The bot left the server or lost permission | Check the server on the **Servers** page, then sync again |
+| Sync shows **Partly synced** | Some work is still queued behind Discord's hourly limit, a target ran out of slots, or some uploads or deletions failed | Wait for queued work in **Activity**. Otherwise, free slots or fix permissions, then sync again |
+| Emojis were removed from a target | **Remove Extra Emojis** is on, or a same-named emoji of the other type was replaced | For extras, turn off **Remove Extra Emojis**. For replacements, protect the target emoji |
+| You cannot create a sync group | Your plan does not include sync groups, or you reached its limit | Delete an unused group or upgrade |
 
 ## Next steps
 
@@ -99,9 +98,9 @@ each target result separately.
     Build a curated source collection.
   </Card>
   <Card title="Backups" href="/guides/backups">
-    Back up targets before destructive syncs.
+    Back up targets before syncing.
   </Card>
-  <Card title="Activity Log" href="/guides/activity-log">
+  <Card title="Activity" href="/guides/activity-log">
     Track sync progress and history.
   </Card>
 </CardGrid>

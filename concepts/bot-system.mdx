@@ -1,109 +1,121 @@
 ---
-title: Bot Setup
-description: Choose between the hosted Kao Bot and Bring Your Own Bot.
+title: Choose a bot setup
+description: Compare the hosted Kao Bot with Bring Your Own Bot, and learn which Discord permissions Kao needs.
 ---
 
-## Your two options
+## Overview
 
-Kao needs a Discord bot in each server it manages. You can either invite Kao's hosted bot or connect your own.
+Kao needs a Discord bot in each server it manages. You can invite Kao's hosted bot or connect your own. Most servers should use the hosted Kao Bot.
 
 | Setup | Best for | What you manage |
 |-------|----------|-----------------|
-| Hosted Kao Bot | Most servers and fastest setup | Invite permissions only |
-| Bring Your Own Bot | Custom branding, custom status, or stricter separation | Discord application, token, invites, and bot settings |
+| Hosted Kao Bot | Most servers and the fastest setup | Approving the Discord invite |
+| Bring Your Own Bot (BYOB) | Your own bot name, avatar, and status, or extra server features | A Discord application, its token, and its invites |
+
+You can use both in the same Kao account.
+
+## What each setup supports
+
+| Feature | Hosted Kao Bot | BYOB |
+|---------|----------------|------|
+| Dashboard imports, emoji management, and protection | Yes | Yes |
+| `/kao` and other Discord commands | Yes | Yes |
+| Backups, rotations, syncs, and streamer follows | Yes | Yes |
+| Emote polls | Yes | Yes |
+| Team sharing with a Discord role | Yes (paid plans) | Yes (paid plans) |
+| Staff notifications and community announcements | No | Yes |
+| Server presets | No | Yes |
+| Custom bot nickname | No | Yes (bot owner) |
+| White-label branding and custom bot status | No | Pro or Enterprise (bot owner) |
 
 ## Hosted Kao Bot
 
-The hosted Kao Bot is the default path for most customers.
+Kao runs the hosted Kao Bot for you. There is no token to store or bot to keep online.
 
-Use it when you want:
+To add the hosted Kao Bot to a server:
 
-- No Discord Developer Portal setup
-- Dashboard-based imports and emoji management
-- A bot that Kao keeps running for you
-- A simple path for adding more servers later
+1. Open **Servers** and click **Add server**.
+2. Choose **Use the Kao hosted bot**.
+3. Choose the server, then click the invite button to open Discord.
+4. Approve the invite in Discord.
+5. Return to Kao. Kao verifies the installation automatically.
 
-To invite it, go to **Bots**, choose **Invite Kao Bot**, select a server, approve the Discord invite, and return to Kao for verification.
+On the Free plan, the hosted Kao Bot can work in 2 servers. If you go over this limit, for example after a paid plan ends, Kao pauses the extra servers instead of removing them. Upgrading resumes them.
+
+### One-time permission update
+
+Servers that added Kao Bot before the late October 2026 update need to approve updated permissions once. The server's **Overview** shows **Kao Bot needs a one-time permission update** with an **Update in Discord** button. Approving it requires the server owner or a member with **Manage Server**. Kao never asks for Administrator.
 
 ## Bring Your Own Bot
 
-Bring Your Own Bot is for teams that want their own bot identity.
-
-Use BYOB when you need:
-
-- A custom bot name or avatar
-- A custom Discord status
-- White-label presentation
-- Separate bots for separate communities
-- Full ownership of the Discord application
+Use BYOB when you want your own bot identity or the BYOB-only server features listed above.
 
 ### Create a BYOB bot
 
-1. Open the [Discord Developer Portal](https://discord.com/developers/applications).
-2. Create an application.
-3. Open **Bot** and, under **Privileged Gateway Intents**, enable **Server Members Intent**.
-4. Reset and copy the bot token.
-5. Paste the token into Kao when adding your bot.
+1. Open the [Discord Developer Portal](https://discord.com/developers/applications) and create an application.
+2. Open **Bot**. Under **Privileged Gateway Intents**, turn on **Server Members Intent**.
+3. Click **Reset Token** and copy the new token.
+4. In Kao, open **Servers**, click **Add server**, and choose **Connect your own bot**.
+5. Paste the token and let Kao check it.
 6. Invite the bot to each server you want Kao to manage.
 
 <Warning>
-Treat a bot token like a password. Only paste it into Kao's token field, and reset it in Discord if it is ever exposed.
+Kao requires **Server Members Intent**. Without it, Discord refuses the bot's connection. Kao uses it to check which members are allowed to use your bot.
 </Warning>
 
-## Required Discord permissions
+<Warning>
+Treat a bot token like a password. Only paste it into Kao's token field. If it is ever exposed, reset it in Discord and update it in Kao.
+</Warning>
 
-At minimum, the bot needs **Manage Emojis and Stickers** in the target server.
+On the Free plan, you can connect 1 bot in up to 3 servers. See [Billing and plans](/guides/billing#plan-limits).
 
-Some workflows also need the bot to see basic server structure so Kao can display channels, roles, and server settings. Kao shows missing permission warnings in the dashboard when something needs attention.
+## Discord permissions
 
-For BYOB setup, enable **Server Members Intent** when Kao asks for it. Without that intent, Kao may not be able to load the bot's servers after token validation.
+Kao asks Discord for these bot permissions:
 
-## Permission and install health
+| Permission | Why Kao needs it |
+|------------|------------------|
+| **Create Expressions** | Add new emojis |
+| **Manage Expressions** | Rename, restrict, and delete emojis |
+| **View Channels**, **Send Messages**, **Embed Links**, **Read Message History** | Reply to commands and post digests, polls, and notices |
+| **Use External Emojis** | Show emotes in Kao's Discord messages |
+| **Use Application Commands** | Run `/kao` and other commands |
+| **Change Nickname** | Apply a bot nickname |
+| **Manage Webhooks** | Post community announcements |
 
-The dashboard can show a warning when:
+Kao never asks for Administrator.
 
-- The bot is missing a required Discord permission.
-- The bot is offline or still starting, so Kao cannot check it yet.
-- The bot may no longer be in the selected server.
+## Bot health warnings
 
-Open the warning to review the affected server. Reinvite or update the bot permissions when Kao offers that action, wait briefly if the bot is starting, and run the check again after Discord finishes applying the change.
+Kao warns you on **Overview**, **Servers**, and the server's page when:
 
-## Shared server access
+- The bot is missing a Discord permission.
+- The bot is offline or still starting, so Kao cannot check it.
+- The bot is no longer in the server.
 
-Server owners can share access with teammates. Shared users can manage only the servers and actions allowed by their assigned role.
-
-Use shared access when a moderator or designer should help with emoji work without owning the bot token or billing account.
-
-## When to switch setups
-
-You can use both hosted and BYOB access in the same Kao account.
-
-Consider BYOB if your community needs branded bot identity. Consider the hosted bot if you want a simpler setup or no longer want to manage a token yourself.
+Open the warning to see what is affected. Use the offered action, such as **Update in Discord** or **Invite again**, then let Kao check again.
 
 ## Troubleshooting
 
-| Problem | What to check |
-|---------|---------------|
-| Server does not appear | You may need Manage Server permission, or the bot is not in that server |
-| Hosted bot will not verify | Finish the Discord invite, then click verify again |
-| BYOB token is invalid | Reset the token in Discord and paste the new token into Kao |
-| Bot cannot import | Reinvite or update the bot role with Manage Emojis and Stickers |
-| Permission check is unavailable | Check that the bot is online, wait for startup to finish, then check again |
-| Bot may no longer be in the server | Invite the bot again and return to Kao to verify the server |
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| Server is not in the invite list | Your Discord account lacks **Manage Server** there | Ask a server admin for the permission or to invite Kao |
+| Hosted bot did not verify | The Discord invite was not completed | Click **Reopen Discord**, approve the invite, then return to Kao |
+| BYOB token is rejected | The token was reset or copied incorrectly | Reset the token in Discord and paste the new one |
+| BYOB bot will not connect | **Server Members Intent** is off | Turn it on in the Developer Portal under **Bot** |
+| Bot cannot add emojis | The bot is missing **Create Expressions** | Use **Update in Discord**, or give the bot's role the permission |
+| Server shows under **Needs attention** | The bot was removed from the server | Click **Invite again** |
 
 ## Next steps
 
 <CardGrid>
   <Card title="Quickstart" href="/quickstart">
-    Invite a bot and import your first emote.
+    Invite the hosted Kao Bot and import your first emotes.
   </Card>
-  <Card title="Multiple Bots" href="/guides/multiple-bots">
-    Manage hosted, BYOB, and shared server access.
+  <Card title="Servers and bots" href="/guides/multiple-bots">
+    Manage hosted servers, your own bots, and shared servers.
   </Card>
-  <Card title="Bot Commands" href="/guides/bot-commands">
-    See available Discord slash commands.
-  </Card>
-  <Card title="Importing Emotes" href="/guides/importing-emotes">
-    Start importing after setup.
+  <Card title="Use Kao in Discord" href="/guides/bot-commands">
+    Learn what `/kao` can do.
   </Card>
 </CardGrid>

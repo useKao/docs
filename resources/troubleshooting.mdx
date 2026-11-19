@@ -1,273 +1,249 @@
 ---
 title: Troubleshooting
-description: Fix common setup, import, server, billing, and account issues.
+description: Fix common problems with Kao setup, bots, imports, Discord commands, automation, billing, and sign-in.
 ---
 
-## Setup issues
+## Setup and bot issues
 
-### Hosted bot will not verify
+### Kao did not detect the hosted bot
 
 **Symptoms**
 
-- Kao says the hosted bot is not detected.
-- The server still shows as not ready after you approve the invite.
+- After you approve the Discord invite, Kao does not show **Kao joined this server.**
 
 **Fixes**
 
-1. Make sure the Discord invite was completed.
-2. Confirm you selected the same server in Kao and Discord.
-3. Check that the hosted bot is still in the server.
-4. Click verify again.
-5. If needed, remove the failed install and invite the hosted bot again.
+1. Make sure you finished the invite in Discord and selected the same server.
+2. If the Discord window closed early, click **Reopen Discord** and approve the invite.
+3. If Kao is already in the server, click **I've already invited Kao**.
+4. If Discord does not list the server, ask a server admin for **Manage Server** or to invite Kao.
 
 ### Bot permission warning or bot not found
 
 **Symptoms**
 
-- Kao shows **Missing Bot Permissions**.
+- Kao says the bot is missing permissions.
 - Kao says it cannot check the bot because it is offline or still starting.
-- Kao says the bot may no longer be in the selected server.
+- The server appears under **Needs attention**.
 
 **Fixes**
 
-1. Open the warning and review the affected server and feature.
-2. Update the bot role with the missing Discord permission, or use the offered update or reinvite action.
-3. If the bot is starting, wait briefly and check again.
-4. If the bot was removed, invite it to the server again and return to Kao to verify it.
-5. Check the [Kao service status page](https://status.usekao.com) if the check remains unavailable.
+1. Open the warning to see which permission or feature is affected.
+2. Click **Update in Discord** if it appears, and approve the permissions.
+3. If the bot was removed, click **Invite again**.
+4. If your own bot is starting, wait a minute and let Kao check again.
+5. Check the [Kao status page](https://status.usekao.com) if the check stays unavailable.
 
-### BYOB token is invalid
+### BYOB bot will not connect
 
 **Symptoms**
 
 - Kao rejects the token.
-- Your connected bot goes offline after a token reset.
+- Your bot goes offline after a token reset.
+- Kao warns that **Server Members Intent** is turned off.
 
 **Fixes**
 
-1. Open the [Discord Developer Portal](https://discord.com/developers/applications).
-2. Select your application.
-3. Open **Bot**.
-4. Reset and copy the token.
-5. Paste the new token into Kao.
+1. Open the [Discord Developer Portal](https://discord.com/developers/applications) and select your application.
+2. Open **Bot** and make sure **Server Members Intent** is on.
+3. Click **Reset Token** and copy the new token.
+4. In Kao, open the bot and click **Update token**.
 
 <Warning>
-Resetting a token makes the old token stop working immediately.
+Resetting a token stops the old token immediately. Update it in Kao right away.
 </Warning>
 
 ### Server does not appear
 
 **Symptoms**
 
-- A server is missing from a dropdown.
-- You cannot choose the expected target server.
+- A server is missing from a server picker.
 
 **Fixes**
 
-1. Confirm your Discord account has access to that server.
-2. Make sure the hosted bot or BYOB bot is installed.
-3. Check whether a server admin needs to grant shared access.
-4. If you just linked a BYOB bot to the server, refresh the dashboard so Kao reloads target server capacity.
-5. Sign out and back in to refresh your Discord server list.
+1. Check that Kao is in the server on the **Servers** page.
+2. If someone else manages the server, ask them to add you to its team role.
+3. If you just invited a bot, refresh the page.
+4. Sign out and back in to refresh your Discord server list.
+
+### Server shows Paused
+
+**Symptoms**
+
+- A hosted Kao Bot server shows **Paused**.
+
+**Fixes**
+
+Your plan allows fewer hosted servers than you have. On Free, the limit is 2. Remove a hosted server, or upgrade to resume it. Nothing in the server was deleted.
+
+## Discord command issues
+
+### /kao does not appear
+
+**Fixes**
+
+1. Restart Discord or press `Ctrl+R` (`Cmd+R` on Mac) to refresh it.
+2. Check that Kao is in the server.
+3. On the server's **Overview** in Kao, click **Update in Discord** if it appears.
+
+### "You need a Kao role to use Kao here."
+
+**Fixes**
+
+Ask a Kao administrator to give you a Kao role on the server's **Commands** page. You also need the matching Discord permission, such as **Create Expressions** to import. See [Kao roles](/guides/server-settings#kao-roles).
 
 ## Import issues
 
-### Server is at emoji capacity
+### Server is full
 
 **Symptoms**
 
-- Imports, restores, rotations, or syncs fail because the server is full.
+- Imports, restores, rotations, or syncs fail because the server has no free slots.
 
 **Fixes**
 
-1. Delete unused emojis.
-2. Choose a different target server.
-3. Reduce the batch size.
-4. Boost the server if your community wants more emoji slots.
+1. Delete unused emojis on the **Emotes** page.
+2. Choose a different server.
+3. Import fewer emotes.
+4. Boost the server for more slots. See [Discord limits](/concepts/overview#discord-limits).
 
-| Boost level | Static | Animated |
-|-------------|--------|----------|
-| No boost | 50 | 50 |
-| Level 1 | 100 | 100 |
-| Level 2 | 150 | 150 |
-| Level 3 | 250 | 250 |
-
-### Bot lacks permission
+### Bot is missing Create Expressions
 
 **Symptoms**
 
-- Kao reports missing permissions.
-- Emoji creation, rename, or delete actions fail.
+- Kao shows "Bot is missing Create Expressions".
+- Adding, renaming, or deleting emojis fails.
 
 **Fixes**
 
-1. Open the server's Discord role settings.
-2. Find the hosted bot or BYOB bot role.
-3. Enable **Manage Emojis and Stickers**.
-4. Make sure the bot role is high enough for the action.
-5. Reinvite the bot if the role is difficult to repair.
+1. On the server's **Overview** in Kao, click **Update in Discord** if it appears.
+2. Otherwise, open the server's role settings in Discord.
+3. Give the bot's role **Create Expressions** and **Manage Expressions**.
 
-### Import is slow or pending
+### Import is waiting
 
 **Symptoms**
 
-- Progress stays pending.
-- A large batch takes several minutes.
+- An import shows **Waiting**.
+- A large batch takes a long time.
 
 **Fixes**
 
-1. Check **Activity** for the current status.
-2. Wait for Discord's emoji change limit to clear.
-3. Import fewer emotes at once for urgent changes.
-4. Confirm your daily import allowance has not been reached.
+1. Check **Activity** for the reason and estimated finish time.
+2. If it says "Waiting for Discord's hourly emoji limit", wait. Each server can take about 50 new emojis an hour.
+3. If it says "Waiting for your daily import limit to reset", wait until tomorrow or upgrade.
+4. Animated emotes may take longer while Kao prepares them.
 
-### Preview or appearance is not what I expected
-
-**Symptoms**
-
-- An animated preview is still preparing.
-- A wide emote looks cropped after choosing a larger appearance.
-- An import is queued for background processing.
+### An emote looks cropped or too small
 
 **Fixes**
 
-1. Review the **Discord-scale preview** after preparation finishes.
-2. Choose **Auto** or **Fit** if important edges are cropped.
-3. Use **Trim** when the image has too much empty space.
-4. Follow the operation from **Activity** while background optimization or rate-limit processing finishes.
+1. Check the Discord-size previews before importing.
+2. Choose **Fit** if important edges are cropped.
+3. Choose **Trim** to remove empty space.
+4. Set your usual choice in **Settings** > **Import defaults**.
 
 ### Search returns no results
-
-**Symptoms**
-
-- A known emote does not appear.
-- Search results are empty.
 
 **Fixes**
 
 1. Try a shorter search term.
-2. Switch source filters.
-3. Search by creator or set when using 7TV.
-4. Try again later if a source platform is unavailable.
+2. Switch **Source** between 7TV and FrankerFaceZ.
+3. For 7TV, search by tag, such as `#cat`, or search on the **Users** tab and browse the creator's sets.
+4. BetterTTV and EmojiGG search is no longer available.
+5. If 7TV is having problems, Kao shows a notice. Try again later.
 
-## Server and dashboard issues
+## Automation issues
 
-### Wrong server selected
-
-**Symptoms**
-
-- Emojis are going to the wrong server.
-- You are viewing the wrong emoji list.
+### Rotation or sync removed emojis I wanted
 
 **Fixes**
 
-1. Check the server icon and name in the selector.
-2. Reopen the action and choose the correct target.
-3. Rename servers in Discord if similar names are causing confusion.
+1. Restore the emojis from a backup, if you have one.
+2. Protect emojis you always want to keep. See [Protect emojis](/guides/managing-emojis#protect-emojis).
+3. For sync groups, consider turning off **Remove Extra Emojis**.
+
+### Rotation did not run
+
+**Fixes**
+
+1. Check that the rotation is turned on.
+2. If it shows **Paused by plan**, your plan does not include it. Upgrade to resume it.
+3. If it shows "Waiting for new emotes", it runs after the streamer adds more emotes.
+
+### Streamer follow is paused
+
+**Fixes**
+
+Open the streamer's panel and follow the reason shown. Kao resumes the follow automatically after you fix it.
+
+## Dashboard issues
 
 ### Buttons or pages do not respond
-
-**Symptoms**
-
-- The dashboard loads but actions do not finish.
-- A page appears stuck.
 
 **Fixes**
 
 1. Refresh the page.
 2. Sign out and back in.
 3. Try a private browser window.
-4. Disable extensions that block scripts or popups.
+4. Turn off extensions that block scripts or pop-ups.
 5. Try another browser.
 
-### Discord invite popup was blocked
-
-**Symptoms**
-
-- The hosted bot invite does not open.
-- Browser reports a blocked popup.
+### The Discord invite does not open
 
 **Fixes**
 
-1. Allow popups for usekao.com.
-2. Click the invite link again.
-3. Copy the shown invite URL if Kao provides one.
-
-On a phone, Discord may open outside your browser. Approve the invite in Discord, return to Kao, and choose **Verify**. Use **Reopen Discord** if the invite was closed before approval.
+1. Allow pop-ups for usekao.com.
+2. Click the invite button again.
+3. On a phone, Discord may open in the app. Approve the invite there, then return to Kao.
 
 ## Billing issues
 
 ### Plan did not activate
 
-**Symptoms**
-
-- You completed checkout but the dashboard still shows locked features.
-
 **Fixes**
 
-1. Refresh the Billing page.
-2. Sign out and back in.
-3. For crypto payments, wait until NowPayments marks the payment complete. Hosted invoice payments can remain pending while the network confirms.
-4. Start a new checkout if the crypto invoice expired or was canceled.
-5. Contact support if the crypto payment is complete, partially paid, or paid with the wrong asset and the plan stays inactive.
+1. Refresh the **Billing** page.
+2. For crypto, wait until NowPayments confirms the payment.
+3. If the crypto invoice expired, start a new checkout.
+4. If you paid with crypto while a card subscription was active, support reviews the payment first.
+5. Contact support if the plan stays inactive after the payment is confirmed.
 
 ### Coupon did not apply
 
-**Symptoms**
-
-- Checkout shows the wrong price.
-- Trial or discount is missing.
-
 **Fixes**
 
-1. Re-enter the coupon code.
-2. Confirm the coupon applies to the selected plan and billing interval.
+1. Enter the coupon again and click **Apply**.
+2. Check that the coupon covers the plan, billing interval, and payment method.
 3. Start checkout again from Kao.
 
-## Account issues
+## Sign-in issues
 
 ### Cannot sign in with Discord
-
-**Symptoms**
-
-- Discord redirects back without signing you in.
-- The dashboard returns to the landing page.
 
 **Fixes**
 
 1. Clear cookies for usekao.com.
 2. Try another browser.
-3. Check Discord status.
+3. Check [Discord's status page](https://discordstatus.com).
 4. Sign in again from [usekao.com](https://usekao.com).
 
-### Session expired
+### Account is locked after requesting deletion
 
-**Symptoms**
-
-- Kao asks you to sign in again.
-- A dashboard action says your session expired.
-
-**Fixes**
-
-Sign in again. If it happens repeatedly, clear cookies for usekao.com and retry.
+Your account is locked during the 14-day deletion period. To keep your account, open the deletion status page and click **Cancel deletion**. See [Account and privacy](/guides/account-management#cancel-or-check-a-deletion).
 
 ## Getting more help
 
-When asking for help, include:
-
-- What you were trying to do
-- The exact error message
-- Which server or workflow was affected
-- What you already tried
+When you contact support, include what you were trying to do, the exact error message, and which server was affected.
 
 <CardGrid>
   <Card title="Support" href="/resources/support">
-    Check service status or choose the right way to contact Kao.
-  </Card>
-  <Card title="Discord Community" href="https://usekao.com/api/discord/invite">
-    Get help from the community.
+    Check service status or contact the Kao team.
   </Card>
   <Card title="FAQ" href="/resources/faq">
     Read common questions.
+  </Card>
+  <Card title="Discord community" href="https://usekao.com/api/discord/invite">
+    Get help from the community.
   </Card>
 </CardGrid>

@@ -1,69 +1,79 @@
 ---
 title: Introduction
-description: Learn what Kao does and where to start.
+description: Learn what Kao does, which emote sources it supports, and where to start.
 ---
 
 ## What is Kao?
 
-Kao helps Discord server owners find, import, organize, and refresh custom emojis from one dashboard.
+Kao helps Discord server owners find, import, organize, and refresh custom emojis. You can work from the web dashboard at [usekao.com](https://usekao.com), from inside Discord with `/kao`, or from the Kao browser extension.
 
 Use Kao when you want to:
 
-- Import emotes from 7TV, BetterTTV, FrankerFaceZ, and EmojiGG
-- Add or remove server emojis without downloading files manually
-- Save emotes into collections for reuse
-- Back up a server before making large emoji changes
-- Rotate or sync emojis across one or more servers
-- Let trusted teammates help manage emojis
+- Import 7TV and FrankerFaceZ emotes without downloading files yourself
+- Follow a streamer and get their new 7TV emotes in your server
+- Let moderators add and manage emotes from Discord
+- Let members vote on which emotes get added
+- Protect emojis so Kao never removes them
+- Back up, rotate, or sync emojis across one or more servers
+- Make your own emotes with the Emote Creator
 
 ## The fastest setup
 
-Most servers should start with the hosted Kao Bot. You invite it once, then use the dashboard to import and manage emojis. You do not need to create a Discord application or handle a bot token.
+Most servers should start with the hosted Kao Bot. You invite it once, then use the dashboard or `/kao` to import and manage emojis. You do not need to create a Discord application or handle a bot token.
 
-Bring Your Own Bot is available for teams that need a custom bot name, avatar, status, or stronger separation between communities.
+Bring Your Own Bot (BYOB) is for communities that want their own bot name, avatar, and status, or extra server features such as staff notifications and presets.
 
 ## Main workflows
 
 | Workflow | What you use it for |
 |----------|---------------------|
-| Importing | Search emote platforms, paste Discord emote text, and add emojis to a server |
-| Managing emojis | Rename, delete, filter, and review server emoji capacity |
-| Collections | Save reusable sets of emotes for later imports, rotations, or sync groups |
-| Backups | Snapshot a server's emojis before a risky change or restore them later |
-| Rotations | Replace or refresh server emojis on a schedule |
-| Sync groups | Keep one collection or server mirrored to other servers |
-| Activity | Track running and past emoji operations |
+| Importing | Search 7TV and FrankerFaceZ and add emojis to a server |
+| Kao in Discord | Add, manage, protect, and back up emotes with `/kao` |
+| Emote polls | Let members vote on new emotes |
+| Managing emojis | Rename, protect, delete, and review emoji slots |
+| Collections | Save reusable sets of emotes |
+| Streamer emotes | Follow a streamer's 7TV emote set |
+| Backups | Save a server's emojis and restore them later |
+| Rotations | Refresh server emojis on a schedule |
+| Sync groups | Make other servers match a collection or source server |
+| Emote Creator | Combine emotes and overlays into new emotes |
+| Activity | Track running and past emoji work |
 
 ## Supported emote sources
 
-| Source | Static | Animated | Notes |
-|--------|--------|----------|-------|
-| 7TV | Yes | Yes | Supports user profiles and emote sets |
-| BetterTTV | Yes | Yes | Good for Twitch community emotes |
-| FrankerFaceZ | Yes | No | Static emotes only |
-| EmojiGG | Yes | Yes | Searchable emoji catalog |
+| Source | Search in Kao | Static | Animated | Notes |
+|--------|---------------|--------|----------|-------|
+| 7TV | Yes | Yes | Yes | Search emotes, users, and emote sets. Paste a 7TV emote link or ID. |
+| FrankerFaceZ | Yes | Yes | Yes | Paste an FFZ emote link or ID. Results can load more slowly. |
+| BetterTTV | No | Yes | Yes | Search is no longer available. Emotes you already saved in Kao still import. |
+| EmojiGG | No | Yes | Yes | Search is no longer available. Emotes you already saved in Kao still import. |
+
+<Info>
+BetterTTV and EmojiGG closed their search to other sites, so Kao can no longer search them. Emotes you saved from them before, for example in a collection, still import.
+</Info>
+
+In Discord, `/kao` and the **Import emotes** message command can also add Discord emojis from a message and image attachments. See [Use Kao in Discord](/guides/bot-commands).
 
 ## Before you begin
 
 You need:
 
 - A Discord account
-- A Discord server where you can manage the server or invite bots
-- Permission for the bot to manage emojis and stickers in the target server
+- A Discord server where you have the **Manage Server** permission, or a server admin who can invite Kao for you
 
 ## Next steps
 
 <CardGrid>
   <Card title="Quickstart" href="/quickstart">
-    Invite Kao and import your first emote.
+    Invite Kao and import your first emotes.
   </Card>
-  <Card title="Bot Setup" href="/concepts/bot-system">
-    Choose hosted Kao Bot or Bring Your Own Bot.
+  <Card title="Choose a bot setup" href="/concepts/bot-system">
+    Compare the hosted Kao Bot and Bring Your Own Bot.
   </Card>
-  <Card title="Importing Emotes" href="/guides/importing-emotes">
-    Search, preview, rename, and import emotes.
+  <Card title="Import emotes" href="/guides/importing-emotes">
+    Search, preview, and import emotes.
   </Card>
-  <Card title="Collections" href="/guides/collections">
-    Organize emotes into reusable groups.
+  <Card title="Use Kao in Discord" href="/guides/bot-commands">
+    Manage emotes without leaving Discord.
   </Card>
 </CardGrid>

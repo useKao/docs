@@ -1,95 +1,81 @@
 ---
-title: Multiple Bots
-description: Manage hosted, BYOB, and shared server access.
+title: Servers and bots
+description: Add servers, connect your own bots, and work with servers that teammates share with you.
 ---
 
 ## Overview
 
-The **Bots** page shows how Kao can access your servers.
+The **Servers** page lists every server Kao can manage for you and every bot you have connected. Use it to add servers, fix problems, and open a server's own page.
 
-You may see:
+## Servers page sections
 
-- Hosted Kao Bot installs
-- Your own connected BYOB bots
-- Servers shared with you by another Kao user
+| Section | What it shows |
+|---------|---------------|
+| **Needs attention** | Servers with a problem, such as a removed bot. Offers **Invite again**, **Remove**, or **Dismiss** |
+| **Your servers** | Servers you manage, with an **Emoji slots** bar for each |
+| **Shared with you** | Servers another Kao user shared with you through a Discord team role |
+| **Your bots** | Your connected BYOB bots |
 
-## Hosted Kao Bot installs
+The page header shows how many servers use the hosted Kao Bot out of your plan's limit.
 
-Hosted installs are the easiest path for most servers. Each hosted server entry shows whether the Kao Bot is active and ready for dashboard imports.
+## Add a server
 
-From a hosted server entry you can:
+1. Open **Servers** and click **Add server**.
+2. Choose **Use the Kao hosted bot** or **Connect your own bot**.
+3. Follow the steps to invite the bot in Discord.
+4. Return to Kao and wait for verification to finish.
 
-- View install status
-- Review permission health and affected features
-- Reinvite the hosted bot if it was removed
-- Remove hosted access when you no longer want Kao managing that server
+See [Choose a bot setup](/concepts/bot-system) if you are not sure which option to choose.
 
-## Add your own bot
+## Connect your own bot
 
-Use BYOB when you need custom bot identity or stronger separation between communities.
+Each BYOB bot needs its own Discord application and token. Follow [Create a BYOB bot](/concepts/bot-system#create-a-byob-bot) first.
 
-1. Go to **Bots**.
-2. Choose **Add Bot**.
-3. Paste the Discord bot token.
-4. Let Kao validate the bot.
-5. Invite the bot to the servers it should manage.
+1. Open **Servers**. Click **Connect a bot** under **Your bots**, or choose **Connect your own bot** from **Add server**.
+2. Paste the bot token and let Kao check it.
+3. Invite the bot to the servers it should manage.
 
-Each BYOB bot needs its own Discord application and token.
+Kao rechecks the bot's server list when you return from Discord.
 
-When Discord asks for privileged access during setup, enable **Server Members Intent** in the application's **Bot** settings. Kao uses it to load the bot's server list after validation.
+## Manage a connected bot
 
-## Assign servers
+Open a bot from **Your bots** to see its page. From there you can:
 
-After adding a BYOB bot:
-
-1. Open the bot.
-2. Add or select the servers it should manage.
-3. Recheck permissions if Kao reports missing access.
-4. Remove stale server links that you no longer want this bot to manage.
-
-## Bot presence
-
-Some plans allow custom bot status text. Use presence settings when your community expects branded status or a specific activity message.
-
-## Token updates
-
-If you reset a BYOB token in Discord:
-
-1. Open the bot in Kao.
-2. Choose **Update Token**.
-3. Paste the new token.
-4. Save it.
+- Review which servers the bot is in and their permission health.
+- Use **Unlink Server** to stop managing a server with this bot.
+- Use **Update token** after you reset the token in Discord.
+- Set a custom status in the **Bot Status** card, if your plan includes custom bot status.
 
 <Warning>
-Resetting a token in Discord immediately invalidates the old one. Update Kao right away or the bot can go offline.
+Resetting a token in Discord stops the old token immediately. Update the token in Kao right away, or the bot goes offline.
 </Warning>
 
 ## Shared servers
 
-Shared servers are servers you can access through another user's bot or hosted install. Your available actions depend on the access they granted and the Discord role requirements for that server.
+A server owner can share a server with teammates through a Discord role. Members with that role see the server under **Shared with you**.
 
-Use shared access when teammates should help with emoji work without owning the bot or billing account.
+Teammates can manage a shared server from their own dashboard. Some actions, such as running polls, also depend on their Kao role and Discord permissions. See [Team access](/guides/server-settings#team-access).
 
 ## Troubleshooting
 
-| Problem | What to check |
-|---------|---------------|
-| Bot will not connect | Check the token and whether the bot still exists in Discord |
-| Server is missing | Invite the bot to that server or check shared access |
-| Permission warning appears | Reinvite the bot or update its Discord role permissions |
-| Hosted bot was removed | Reinvite the hosted Kao Bot from the server entry |
-| Permission check is unavailable | Confirm the bot is online or wait for startup to finish, then recheck |
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| Bot will not connect | The token is wrong, or **Server Members Intent** is off | Reset the token, turn on the intent, and paste the new token |
+| Server is missing | The bot is not in that server, or it was not shared with you | Invite the bot, or ask the owner to add you to the team role |
+| Server shows **Paused** | Your plan's hosted server limit is lower than your server count | Remove a hosted server or upgrade your plan |
+| Server is under **Needs attention** | The bot was removed or lost permissions | Use **Invite again** or the offered fix |
+| Permission check is unavailable | Your bot is offline or still starting | Wait for it to come online, then check again |
 
 ## Next steps
 
 <CardGrid>
-  <Card title="Bot Setup" href="/concepts/bot-system">
-    Compare hosted and BYOB options.
+  <Card title="Choose a bot setup" href="/concepts/bot-system">
+    Compare the hosted Kao Bot and BYOB.
   </Card>
-  <Card title="Server Settings" href="/guides/server-settings">
-    Configure server behavior and access.
+  <Card title="Server settings" href="/guides/server-settings">
+    Set roles, team access, and server features.
   </Card>
-  <Card title="Importing Emotes" href="/guides/importing-emotes">
-    Import after a bot is ready.
+  <Card title="Import emotes" href="/guides/importing-emotes">
+    Import once a bot is ready.
   </Card>
 </CardGrid>

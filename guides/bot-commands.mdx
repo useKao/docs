@@ -1,73 +1,104 @@
 ---
-title: Bot Commands
-description: Use Kao's Discord slash commands when a connected bot supports them.
+title: Use Kao in Discord
+description: Add, manage, protect, and back up emotes from inside Discord with /kao and Kao's other commands.
 ---
 
 ## Overview
 
-The dashboard is the primary way to use Kao. Some connected bots also expose Discord slash commands for quick server actions.
+Type `/kao` in any channel to open Kao's home for that server. From there you can see free emoji slots and running work, add and manage emotes, follow streamers, and run polls without opening a browser.
 
-Use `/help` in Discord to see the commands available for your server. Available commands depend on the bot setup and server permissions.
+Kao's Discord commands work with both the hosted Kao Bot and BYOB bots.
 
-## Common commands
+## Before you begin
 
-| Command | What it does |
-|---------|--------------|
-| `/help` | Shows available Kao commands |
-| `/status` | Shows server emoji capacity |
-| `/emojis` | Browses server emojis |
-| `/emoji delete` | Deletes a server emoji |
-| `/emoji rename` | Renames a server emoji |
-| `/settings` | Shows bot settings |
+- Kao must be in the server. See the [Quickstart](/quickstart).
+- You need a Kao role in the server, plus the matching Discord permission. The server owner and Administrators always have access. See [Kao roles](/guides/server-settings#kao-roles).
 
-## Import commands
-
-Some BYOB or command-enabled setups can import from Discord:
+## Commands
 
 | Command | What it does |
 |---------|--------------|
-| `/7tv` | Imports from a 7TV set |
-| `/import url` | Imports one emote from a URL |
-| `/import bttv` | Imports from BetterTTV |
-| `/import ffz` | Imports from FrankerFaceZ |
+| `/kao` | Opens Kao's home for the server |
+| `/emotes [search]` | Opens **Manage emotes**, optionally filtered by a search |
+| `/import <query>` | Adds emotes from a link, a set, a streamer's name, or search words |
+| `/settings` | Opens Kao's settings for the server |
+| `/activity` | Shows recent Kao work in the server |
+| **Import emotes** | Message command. Adds the emotes from a message |
+| **Start an emote poll** | Message command. Starts a poll from the emotes in a message |
 
-For most hosted bot workflows, use the dashboard **Import** page instead.
+To use a message command, right-click a message (or long-press it on mobile), then choose **Apps**.
 
-## Collection, backup, and rotation commands
+## The /kao home
 
-When the bot is linked to Kao's dashboard features, these commands may be available:
+The home card shows the server's free slots, running work, and anything that needs attention. Each panel has **Back** and **Home** buttons.
 
-| Command | What it does |
-|---------|--------------|
-| `/collection list` | Lists your collections |
-| `/collection apply` | Applies a collection to the server |
-| `/backup create` | Creates a server emoji backup |
-| `/backup list` | Lists recent backups |
-| `/rotation status` | Shows rotation schedules |
-| `/rotation trigger` | Runs a rotation now |
-| `/rotation pause` | Pauses a rotation |
-| `/rotation resume` | Resumes a rotation |
+| Panel | Use it to |
+|-------|-----------|
+| **Add emotes** | Import emotes into the server |
+| **Manage emotes** | Search, rename, protect, restrict, download, or delete emotes |
+| **7TV channels** | Follow streamers and get their new 7TV emotes |
+| **More** | Open **Collections**, **Backups**, **Rotations**, **Polls**, **Health**, **Activity**, and **Settings** |
 
-## Who can use commands?
+**Health** checks for missing permissions, nearly full slots, duplicates, and old backups. Each problem has a **Fix** button.
 
-Server settings control who can use bot commands. Depending on your setup, commands can be limited to the owner, server admins, selected Discord roles, or specific users.
+## Add emotes from Discord
+
+You can add emotes from:
+
+- A 7TV or FrankerFaceZ emote link
+- A 7TV emote set
+- A streamer's name
+- Search words
+- Discord emojis or image attachments in a message, with the **Import emotes** message command
+
+Every import opens a review card first. Nothing changes until you confirm.
+
+After you confirm, the card updates as the import runs. Once the import finishes, you have 10 minutes to click **Undo**. You can also undo it from **Activity** on the dashboard during the same 10 minutes.
+
+<Info>
+Undo is available for imports only. Deleted emojis cannot be undone from Discord. Create a backup before large deletions.
+</Info>
+
+## Manage emotes from Discord
+
+Use `/emotes` or `/kao` > **Manage emotes**.
+
+1. Search by name, or filter to **Static**, **Animated**, **Protected**, or **Locked to roles**.
+2. Select an emote.
+3. Choose **Rename**, **Protect** or **Unprotect**, a role limit, **Download**, or **Delete**.
+
+For bulk cleanup, use **Delete several**, **Find duplicates**, or **Delete newest**. Kao shows a **Review deletion** step before anything is deleted, then reports what happened to each emote.
+
+Members only see the actions their Kao role allows.
+
+## Language
+
+Kao replies in the server's language by default. To change it, open **Commands** on the server's dashboard page and set **Server language**.
+
+## Older commands on BYOB bots
+
+BYOB bots still respond to some older commands, such as `/help`, `/status`, and `/emojis`. These now open the matching part of `/kao` or `/emotes`. Use `/kao` for new work. If `/kao` is not available on your bot, the older `/import url` command can upload directly without a review card or **Undo**.
 
 ## Troubleshooting
 
-| Problem | What to check |
-|---------|---------------|
-| Command does not appear | Refresh Discord, check the bot is installed, or use `/help` |
-| Command says permission denied | Your server settings may limit command access |
-| Import command fails | Check server capacity and Manage Emojis and Stickers permission |
-| Hosted bot import is confusing | Use the dashboard **Import** page for the hosted setup |
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| `/kao` does not appear | Discord has not refreshed its command list, or the bot needs updated permissions | Restart Discord. On the server's **Overview**, use **Update in Discord** if it appears |
+| "You need a Kao role to use Kao here." | You have no Kao role in the server | Ask a Kao administrator to assign you a role |
+| An action is missing in **Manage emotes** | Your Kao role does not allow it | Ask for the **Emote manager** role |
+| Import fails | The server is full, or the bot lacks **Create Expressions** | Free slots or fix permissions with **Health** |
+| Kao says 7TV is having trouble | 7TV is unavailable | Wait and try again. Check [status.usekao.com](https://status.usekao.com) |
 
 ## Next steps
 
 <CardGrid>
-  <Card title="Importing Emotes" href="/guides/importing-emotes">
-    Use the dashboard import flow.
+  <Card title="Server settings" href="/guides/server-settings">
+    Assign Kao roles and choose server features.
   </Card>
-  <Card title="Server Settings" href="/guides/server-settings">
-    Control command access and notifications.
+  <Card title="Emote polls" href="/guides/emote-polls">
+    Let members vote on new emotes.
+  </Card>
+  <Card title="Streamer emotes" href="/guides/streamer-emotes">
+    Follow streamers from Discord.
   </Card>
 </CardGrid>

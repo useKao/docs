@@ -1,49 +1,70 @@
 ---
 title: Overview
-description: Understand Kao's main concepts before using the dashboard.
+description: Understand the Kao dashboard, how server access works, and the Discord and plan limits that affect your emoji work.
 ---
+
+## Overview
+
+This page explains how Kao is organized. Read it when you want to know where things live before you follow a task guide.
 
 ## Dashboard areas
 
-Kao is organized around the tasks server owners perform most often:
+The dashboard sidebar contains these areas:
 
 | Area | Use it to |
 |------|-----------|
-| Import | Find emotes and add them to a server |
-| Servers | View server emojis, capacity, settings, and activity |
-| Bots | Invite the hosted bot, connect your own bot, or review shared server access |
-| Collections | Save reusable groups of emotes |
-| Backups | Snapshot and restore server emojis |
-| Rotations | Refresh server emojis on a schedule |
-| Sync | Copy a collection or server emoji set to other servers |
-| Activity | Monitor imports, restores, rotations, syncs, and deletes |
-| Billing | Review your plan, limits, and payment settings |
+| **Overview** | See what needs attention, recent activity, and shortcuts |
+| **Servers** | Add servers, connect your own bots, and open a server's settings, team, and polls |
+| **Emotes** | View and manage a server's emojis. **Collections** are grouped here too |
+| **Import** | Search 7TV and FrankerFaceZ and add emotes to a server |
+| **Create** | Make emotes with the Emote Creator |
+| **Rotations**, **Backups**, **Sync**, **Streamer emotes** | Automate emoji changes. These are grouped under **Server Emojis** |
+| **Activity** | Follow running work, review history, and see your usage limits |
+| **Billing** | Review your plan, usage, and payment options |
+| **Support** | Check service status and contact the Kao team |
+| **Settings** | Set preferences, import defaults, notifications, the browser extension, and privacy options |
+
+The bell icon in the header opens your notifications.
+
+On phones and tablets, a bottom tab bar shows **Overview**, **Servers**, **Emotes**, and **Import**. Tap **More** for every other page.
 
 ## Servers and bot access
 
 Kao can manage a server when one of these is true:
 
-- The hosted Kao Bot is installed in the server.
-- Your own connected bot is installed and assigned to the server.
-- Another Kao user shared access to the server with you.
+- The hosted Kao Bot is in the server.
+- One of your own connected bots is in the server.
+- Another Kao user shared the server with you through a Discord team role.
 
-The bot needs Discord permission to manage emojis and stickers before Kao can add, rename, or delete server emojis.
+The bot needs Discord's **Create Expressions** permission to add emojis and **Manage Expressions** to rename or delete them. See [Choose a bot setup](/concepts/bot-system#discord-permissions) for the full list.
+
+## Where you can use Kao
+
+| Surface | Best for |
+|---------|----------|
+| Web dashboard | Setup, large imports, automation, billing, and settings |
+| `/kao` in Discord | Quick imports, emoji management, polls, and health checks for one server |
+| Browser extension | Adding a 7TV emote you see on Twitch or 7tv.app |
 
 ## Operations
 
-Emoji changes run as operations. This lets Kao show progress, retry failed items where possible, and avoid overwhelming Discord's emoji limits.
+Kao runs emoji changes as operations. This lets Kao show progress, queue work around Discord's limits, and report which items succeeded or failed.
 
-You will see operations for:
+Operations include:
 
-- Imports
+- Imports from the dashboard, Discord, or the browser extension
 - Bulk deletes
 - Backup restores
-- Rotations
-- Sync groups
+- Rotations and syncs
+- Streamer follow updates
+- Emote poll winners
+- Restores of protected emojis that someone deleted
+
+Follow running work from the operations dock at the bottom of the dashboard or from **Activity**.
 
 ## Discord limits
 
-Discord controls how many static and animated emojis a server can store. Kao shows your server capacity before you import, restore, rotate, or sync.
+Discord controls how many static and animated emojis a server can store. Kao shows a server's free slots before you import, restore, rotate, or sync.
 
 | Server boost level | Static emojis | Animated emojis |
 |--------------------|---------------|-----------------|
@@ -52,27 +73,29 @@ Discord controls how many static and animated emojis a server can store. Kao sho
 | Level 2 | 150 | 150 |
 | Level 3 | 250 | 250 |
 
-Discord also limits how quickly a server can create emojis. If a large batch slows down, leave the dashboard open or check **Activity** later.
+Discord also limits each server to about 50 new emojis per rolling hour. This limit covers Kao imports, rotations, restores, and manual uploads together. When a server reaches it, Kao queues the remaining work and shows when it expects to finish.
+
+Each emoji file must be 256 KB or smaller. Kao resizes and re-encodes emotes to fit.
 
 ## Plans and limits
 
-Your Kao plan controls limits such as daily imports, backups, collections, rotations, sync groups, and how many servers or bots you can manage.
+Your Kao plan sets limits such as emotes per day, emotes per import, hosted servers, collections, backups, rotations, polls, and protected emojis. Kao shows the limit in context when you reach one.
 
-When you hit a limit, Kao shows the limit in context and offers the next available path.
+See [Billing and plans](/guides/billing#plan-limits) for Free and Pro limits.
 
 ## Next steps
 
 <CardGrid>
   <Card title="Quickstart" href="/quickstart">
-    Set up Kao and import your first emote.
+    Set up Kao and import your first emotes.
   </Card>
-  <Card title="Bot Setup" href="/concepts/bot-system">
-    Choose hosted Kao Bot or BYOB.
+  <Card title="Choose a bot setup" href="/concepts/bot-system">
+    Compare the hosted Kao Bot and BYOB.
   </Card>
-  <Card title="Activity Log" href="/guides/activity-log">
-    Understand progress and history.
+  <Card title="Activity" href="/guides/activity-log">
+    Understand progress, queues, and history.
   </Card>
-  <Card title="Billing" href="/guides/billing">
-    See which features are limited by plan.
+  <Card title="Billing and plans" href="/guides/billing">
+    See which features depend on your plan.
   </Card>
 </CardGrid>

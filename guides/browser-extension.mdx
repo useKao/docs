@@ -1,0 +1,82 @@
+---
+title: Browser extension
+description: Add 7TV emotes you see on Twitch or 7tv.app to your Discord server in a couple of clicks with the Kao browser extension.
+---
+
+## Overview
+
+The Kao 7TV Importer extension for Chrome adds 7TV emotes to your server while you browse Twitch or 7tv.app. You can add single emotes or open a whole 7TV set in Kao.
+
+## Before you begin
+
+- A Kao account with at least one server where Kao is installed
+- Google Chrome
+- The 7TV browser extension, to add emotes from Twitch chat
+
+## Install and link the extension
+
+1. Install [Kao 7TV Importer](https://chromewebstore.google.com/detail/kao-emote-importer/mehljkalknjeeipojbiffpdeohjlccja) from the Chrome Web Store.
+2. Follow the extension's prompt to link it. Kao opens **Link Kao to this browser?**
+3. Check that the account shown is yours, then click **Link browser**.
+
+Kao creates a security notice whenever a new browser is linked to your account. If you did not link it, unlink it right away.
+
+## Add an emote from Twitch chat
+
+1. Open a Twitch stream that uses 7TV.
+2. Click a 7TV emote in chat to open 7TV's emote card.
+3. Click the Kao cloud next to the card.
+4. Choose a server, or use your default server.
+
+The extension popup also lists the 7TV emotes in the chat you are watching and the channel's whole 7TV set.
+
+## Add emotes from 7tv.app
+
+- On an emote page, click **Add to Discord**.
+- On a set page, click **Import set to Discord**. Kao opens the set so you can choose which emotes to add.
+
+What happens next depends on the extension's permission for this browser:
+
+| Permission | What happens |
+|------------|--------------|
+| **Quick add** | Kao adds the emote straight away. A toast shows **Undo** for a short time after the emote lands, and the add shows up in **Activity** |
+| **Review only** | Kao sends the emote to your dashboard so you can review it before importing |
+
+## Change extension settings
+
+Open **Settings** and go to **Browser extension**.
+
+- **Permissions** changes what the extension can do in one browser.
+- **Unlink** signs that browser out straight away after you confirm.
+- **Quick add** settings apply to every linked browser:
+  - **Default server** is pre-selected and used by one-click add.
+  - **Post quick adds to the server's import log** posts a message after the undo window closes. It uses the **Import Updates** channel from the server's [staff notifications](/guides/server-settings#notifications-byob), so it only works on BYOB servers with staff notifications set up.
+
+A linked browser stays linked while you use it. Kao unlinks it automatically after 30 days without use.
+
+## Privacy
+
+The extension can see your servers and how many emoji slots are free, send emotes to Kao for review, and add emotes if you allow **Quick add**. When you use **Quick add** on Twitch, it also sends the channel name to Kao. It does not read your chat messages, browsing history, or Discord messages, and it cannot change server settings. It only imports emotes when you click.
+
+## Troubleshooting
+
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| "Couldn't find the Kao extension in this browser" | The extension is not installed or is turned off | Install or turn on the extension, then click **Try again** |
+| The extension stopped working | The browser was unlinked or expired | Link the browser again from the extension |
+| Emotes go to review instead of being added | The browser uses **Review only** | Change **Permissions** in **Settings** > **Browser extension** |
+| Import fails | The server is full or the bot lacks permissions | Check the server on the **Servers** page |
+
+## Next steps
+
+<CardGrid>
+  <Card title="Import emotes" href="/guides/importing-emotes">
+    Import from the dashboard.
+  </Card>
+  <Card title="Activity" href="/guides/activity-log">
+    Follow and undo recent imports.
+  </Card>
+  <Card title="Account and privacy" href="/guides/account-management">
+    Review linked browsers and other account settings.
+  </Card>
+</CardGrid>

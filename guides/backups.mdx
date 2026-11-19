@@ -1,119 +1,123 @@
 ---
 title: Backups
-description: Back up and restore a server's emojis.
+description: Save a copy of a server's emojis and restore them to the same server or a different one.
 ---
 
 ## Overview
 
-Backups save a point-in-time copy of a server's emojis. They are not a continuous mirror, so create another backup after important changes. Use them before large imports, rotations, syncs, or cleanup work.
+A backup saves a point-in-time copy of a server's emojis. Create one before large imports, rotations, syncs, or cleanups. You can later restore it to the original server, copy it to another server, or turn it into a collection.
 
-You can restore a backup to the original server, copy it to another server, or convert it into a collection.
+A backup is not a continuous mirror or a full Discord server backup. It reflects the server at the moment it was created.
 
-A backup is a point-in-time emoji snapshot, not a continuous mirror or a full
-Discord server backup. Wait for its completed state before relying on it as a
-restore point.
+## Before you begin
+
+- Kao must be in the server. Backups work with both the hosted Kao Bot and BYOB.
+- Your plan sets how many backups you can keep. On Free, you can keep 2. See [Billing and plans](/guides/billing#plan-limits).
 
 ## Create a backup
 
-1. Go to **Backups**.
-2. Choose **Create Backup**.
-3. Select the server.
-4. Choose what to include:
-   - **Backup All** for every custom emoji
-   - **Select Emojis** for a specific set
-5. Add an optional name.
-6. Confirm the backup.
+1. Open **Backups** and click **Create backup**.
+2. Select the server. Kao shows the **Current emoji status** with total, static, and animated counts.
+3. Under **Backup Mode**, choose **Backup All** or **Select Emojis**.
+4. Optionally, enter a **Backup Name**.
+5. Start the backup.
+6. Click **View backup** to follow its progress.
 
-<Info>
-The confirmation screen shows the total count and static versus animated breakdown before you start.
-</Info>
-
-<Info>
-Backup creation can be queued while Kao captures and processes the emoji artifacts. Wait for the backup to show as completed before restoring it.
-</Info>
+Wait until the backup shows **Saved** before you rely on it.
 
 ## What a backup includes
 
-A backup includes the emoji images, names, type, role restrictions when available, and the server boost level at the time the backup was created.
+A backup saves each emoji's image, name, type, and role restrictions. Animated emojis stay animated.
 
-Your plan controls how many backups you can keep and how many you can create in a day.
+If some images could not be saved, the backup shows **Partly saved**. It is still usable. Open the backup and click the button to retry the images that did not save.
+
+A server's backups are shared with the server's team.
 
 ## Restore a backup
 
-1. Open **Backups**.
-2. Select the backup.
-3. Choose **Restore**.
-4. Pick the target server.
-5. Choose a restore mode.
-6. Confirm the restore.
-
-| Restore mode | What it does |
-|--------------|--------------|
-| Add Missing | Adds emojis from the backup without deleting existing emojis |
-| Sync to Backup | Removes emojis not in the backup, then restores missing emojis |
-
 <Warning>
-Sync to Backup can delete emojis from the target server. Use Add Missing if you want to keep existing emojis.
+**Make it match the backup** deletes emojis that are not in the backup. Protected emojis and Discord-managed emojis are always kept. To copy a backup to a different server with this mode, you must type that server's name to confirm.
+
+If you also turn on **Add same-named emojis as separate copies**, the server's existing emoji with the same name no longer counts as a match, so Kao can delete it. Always check the emojis listed for removal on the review step before you confirm.
 </Warning>
 
-Restoring uploads emoji artifacts again through Discord. The restored emojis are new Discord emoji records, so an old emoji ID or a message that refers to that ID is not preserved.
+1. Open **Backups** and select the backup.
+2. Click **Restore**.
+3. Under **Restore to**, choose a server. The original server is marked.
+4. Under **What to restore**, choose a mode:
 
-## Restore to another server
+   | Mode | What it does |
+   |------|--------------|
+   | **Add missing emojis** | Adds emojis from the backup that the server does not have. Removes nothing |
+   | **Make it match the backup** | Adds missing emojis and removes emojis that are not in the backup |
+   | **Pick emojis** | Restores only the emojis you choose |
 
-You can restore a backup to any server Kao can manage. This is useful when you want to copy an emoji set to a new community.
+5. Under **Also**, choose whether to **Restore saved names**, **Restore saved role restrictions**, and **Add same-named emojis as separate copies**.
+6. Click **Review restore**. Kao shows how many emojis it will add, remove, and keep.
+7. Confirm the restore.
 
-The target server still needs enough emoji capacity for the restored items.
+The preview expires after 15 minutes. If it expires, review the restore again.
 
-## Convert a backup to a collection
+Kao skips some emojis during a restore:
 
-Use **Add to Collection** when you want to reuse a backup without restoring it immediately.
+- If the server already has an emoji with the same name and type, Kao skips the backup copy. Turn on **Add same-named emojis as separate copies** to add it anyway.
+- If an emoji was limited to roles and none of those roles exist on the target server, Kao skips it. Otherwise everyone could use it.
+- If an image was not saved in the backup, Kao cannot restore that emoji.
 
-Collections are easier to browse, import from, rotate, and sync later.
+The review step lists skipped emojis.
+
+Restored emojis are new Discord emojis with new IDs. Older messages that used the original emojis still show them as missing.
+
+## How restores run
+
+- Each server runs one restore at a time.
+- Restores do not overlap with rotations or syncs on the same server.
+- Restores do not use your daily import allowance, but they still follow Discord's hourly emoji limit.
+- Kao keeps a backup until every restore using it has finished.
+
+## Turn a backup into a collection
+
+Open the backup and click **Make a collection**, or choose **Add to Collection** from the backup's menu in the list. Collections are easier to browse, import from, rotate, and sync later.
+
+## Check that a backup or restore finished
+
+For a backup, open it and check that the status is **Saved** and the counts match the server.
+
+For a restore, open the backup's **Restores** history or **Activity** and check that:
+
+- The restore reached a final state.
+- Restored and failed counts are shown.
+- The server contains the expected emojis.
+
+Before retrying failed items, make sure the server has free slots and the bot has permission.
 
 ## Best practices
 
-- Create a backup before bulk deleting emojis.
-- Create a backup before using Sync to Backup or full replacement rotations.
+- Create a backup before bulk deletes, **Make it match the backup**, or **Full Replacement** rotations.
 - Name backups with dates or event names.
-- Run a fresh backup after major changes; an older backup reflects only its creation point.
-- Delete backups you no longer need if you hit your plan limit.
-- Convert long-term reusable sets into collections.
-
-## How to know backup or restore work finished
-
-For a new backup, confirm that its status is complete and that the static,
-animated, and total counts match the source server at capture time.
-
-For a restore, open **Activity** and confirm:
-
-- The restore reached a final state.
-- Restored and failed item counts are visible.
-- The target server contains the expected emoji names and images.
-- The target has enough capacity and the bot still has permission before retrying failures.
-
-Restored emojis receive new Discord emoji IDs. Completion does not restore old
-message references to the deleted IDs.
+- Create a fresh backup after major changes.
+- Delete backups you no longer need if you reach your plan's limit.
 
 ## Troubleshooting
 
-| Problem | What to try |
-|---------|-------------|
-| Backup limit reached | Delete an old backup or review your plan |
-| Backup is still processing | Wait for a completed status before trying to restore it |
-| Restore partially failed | Check target capacity and open Activity for item-level status |
-| Restored emojis are missing | Confirm the restore finished and the target server has enough slots |
-| Wrong emoji count | A backup reflects the server at the moment it was created |
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| Backup limit reached | You have as many backups as your plan allows | Delete an old backup or upgrade |
+| Backup shows **Partly saved** | Some images could not be downloaded | Retry the missing images from the backup page |
+| Restore is waiting | Another restore, rotation, or sync is running on the server, or Discord's hourly limit was reached | Wait. **Activity** shows the reason |
+| Restore partly failed | The server ran out of slots or the bot lost permission | Free slots or fix permissions, then restore again |
+| Restore preview expired | More than 15 minutes passed | Click **Review restore** again |
 
 ## Next steps
 
 <CardGrid>
-  <Card title="Managing Emojis" href="/guides/managing-emojis">
-    Clean up a server before or after restoring.
+  <Card title="Manage emojis" href="/guides/managing-emojis">
+    Protect emojis and clean up a server.
   </Card>
   <Card title="Collections" href="/guides/collections">
-    Convert backups into reusable sets.
+    Turn backups into reusable sets.
   </Card>
-  <Card title="Activity Log" href="/guides/activity-log">
-    Watch backup and restore progress.
+  <Card title="Activity" href="/guides/activity-log">
+    Follow backup and restore progress.
   </Card>
 </CardGrid>
